@@ -141,9 +141,6 @@ function HeaderMenu() {
                                         </li>
                                     </ul>
                                 </li>
-
-
-
                             </ul>
                             {/* Left links */}
                         </div>
