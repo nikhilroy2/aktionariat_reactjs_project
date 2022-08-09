@@ -14,19 +14,29 @@ body {
   line-height: 1.4;
   font-weight: 400;
   min-height: 100%;
+  color: #fff;
 }
 // ..............root variables ............
 :root {
   // color variable
   --text-57: #5768ff;
+  --text-01: #010101;
+  --text-26: #262626;
 }
-
 
 // ............global default settings.................
 
+.section_container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.section_container{
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+.btn {
+  font-size: 1rem;
+  text-transform: none;
+}
+.text-size-medium {
+  font-size: 1.25rem;
+  line-height: 1.4;
 }

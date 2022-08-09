@@ -23,6 +23,26 @@ header#Header {
     #logo {
       height: 1.5rem;
       max-height: 2rem;
+      margin-right: 153px;
+    }
+    a {
+      color: white;
+    }
+    .dropdown-toggle{
+        &::after{
+            display: none;
+        }
+    }
+    .dropdown-menu {
+      li {
+        background: var(--text-01);
+        &:hover {
+          background: var(--text-26);
+          .dropdown-item {
+            background: var(--text-26);
+          }
+        }
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../header/logo.svg';
+import './Footer.css'
 function Footer(props) {
     return (
         <footer id='footer'>
@@ -7,7 +8,7 @@ function Footer(props) {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <ul className="list-unstyled">
+                            <ul className="list-unstyled footer_list">
                                 <li>
                                     <img src={logo} alt="logo" />
                                 </li>
@@ -15,12 +16,12 @@ function Footer(props) {
                         </div>
 
                         <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <h3>
+                            <h3 className='footer_title'>
                                 Solutions
                             </h3>
-                            <ul className="list-unstyled">
+                            <ul className="list-unstyled footer_list">
                                 <li>
-                                    <a href="#">For companies</a>
+                                    <a href="#">For companies <i class="fa-solid fa-angle-down"></i></a>
                                 </li>
                                 <li>
                                     <a href="#">For investors</a>
@@ -36,10 +37,10 @@ function Footer(props) {
                         </div>
 
                         <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <h3>
+                            <h3 className='footer_title'>
                                 About us
                             </h3>
-                            <ul className="list-unstyled">
+                            <ul className="list-unstyled footer_list">
                                 <li>
                                     <a href="#">Our vision</a>
                                 </li>
@@ -58,10 +59,10 @@ function Footer(props) {
                             </ul>
                         </div>
                         <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <h3>
+                            <h3 className='footer_title'>
                                 Resources
                             </h3>
-                            <ul className="list-unstyled">
+                            <ul className="list-unstyled footer_list">
                                 <li>
                                     <a href="#">Documentation</a>
                                 </li>
@@ -78,10 +79,10 @@ function Footer(props) {
                         </div>
 
                         <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <h3>
+                            <h3 className='footer_title'>
                                 Legal & privacy
                             </h3>
-                            <ul className="list-unstyled">
+                            <ul className="list-unstyled footer_list">
                                 <li>
                                     <a href="#">Terms of service</a>
                                 </li>
@@ -96,10 +97,10 @@ function Footer(props) {
 
 
                         <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <h3>
+                            <h3 className='footer_title'>
                                 Contact
                             </h3>
-                            <ul className="list-unstyled">
+                            <ul className="list-unstyled footer_list">
                                 <li>
                                     <a href="#">E-mail</a>
                                 </li>
@@ -122,12 +123,16 @@ function Footer(props) {
                         </div>
                     </div>
 
-                    <div className="row">
+                    <div className="row footer_list">
                         <div className="col-6">
-                        © 2022 AKTIONARIAT AG
+                            <span className="footer_item">
+                                © 2022 AKTIONARIAT AG
+                            </span>
                         </div>
                         <div className="col-6 text-end">
-                        All rights reserved.
+                            <span className="footer_item">
+                                All rights reserved.
+                            </span>
                         </div>
                     </div>
                 </div>

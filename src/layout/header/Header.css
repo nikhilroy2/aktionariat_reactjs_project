@@ -27,5 +27,26 @@ header#Header menu#HeaderMenu {
 header#Header menu#HeaderMenu #logo {
   height: 1.5rem;
   max-height: 2rem;
+  margin-right: 153px;
+}
+
+header#Header menu#HeaderMenu a {
+  color: white;
+}
+
+header#Header menu#HeaderMenu .dropdown-toggle::after {
+  display: none;
+}
+
+header#Header menu#HeaderMenu .dropdown-menu li {
+  background: var(--text-01);
+}
+
+header#Header menu#HeaderMenu .dropdown-menu li:hover {
+  background: var(--text-26);
+}
+
+header#Header menu#HeaderMenu .dropdown-menu li:hover .dropdown-item {
+  background: var(--text-26);
 }
 /*# sourceMappingURL=Header.css.map */

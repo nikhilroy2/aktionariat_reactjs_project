@@ -46,7 +46,7 @@ function HeaderMenu() {
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                                        For companies
+                                        For companies <i class="fa-solid ms-2 fa-angle-down"></i>
                                     </a>
                                     {/* Dropdown menu */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -75,7 +75,7 @@ function HeaderMenu() {
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                                        For investors
+                                        For investors <i class="fa-solid ms-2 fa-angle-down"></i>
                                     </a>
                                     {/* Dropdown menu */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -104,7 +104,7 @@ function HeaderMenu() {
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                                        About us
+                                        About us <i class="fa-solid ms-2 fa-angle-down"></i>
                                     </a>
                                     {/* Dropdown menu */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -123,7 +123,7 @@ function HeaderMenu() {
 
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                                        Resources
+                                        Resources <i class="fa-solid ms-2 fa-angle-down"></i>
                                     </a>
                                     {/* Dropdown menu */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -147,8 +147,8 @@ function HeaderMenu() {
                         {/* Collapsible wrapper */}
                         {/* Right elements */}
                         <div className="d-flex align-items-center">
-                            <a href="#" className='text-white'>Invest in us</a>
-                            <a href="#" className="btn btn-light">
+                            <a href="#" className='text-white me-4'>Invest in us</a>
+                            <a href="#" className="btn btn-light text-black">
                                 Request a demo
                             </a>
                         </div>
