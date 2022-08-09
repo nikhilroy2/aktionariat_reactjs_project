@@ -1,0 +1,28 @@
+header#Header {
+  // marquee text scroll
+  marquee {
+    background: var(--text-57);
+    color: white;
+    display: flex;
+    justify-content: center;
+    a {
+      color: inherit;
+      display: inline-block;
+      padding-left: 5rem;
+      font-size: 0.875rem;
+      text-decoration: none;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+
+  // HeaderMenu
+  menu#HeaderMenu {
+    margin: 0;
+    padding: 0;
+    #logo {
+      height: 1.5rem;
+      max-height: 2rem;
+    }
+  }
+}

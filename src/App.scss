@@ -2,13 +2,10 @@
   font-family: abc_favorit;
   src: url(./fonts/abc_favorite.woff2);
 }
-
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: abc_favorit;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -18,14 +15,18 @@ body {
   font-weight: 400;
   min-height: 100%;
 }
-
+// ..............root variables ............
 :root {
+  // color variable
   --text-57: #5768ff;
 }
 
-.section_container {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
+
+// ............global default settings.................
+
+
+.section_container{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
 }
-/*# sourceMappingURL=App.css.map */
