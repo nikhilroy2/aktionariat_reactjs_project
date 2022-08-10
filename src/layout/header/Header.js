@@ -43,7 +43,7 @@ function HeaderMenu() {
                                 <img src={logo} id="logo" alt="logo" />
                             </a>
                             {/* Left links */}
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0 flex-wrap">
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                                         For companies <i class="fa-solid ms-2 fa-angle-down"></i>
@@ -148,7 +148,7 @@ function HeaderMenu() {
                         {/* Right elements */}
                         <div className="d-flex align-items-center">
                             <a href="#" className='text-white me-4'>Invest in us</a>
-                            <a href="#" className="btn btn-light text-black">
+                            <a href="#" className="btn btn-light text-black p-2 text-nowrap px-3">
                                 Request a demo
                             </a>
                         </div>

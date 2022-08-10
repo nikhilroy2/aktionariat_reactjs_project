@@ -1,5 +1,12 @@
 header#Header {
   // marquee text scroll
+  position: absolute;
+  top: 0;
+  left: 0;
+  .navbar{
+    background: transparent!important;
+    padding: 1.5rem 0rem
+  }
   marquee {
     background: var(--text-57);
     color: white;

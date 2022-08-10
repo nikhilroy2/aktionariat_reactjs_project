@@ -1,3 +1,14 @@
+header#Header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header#Header .navbar {
+  background: transparent !important;
+  padding: 1.5rem 0rem;
+}
+
 header#Header marquee {
   background: var(--text-57);
   color: white;

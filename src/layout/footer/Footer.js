@@ -21,7 +21,7 @@ function Footer(props) {
                             </h3>
                             <ul className="list-unstyled footer_list">
                                 <li>
-                                    <a href="#">For companies <i class="fa-solid fa-angle-down"></i></a>
+                                    <a href="#">For companies</a>
                                 </li>
                                 <li>
                                     <a href="#">For investors</a>

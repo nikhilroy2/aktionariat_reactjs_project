@@ -1,6 +1,12 @@
 #Homepage {
-  padding-top: 12rem;
   #CreateMarketSection {
+    padding-top: 12rem;
+    background-image: linear-gradient(0deg, #000, transparent),
+      linear-gradient(180deg, hsla(0, 0%, 100%, 0.1), transparent),
+      url(./img/bg.svg);
+    background-position: 0 0, 0 0, 0 0;
+    background-size: auto, auto, 100%;
+    background-repeat: repeat, repeat, no-repeat;
     .jumbo_text {
       max-width: 734px;
       h1 {
@@ -18,5 +24,22 @@
         }
       }
     }
+    .req_demo {
+      width: 384px;
+      display: inline-flex;
+      justify-content: space-between;
+    }
+    .company_logo_row {
+      img {
+        max-height: 2.5rem;
+        opacity: 0.8;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  #Companies{
+    
   }
 }

@@ -40,3 +40,20 @@ body {
   font-size: 1.25rem;
   line-height: 1.4;
 }
+.action_arrow {
+  color: #fff !important;
+  opacity: 0.8;
+  font-size: 1.25rem;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.6);
+  padding-bottom: 0.5rem;
+  transition: 0.2s;
+  * {
+    transition: 0.2s;
+  }
+  &:hover {
+    opacity: 1;
+    .arrow {
+      transform: rotate(-45deg);
+    }
+  }
+}

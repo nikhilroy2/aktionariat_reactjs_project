@@ -1,10 +1,16 @@
+footer#footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4rem 0px;
+}
+
 footer#footer .footer_title {
   font-size: 1.25rem;
   line-height: 1.4;
   color: white;
 }
 
-footer#footer .footer_list a, footer#footer .footer_list .footer_item {
+footer#footer .footer_list a,
+footer#footer .footer_list .footer_item {
   display: block;
   margin-top: 0.5rem;
   opacity: 0.7;
@@ -14,7 +20,8 @@ footer#footer .footer_list a, footer#footer .footer_list .footer_item {
   transition: 0.1s;
 }
 
-footer#footer .footer_list a:hover, footer#footer .footer_list .footer_item:hover {
+footer#footer .footer_list a:hover,
+footer#footer .footer_list .footer_item:hover {
   opacity: 1;
 }
 /*# sourceMappingURL=Footer.css.map */

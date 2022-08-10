@@ -41,4 +41,28 @@ body {
   font-size: 1.25rem;
   line-height: 1.4;
 }
+
+.action_arrow {
+  color: #fff !important;
+  opacity: 0.8;
+  font-size: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 0.5rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.action_arrow * {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.action_arrow:hover {
+  opacity: 1;
+}
+
+.action_arrow:hover .arrow {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
 /*# sourceMappingURL=App.css.map */
