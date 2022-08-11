@@ -75,6 +75,10 @@ header#Header menu#HeaderMenu .dropdown-menu li {
   background-color: transparent;
 }
 
+header#Header menu#HeaderMenu .dropdown-menu li .active_item {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 header#Header menu#HeaderMenu .dropdown-menu li:hover {
   background: var(--text-26);
 }

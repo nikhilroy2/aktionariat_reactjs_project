@@ -64,11 +64,11 @@ function HeaderMenu() {
                                         <li>
                                             <a className="dropdown-item" href="#">Legal Package</a>
                                         </li>
-                                        <li>
+                                        <li className='mb-3'>
                                             <a className="dropdown-item" href="#">Pricing</a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">Corporate Login</a>
+                                            <a className="dropdown-item active_item" href="#">Corporate Login</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -90,14 +90,14 @@ function HeaderMenu() {
                                         <li>
                                             <a className="dropdown-item" href="#">Investment Opportunities</a>
                                         </li>
-                                        <li>
+                                        <li className='mb-3'>
                                             <a className="dropdown-item" href="#">How it Works</a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">Invest in Us</a>
+                                            <a className="dropdown-item active_item" href="#">Invest in Us</a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">All Companies</a>
+                                            <a className="dropdown-item active_item" href="#">All Companies</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -108,13 +108,17 @@ function HeaderMenu() {
                                     {/* Dropdown menu */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li>
-                                            <a className="dropdown-item" href="#">FAQ</a>
+                                            <a className="dropdown-item mb-3" href="#">About us</a>
+                                        </li>
+
+                                        <li>
+                                            <a className="dropdown-item active_item" href="#">FAQ</a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">Get in Touch</a>
+                                            <a className="dropdown-item active_item" href="#">Get in Touch</a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">Subscribe to the Newsletter</a>
+                                            <a className="dropdown-item active_item" href="#">Subscribe to the Newsletter</a>
                                         </li>
                                     </ul>
                                 </li>

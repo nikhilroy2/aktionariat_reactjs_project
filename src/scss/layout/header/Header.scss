@@ -59,6 +59,9 @@ header#Header {
       }
       li {
         background-color: transparent;
+        .active_item{
+          background: hsla(0,0%,100%,.1);
+        }
         &:hover {
           background: var(--text-26);
           .dropdown-item {
