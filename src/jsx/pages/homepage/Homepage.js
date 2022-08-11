@@ -1,6 +1,6 @@
 import React from 'react';
-import './Homepage.css';
-import CompanyTable from '../../components/CompanyTable/CompanyTable';
+import '../../../scss/pages/homepage/Homepage.css';
+import CompanyTable from '../../../components/CompanyTable/CompanyTable';
 function Homepage(props) {
     return (
         <div id='Homepage'>
@@ -44,27 +44,27 @@ function CreateMarketSection() {
                 <div className="row company_logo_row my-5">
                     <div className="col">
                         <a href="#">
-                            <img width={112} src={require('./img/nzz.svg').default} alt="nzz" />
+                            <img width={112} src={require('../../../images/pages/homepage/nzz.svg').default} alt="nzz" />
                         </a>
                     </div>
                     <div className="col">
                         <a href="#">
-                            <img width={156} src={require('./img/hslu.svg').default} alt="hslu" />
+                            <img width={156} src={require('../../../images/pages/homepage/hslu.svg').default} alt="hslu" />
                         </a>
                     </div>
                     <div className="col">
                         <a href="#">
-                            <img width={156} src={require('./img/bilanz.svg').default} alt="hslu" />
+                            <img width={156} src={require('../../../images/pages/homepage/bilanz.svg').default} alt="hslu" />
                         </a>
                     </div>
                     <div className="col">
                         <a href="#">
-                            <img width={156} src={require('./img/moneyca.svg').default} alt="hslu" />
+                            <img width={156} src={require('../../../images/pages/homepage/moneyca.svg').default} alt="hslu" />
                         </a>
                     </div>
                     <div className="col">
                         <a href="#">
-                            <img width={161} src={require('./img/startup.svg').default} alt="hslu" />
+                            <img width={161} src={require('../../../images/pages/homepage/startup.svg').default} alt="hslu" />
                         </a>
                     </div>
                 </div>

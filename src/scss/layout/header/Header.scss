@@ -3,9 +3,12 @@ header#Header {
   position: absolute;
   top: 0;
   left: 0;
-  .navbar{
-    background: transparent!important;
-    padding: 1.5rem 0rem
+  .navbar {
+    background: transparent !important;
+    padding: 1.5rem 0rem;
+    .dropdown-item {
+      padding: 0.75rem 1.25rem;
+    }
   }
   marquee {
     background: var(--text-57);
@@ -35,14 +38,27 @@ header#Header {
     a {
       color: white;
     }
-    .dropdown-toggle{
-        &::after{
-            display: none;
-        }
+    .dropdown-toggle {
+      &::after {
+        display: none;
+      }
     }
     .dropdown-menu {
+      border-radius: 0px;
+      padding: 0.25rem;
+      border: 1px solid hsla(0, 0%, 100%, 0.15);
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.8);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      .dropdown-item {
+        background: transparent;
+      }
+      * {
+        border-radius: 0px !important;
+      }
       li {
-        background: var(--text-01);
+        background-color: transparent;
         &:hover {
           background: var(--text-26);
           .dropdown-item {

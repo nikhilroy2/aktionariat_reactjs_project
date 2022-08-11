@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import logo from './logo.svg'
-
-import './Header.css';
+import logo from '../../../images/logo.svg'
+import '../../../scss/layout/header/Header.css'
 function Header(props) {
     return (
         <header id='Header'>

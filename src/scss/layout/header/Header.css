@@ -9,6 +9,10 @@ header#Header .navbar {
   padding: 1.5rem 0rem;
 }
 
+header#Header .navbar .dropdown-item {
+  padding: 0.75rem 1.25rem;
+}
+
 header#Header marquee {
   background: var(--text-57);
   color: white;
@@ -49,8 +53,26 @@ header#Header menu#HeaderMenu .dropdown-toggle::after {
   display: none;
 }
 
+header#Header menu#HeaderMenu .dropdown-menu {
+  border-radius: 0px;
+  padding: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+header#Header menu#HeaderMenu .dropdown-menu .dropdown-item {
+  background: transparent;
+}
+
+header#Header menu#HeaderMenu .dropdown-menu * {
+  border-radius: 0px !important;
+}
+
 header#Header menu#HeaderMenu .dropdown-menu li {
-  background: var(--text-01);
+  background-color: transparent;
 }
 
 header#Header menu#HeaderMenu .dropdown-menu li:hover {
