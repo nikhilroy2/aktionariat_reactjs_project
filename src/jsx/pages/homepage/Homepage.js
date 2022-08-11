@@ -25,10 +25,10 @@ function CreateMarketSection() {
         <section id="CreateMarketSection">
             <div className="section_container">
                 <div className="d-flex">
-                    <div class="jumbo_text"><h1>Create a market for
-                        <span class="text-gradient-3"> your&nbsp;shares</span>
+                    <div className="jumbo_text"><h1>Create a market for
+                        <span className="text-gradient-3"> your&nbsp;shares</span>
                     </h1>
-                        <p class="text-size-medium">We provide Swiss companies with digital tools to create a market for their shares on their website.</p>
+                        <p className="text-size-medium">We provide Swiss companies with digital tools to create a market for their shares on their website.</p>
                     </div>
 
                     <div className="d-flex mb-3">
@@ -84,9 +84,9 @@ function Companies() {
     return (
         <section id="Companies">
             <div className="section_container">
-                <h2 class="heading-label text-color-grey">Investment Opportunities</h2>
-                <div class="margin-bottom margin-small"><p class="heading-large text-weight-bold">Companies</p></div>
-                <p class="paragraph margin-bottom margin-large">Important information: Read our <a href="/disclaimer"><strong>disclaimer</strong> </a>before taking any investment decisions.</p>
+                <h2 className="heading-label text-color-grey">Investment Opportunities</h2>
+                <div className="margin-bottom margin-small"><p className="heading-large text-weight-bold">Companies</p></div>
+                <p className="paragraph margin-bottom margin-large">Important information: Read our <a href="/disclaimer"><strong>disclaimer</strong> </a>before taking any investment decisions.</p>
 
                 <CompanyTable data={company_table_object}></CompanyTable>
             </div>

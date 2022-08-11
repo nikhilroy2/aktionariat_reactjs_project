@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import logo from '../../../images/logo.svg'
+import logo from '../../../images/logo.svg';
+import MenuIcon from '../../../images/layout/header/menu_icon.svg';
 import '../../../scss/layout/header/Header.css'
 function Header(props) {
     return (
@@ -24,6 +25,151 @@ function Header(props) {
 export default Header;
 
 function HeaderMenu() {
+    const companies_object = [
+        {
+            id: 1,
+            name: 'Overview',
+            link: '#',
+            active: false
+        },
+        {
+            id: 2,
+            name: 'Secondary Market',
+            link: '#',
+            active: false
+
+        },
+        {
+            id: 3,
+            name: 'Our Products',
+            link: '#',
+            active: false
+
+        },
+        {
+            id: 4,
+            name: 'Onboarding Process',
+            link: '#',
+            active: false
+
+        },
+        {
+            id: 5,
+            name: 'Legal Package',
+            link: '#',
+            active: false
+
+        },
+        {
+            id: 6,
+            name: 'Pricing',
+            link: '#',
+            active: false
+
+        },
+        {
+            id: 6,
+            name: 'Corporate Login',
+            link: '#',
+            active: true
+        },
+    ]
+    const investors_object = [
+        {
+            id: 1,
+            name: 'Overview',
+            link: '#',
+            active: false,
+        },
+        {
+            id: 2,
+            name: 'Mobile Wallet',
+            link: '#',
+            active: false,
+        },
+        {
+            id: 3,
+            name: 'The Private Equity Market',
+            link: '#',
+            active: false,
+        },
+        {
+            id: 4,
+            name: 'Investment Opportunities',
+            link: '#',
+            active: false,
+        },
+        {
+            id: 5,
+            name: 'How it Works',
+            link: '#',
+            active: false,
+        },
+        {
+            id: 6,
+            name: 'Invest in Us',
+            link: '#',
+            active: true,
+        },
+        {
+            id: 7,
+            name: 'All Companies',
+            link: '#',
+            active: true,
+        },
+    ]
+    const about_us_object = [
+        {
+            id: 1,
+            name: 'About us',
+            link: '#',
+            active: false,
+        },
+        {
+            id: 1,
+            name: 'FAQ',
+            link: '#',
+            active: true,
+        },
+        {
+            id: 1,
+            name: 'Get in Touch',
+            link: '#',
+            active: true,
+        },
+        {
+            id: 1,
+            name: 'Subscribe to the Newsletter',
+            link: '#',
+            active: true,
+        },
+    ]
+    const resource_object = [
+        {
+            id: 1,
+            name: 'Documentation',
+            link: '#',
+            active: false,
+        },
+        {
+            id: 1,
+            name: 'Slide Deck',
+            link: '#',
+            active: false,
+        },
+        {
+            id: 1,
+            name: 'Blog',
+            link: '#',
+            active: false,
+        },
+        {
+            id: 1,
+            name: 'News',
+            link: '#',
+            active: false,
+        },
+    ]
     return (
         <menu id="HeaderMenu">
             <div className="section_container">
@@ -33,7 +179,7 @@ function HeaderMenu() {
                     <div className="container-fluid">
                         {/* Toggle button */}
                         <button className="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <i className="fas fa-bars" />
+                            <img src={MenuIcon} alt="bar" />
                         </button>
                         {/* Collapsible wrapper */}
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -45,103 +191,62 @@ function HeaderMenu() {
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0 flex-wrap">
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                                        For companies <i class="fa-solid ms-2 fa-angle-down"></i>
+                                        For companies <i className="fa-solid ms-2 fa-angle-down"></i>
                                     </a>
                                     {/* Dropdown menu */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li>
-                                            <a className="dropdown-item" href="#">Overview</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">Secondary Market</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">Our Products</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">Onboarding Process</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">Legal Package</a>
-                                        </li>
-                                        <li className='mb-3'>
-                                            <a className="dropdown-item" href="#">Pricing</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item active_item" href="#">Corporate Login</a>
-                                        </li>
+                                        {
+                                            companies_object.map(v => {
+                                                return (
+                                                    <li key={v.id}>
+                                                        <a className={`dropdown-item ${v.active ? 'active_item' : ''}`} href={v.link}>{v.name}</a>
+                                                    </li>
+                                                )
+                                            })
+                                        }
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                                        For investors <i class="fa-solid ms-2 fa-angle-down"></i>
+                                        For investors <i className="fa-solid ms-2 fa-angle-down"></i>
                                     </a>
                                     {/* Dropdown menu */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li>
-                                            <a className="dropdown-item" href="#">Overview</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">Mobile Wallet</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">The Private Equity Market</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">Investment Opportunities</a>
-                                        </li>
-                                        <li className='mb-3'>
-                                            <a className="dropdown-item" href="#">How it Works</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item active_item" href="#">Invest in Us</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item active_item" href="#">All Companies</a>
-                                        </li>
+                                        {investors_object.map(v => {
+                                            return (
+                                                <li key={v.id}>
+                                                    <a className={`dropdown-item ${v.active ? 'active_item' : ''}`} href={v.link}>{v.name}</a>
+                                                </li>
+                                            )
+                                        })}
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                                        About us <i class="fa-solid ms-2 fa-angle-down"></i>
+                                        About us <i className="fa-solid ms-2 fa-angle-down"></i>
                                     </a>
                                     {/* Dropdown menu */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li>
-                                            <a className="dropdown-item mb-3" href="#">About us</a>
-                                        </li>
-
-                                        <li>
-                                            <a className="dropdown-item active_item" href="#">FAQ</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item active_item" href="#">Get in Touch</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item active_item" href="#">Subscribe to the Newsletter</a>
-                                        </li>
+                                        {about_us_object.map(v => {
+                                            return (<li key={v.id}>
+                                                <a className={`dropdown-item ${v.active ? 'active_item' : ''}`} href={v.link}>{v.name}</a>
+                                            </li>)
+                                        })}
                                     </ul>
                                 </li>
 
 
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                                        Resources <i class="fa-solid ms-2 fa-angle-down"></i>
+                                        Resources <i className="fa-solid ms-2 fa-angle-down"></i>
                                     </a>
                                     {/* Dropdown menu */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li>
-                                            <a className="dropdown-item" href="#">Documentation</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">Slide Deck</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">Blog</a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">News</a>
-                                        </li>
+                                        {resource_object.map(v => {
+                                            return (<li key={v.id}>
+                                                <a className={`dropdown-item ${v.active ? 'active_item' : ''}`} href={v.link}>{v.name}</a>
+                                            </li>)
+                                        })}
                                     </ul>
                                 </li>
                             </ul>
@@ -150,7 +255,7 @@ function HeaderMenu() {
                         {/* Collapsible wrapper */}
                         {/* Right elements */}
                         <div className="d-flex align-items-center">
-                            <a href="#" className='text-white me-4'>Invest in us</a>
+                            <a href="#" className='text-white me-4 text-nowrap'>Invest in us</a>
                             <a href="#" className="btn btn-light text-black p-2 text-nowrap px-3">
                                 Request a demo
                             </a>
