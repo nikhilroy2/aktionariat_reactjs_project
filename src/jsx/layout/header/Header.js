@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import logo from '../../../images/logo.svg';
 import MenuIcon from '../../../images/layout/header/menu_icon.svg';
-import '../../../scss/layout/header/Header.css'
+import '../../../scss/layout/header/Header.css';
 function Header(props) {
     return (
         <header id='Header'>
@@ -171,20 +171,26 @@ function HeaderMenu() {
         },
     ]
     return (
-        <menu id="HeaderMenu">
-            <div className="section_container">
+        <menu id="HeaderMenu" className='position-relative'>
+            <div className="section_container px-0">
                 {/* Navbar */}
                 <nav className="navbar navbar-expand-lg navbar-dark bg-black">
                     {/* Container wrapper */}
-                    <div className="container-fluid">
-                        {/* Toggle button */}
-                        <button className="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <img src={MenuIcon} alt="bar" />
-                        </button>
+                    <div className="container-fluid px-0">
+                        <div className="d-flex d-lg-none align-items-center justify-content-between w-100">
+                            <a className="navbar-brand mt-2 mt-lg-0 d-inline-block" href="#">
+                                <img src={logo} id="logo" alt="logo" />
+                            </a>
+
+                            {/* Toggle button */}
+                            <button className="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <img src={MenuIcon} alt="bar" />
+                            </button>
+                        </div>
                         {/* Collapsible wrapper */}
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             {/* Navbar brand */}
-                            <a className="navbar-brand mt-2 mt-lg-0 d-inline-block" href="#">
+                            <a className="navbar-brand mt-2 mt-lg-0 d-none d-lg-inline-block" href="#">
                                 <img src={logo} id="logo" alt="logo" />
                             </a>
                             {/* Left links */}
@@ -254,7 +260,7 @@ function HeaderMenu() {
                         </div>
                         {/* Collapsible wrapper */}
                         {/* Right elements */}
-                        <div className="d-flex align-items-center">
+                        <div className="d-none d-lg-flex align-items-center">
                             <a href="#" className='text-white me-4 text-nowrap'>Invest in us</a>
                             <a href="#" className="btn btn-light text-black p-2 text-nowrap px-3">
                                 Request a demo

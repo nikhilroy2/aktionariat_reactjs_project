@@ -86,4 +86,54 @@ header#Header menu#HeaderMenu .dropdown-menu li:hover {
 header#Header menu#HeaderMenu .dropdown-menu li:hover .dropdown-item {
   background: var(--text-26);
 }
+
+@media (max-width: 991px) {
+  header#Header menu#HeaderMenu .navbar {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    z-index: 1000;
+  }
+  header#Header menu#HeaderMenu .navbar-collapse {
+    background: #161616;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 84px;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+  header#Header menu#HeaderMenu .nav-link {
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header#Header menu#HeaderMenu .dropdown-menu {
+    position: static;
+    margin-right: -2.5rem;
+    margin-left: -2.5rem;
+  }
+  header#Header menu#HeaderMenu .dropdown-menu .dropdown-item {
+    padding: 1rem 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  header#Header menu#HeaderMenu .navbar,
+  header#Header menu#HeaderMenu .navbar-collapse {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+  header#Header menu#HeaderMenu .dropdown-menu {
+    margin-right: -1.25rem;
+    margin-left: -1.25rem;
+  }
+  header#Header menu#HeaderMenu #logo {
+    height: 1rem;
+  }
+}
 /*# sourceMappingURL=Header.css.map */
