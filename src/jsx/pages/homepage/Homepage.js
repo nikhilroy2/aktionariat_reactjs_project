@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../scss/pages/homepage/Homepage.css';
-import CompanyTable from '../../../components/CompanyTable/CompanyTable';
+import CompanyTable from '../../../jsx/components/CompanyTable/CompanyTable';
 function Homepage(props) {
     return (
         <div id='Homepage'>
