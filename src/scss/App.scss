@@ -30,15 +30,10 @@ body {
 // ............global default settings.................
 
 .section_container {
-  max-width: calc(1280px - 5rem);
-  margin-left: auto;
+  width: 100%;
+  max-width: 80rem;
   margin-right: auto;
-
-  @media (max-width: 767px) {
-    max-width: calc(1280px - 2.5rem);
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
-  }
+  margin-left: auto;
 }
 a,
 a:hover {

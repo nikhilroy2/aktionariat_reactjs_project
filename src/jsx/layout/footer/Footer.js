@@ -1,7 +1,129 @@
 import React from 'react';
-import logo from '../../../scss/layout/header/Header.css'
+import logo from '../../../images/logo.svg'
 import '../../../scss/layout/footer/Footer.css';
 function Footer(props) {
+    const footer_object = {
+        solutions: [
+            {
+                id: 1,
+                name: 'For companies',
+                link: '#'
+            },
+            {
+                id: 2,
+                name: 'For investors',
+                link: '#'
+            },
+            {
+                id: 3,
+                name: 'Our products',
+                link: '#'
+            },
+            {
+                id: 4,
+                name: 'Corporate login',
+                link: '#'
+            },
+        ],
+        about_us: [
+            {
+                id: 1,
+                name: 'Our vision',
+                link: '#'
+            },
+            {
+                id: 2,
+                name: 'Team & career',
+                link: '#'
+            },
+            {
+                id: 3,
+                name: 'Our products',
+                link: '#'
+            },
+            {
+                id: 4,
+                name: 'Press room',
+                link: '#'
+            },
+            {
+                id: 5,
+                name: 'FAQ',
+                link: '#'
+            },
+        ],
+        resources: [
+            {
+                id: 1,
+                name: 'Documentation',
+                link: '#'
+            },
+            {
+                id: 2,
+                name: 'Developer resources',
+                link: '#'
+            },
+            {
+                id: 3,
+                name: 'Blogs',
+                link: '#'
+            },
+            {
+                id: 4,
+                name: 'News',
+                link: '#'
+            },
+        ],
+        legal_privacy: [
+            {
+                id: 1,
+                name: 'Terms of service',
+                link: '#'
+            },
+            {
+                id: 2,
+                name: 'Legal package',
+                link: '#'
+            },
+            {
+                id: 3,
+                name: 'Impressum',
+                link: '#'
+            },
+        ],
+        contact: [
+            {
+                id: 1,
+                name: 'E-mail',
+                link: '#'
+            },
+            {
+                id: 2,
+                name: 'Call',
+                link: '#'
+            },
+            {
+                id: 3,
+                name: 'Twitter',
+                link: '#'
+            },
+            {
+                id: 4,
+                name: 'Linkedin',
+                link: '#'
+            },
+            {
+                id: 5,
+                name: 'Telegram',
+                link: '#'
+            },
+            {
+                id: 6,
+                name: 'Youtube',
+                link: '#'
+            },
+        ]
+    }
     return (
         <footer id='footer'>
             <div className="section_container">
@@ -20,19 +142,14 @@ function Footer(props) {
                                 Solutions
                             </h3>
                             <ul className="list-unstyled footer_list">
-                                <li>
-                                    <a href="#">For companies</a>
-                                </li>
-                                <li>
-                                    <a href="#">For investors</a>
-                                </li>
-                                <li>
-                                    <a href="#">Our products</a>
-                                </li>
-                                <li>
-                                    <a href="#">Corporate login</a>
-                                </li>
+                                {footer_object.solutions.map(v => {
+                                    return (
 
+                                        <li key={v.id}>
+                                            <a href={v.link}>{v.name}</a>
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         </div>
 
@@ -41,21 +158,14 @@ function Footer(props) {
                                 About us
                             </h3>
                             <ul className="list-unstyled footer_list">
-                                <li>
-                                    <a href="#">Our vision</a>
-                                </li>
-                                <li>
-                                    <a href="#">Team & career</a>
-                                </li>
-                                <li>
-                                    <a href="#">Our products</a>
-                                </li>
-                                <li>
-                                    <a href="#">Press room</a>
-                                </li>
-                                <li>
-                                    <a href="#">FAQ</a>
-                                </li>
+                                {footer_object.about_us.map(v => {
+                                    return (
+
+                                        <li key={v.id}>
+                                            <a href={v.link}>{v.name}</a>
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         </div>
                         <div className="col-6 col-sm-4 col-md-3 col-lg-2">
@@ -63,18 +173,14 @@ function Footer(props) {
                                 Resources
                             </h3>
                             <ul className="list-unstyled footer_list">
-                                <li>
-                                    <a href="#">Documentation</a>
-                                </li>
-                                <li>
-                                    <a href="#">Developer resources</a>
-                                </li>
-                                <li>
-                                    <a href="#">Blog</a>
-                                </li>
-                                <li>
-                                    <a href="#">News</a>
-                                </li>
+                                {footer_object.resources.map(v => {
+                                    return (
+
+                                        <li key={v.id}>
+                                            <a href={v.link}>{v.name}</a>
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         </div>
 
@@ -83,15 +189,14 @@ function Footer(props) {
                                 Legal & privacy
                             </h3>
                             <ul className="list-unstyled footer_list">
-                                <li>
-                                    <a href="#">Terms of service</a>
-                                </li>
-                                <li>
-                                    <a href="#">Legal package</a>
-                                </li>
-                                <li>
-                                    <a href="#">Impressum</a>
-                                </li>
+                                {footer_object.legal_privacy.map(v => {
+                                    return (
+
+                                        <li key={v.id}>
+                                            <a href={v.link}>{v.name}</a>
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         </div>
 
@@ -101,24 +206,14 @@ function Footer(props) {
                                 Contact
                             </h3>
                             <ul className="list-unstyled footer_list">
-                                <li>
-                                    <a href="#">E-mail</a>
-                                </li>
-                                <li>
-                                    <a href="#">Call</a>
-                                </li>
-                                <li>
-                                    <a href="#">Twitter</a>
-                                </li>
-                                <li>
-                                    <a href="#">Linkedin</a>
-                                </li>
-                                <li>
-                                    <a href="#">Telegram</a>
-                                </li>
-                                <li>
-                                    <a href="#">Youtube</a>
-                                </li>
+                                {footer_object.contact.map(v => {
+                                    return (
+
+                                        <li key={v.id}>
+                                            <a href={v.link}>{v.name}</a>
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         </div>
                     </div>
