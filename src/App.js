@@ -8,19 +8,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // ......................Pages import.....................
 import Homepage from './jsx/pages/homepage/Homepage'
-
+import ForCompanies from './jsx/pages/for_companies/for_companies';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={
-            <Base> <Homepage></Homepage></Base>
-          }></Route>
-        </Routes>
+        <Base>
+          <Routes>
+            <Route path="/" element={<Homepage></Homepage>}></Route>
+            <Route path="/for-companies" element={<ForCompanies></ForCompanies>}></Route>
+          </Routes>
+        </Base>
       </BrowserRouter>
-
     </div>
   );
 }

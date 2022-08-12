@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import logo from '../../../images/logo.svg';
 import MenuIcon from '../../../images/layout/header/menu_icon.svg';
 import '../../../scss/layout/header/Header.css';
+import { Link } from 'react-router-dom';
 function Header(props) {
     return (
         <header id='Header'>
@@ -29,7 +30,7 @@ function HeaderMenu() {
         {
             id: 1,
             name: 'Overview',
-            link: '#',
+            link: '/for-companies',
             active: false
         },
         {
@@ -178,9 +179,10 @@ function HeaderMenu() {
                     {/* Container wrapper */}
                     <div className="container-fluid px-0">
                         <div className="d-flex d-lg-none align-items-center justify-content-between w-100">
-                            <a className="navbar-brand mt-2 mt-lg-0 d-inline-block" href="#">
+                            <Link to="/" className="navbar-brand mt-2 mt-lg-0 d-inline-block">
                                 <img src={logo} id="logo" alt="logo" />
-                            </a>
+                            </Link>
+
 
                             {/* Toggle button */}
                             <button className="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -190,22 +192,22 @@ function HeaderMenu() {
                         {/* Collapsible wrapper */}
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             {/* Navbar brand */}
-                            <a className="navbar-brand mt-2 mt-lg-0 d-none d-lg-inline-block" href="#">
+                            <Link to="/" className="navbar-brand mt-2 mt-lg-0 d-none d-lg-inline-block">
                                 <img src={logo} id="logo" alt="logo" />
-                            </a>
+                            </Link>
                             {/* Left links */}
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0 flex-wrap">
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <Link to="/for-companies" className="nav-link dropdown-toggle" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                                         For companies <i className="fa-solid ms-2 fa-angle-down"></i>
-                                    </a>
+                                    </Link>
                                     {/* Dropdown menu */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         {
                                             companies_object.map(v => {
                                                 return (
                                                     <li key={v.id}>
-                                                        <a className={`dropdown-item ${v.active ? 'active_item' : ''}`} href={v.link}>{v.name}</a>
+                                                        <Link to={v.link} className={`dropdown-item ${v.active ? 'active_item' : ''}`} href={v.link}>{v.name}</Link>
                                                     </li>
                                                 )
                                             })

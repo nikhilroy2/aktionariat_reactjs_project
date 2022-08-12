@@ -81,4 +81,14 @@ a:hover {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+
+.section_padding_top {
+  padding-top: 12rem;
+}
+
+@media (max-width: 991px) {
+  .section_padding_top {
+    padding-top: 8rem;
+  }
+}
 /*# sourceMappingURL=App.css.map */

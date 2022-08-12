@@ -1,11 +1,14 @@
 import React from 'react';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
+import '../../../scss/layout/base/Base.css';
 function Base(props) {
     return (
         <div id="Base">
             <Header></Header>
-            {props.children}
+            <main>
+                {props.children}
+            </main>
             <Footer></Footer>
         </div>
     );
