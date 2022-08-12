@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../../scss/pages/homepage/Homepage.css';
 import CompanyTable from '../../../jsx/components/CompanyTable/CompanyTable';
+
 function Homepage(props) {
     return (
         <div id='Homepage'>
@@ -139,6 +140,39 @@ function VideoSection() {
 }
 
 function CompanyEmpower() {
+    const card_object = [
+        {
+            id: 1,
+            link: 'http://client.aktionariat.com/continuous-fundraising',
+            title: 'Continuous fundraising',
+            description: `Allow new investors to buy-in at any time directly through
+            your website.`,
+            img: 'https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61b28a3ce52d49394879f9a3_icon-color-continuous.svg',
+        },
+        {
+            id: 2,
+            link: 'http://client.aktionariat.com/community-engagement',
+            title: 'Community engagement',
+            description: `Let clients, suppliers, and other stakeholders participate in
+            your success.`,
+            img: 'https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61b28a3cb5fb87497a989a3c_icon-color-community.svg',
+        },
+        {
+            id: 3,
+            link: 'http://client.aktionariat.com/continuous-fundraising',
+            title: 'Employee participation',
+            description: `Incentivize your employees with real shares of tangible value.`,
+            img: 'https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61b28a3df007f810f5190a69_icon-color-employee.svg',
+        },
+        {
+            id: 4,
+            link: 'http://client.aktionariat.com/continuous-fundraising',
+            title: 'Strategic independence',
+            description: `Enjoy liquidity and grow your company without being pushed
+            towards an exit.`,
+            img: 'https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61b28a3de52d49649479f9a4_icon-color-strategic.svg',
+        },
+    ]
     return (
 
         <section id="CompanyEmpower" className='section section-grey'>
@@ -157,127 +191,45 @@ function CompanyEmpower() {
                             </div>
                         </div>
                         <div className="content-grid">
-                            <div
-                                id="w-node-_56209af1-0039-0a72-959e-32a5445db57c-445db57b"
-                                className="hover-card-item background-color-gradient-1"
-                            >
-                                <div className="hover-card-content justify-start">
-                                    <div className="margin-bottom margin-medium">
-                                        <img
-                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61b28a3ce52d49394879f9a3_icon-color-continuous.svg"
-                                            loading="lazy"
-                                            alt
-                                            className="icon-1x1-small"
-                                            style={{ filter: "saturate(0%) brightness(200%)" }}
-                                        />
-                                    </div>
-                                    <div className="max-width-full">
-                                        <div className="margin-bottom margin-small">
-                                            <h3 className="text-size-xlarge text-weight-normal">
-                                                <a href="http://client.aktionariat.com/continuous-fundraising">
-                                                    Continuous fundraising
-                                                </a>
-                                            </h3>
+                            {
+                                card_object.map(v => {
+                                    return (
+                                        <div key={v.id}
+                                            id="w-node-_56209af1-0039-0a72-959e-32a5445db57c-445db57b"
+                                            className="hover-card-item background-color-gradient-1"
+                                        >
+                                            <div className="hover-card-content justify-start">
+                                                <div className="margin-bottom margin-medium">
+                                                    <img
+                                                        src={v.img}
+                                                        loading="lazy"
+                                                        alt="img"
+                                                        className="icon-1x1-small"
+                                                        style={{ filter: "saturate(0%) brightness(200%)" }}
+                                                    />
+                                                </div>
+                                                <div className="max-width-full">
+                                                    <div className="margin-bottom margin-small">
+                                                        <h3 className="text-size-xlarge text-weight-normal">
+                                                            <a href={v.link}>
+                                                                {v.title}
+                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <p className="text-color-darkgrey">
+                                                        {v.description}
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <p className="text-color-darkgrey">
-                                            Allow new investors to buy-in at any time directly through
-                                            your website.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-_56209af1-0039-0a72-959e-32a5445db586-445db57b"
-                                className="hover-card-item background-color-gradient-1"
-                            >
-                                <div className="hover-card-content justify-start">
-                                    <div className="margin-bottom margin-medium">
-                                        <img
-                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61b28a3cb5fb87497a989a3c_icon-color-community.svg"
-                                            loading="lazy"
-                                            alt
-                                            className="icon-1x1-small"
-                                            style={{ filter: "saturate(0%) brightness(200%)" }}
-                                        />
-                                    </div>
-                                    <div className="max-width-full">
-                                        <div className="margin-bottom margin-small">
-                                            <h3 className="text-size-xlarge text-weight-normal">
-                                                <a href="http://client.aktionariat.com/community-engagement">
-                                                    Community engagement
-                                                </a>
-                                            </h3>
-                                        </div>
-                                        <p className="text-color-darkgrey">
-                                            Let clients, suppliers, and other stakeholders participate in
-                                            your success.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-_56209af1-0039-0a72-959e-32a5445db590-445db57b"
-                                className="hover-card-item background-color-gradient-1"
-                            >
-                                <div className="hover-card-content justify-start">
-                                    <div className="margin-bottom margin-medium">
-                                        <img
-                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61b28a3df007f810f5190a69_icon-color-employee.svg"
-                                            loading="lazy"
-                                            alt
-                                            className="icon-1x1-small"
-                                            style={{ filter: "saturate(0%) brightness(200%)" }}
-                                        />
-                                    </div>
-                                    <div className="max-width-full">
-                                        <div className="margin-bottom margin-small">
-                                            <h3 className="text-size-xlarge text-weight-normal">
-                                                <a href="http://client.aktionariat.com/employee-participation">
-                                                    Employee participation
-                                                </a>
-                                            </h3>
-                                        </div>
-                                        <p className="text-color-darkgrey">
-                                            Incentivize your employees with real shares of tangible value.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-_56209af1-0039-0a72-959e-32a5445db59a-445db57b"
-                                className="hover-card-item background-color-gradient-1"
-                            >
-                                <div className="hover-card-content justify-start">
-                                    <div className="margin-bottom margin-medium">
-                                        <img
-                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61b28a3de52d49649479f9a4_icon-color-strategic.svg"
-                                            loading="lazy"
-                                            alt
-                                            className="icon-1x1-small"
-                                            style={{ filter: "saturate(0%) brightness(200%)" }}
-                                        />
-                                    </div>
-                                    <div className="max-width-full">
-                                        <div className="margin-bottom margin-small">
-                                            <h3 className="text-size-xlarge text-weight-normal">
-                                                <a href="http://client.aktionariat.com/strategic-independence">
-                                                    Strategic independence
-                                                </a>
-                                            </h3>
-                                        </div>
-                                        <p className="text-color-darkgrey">
-                                            Enjoy liquidity and grow your company without being pushed
-                                            towards an exit.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     )
 }
 
@@ -334,25 +286,12 @@ function OurVision() {
                                 </div>
                                 <a
                                     href="/for-companies"
-                                    className="button-arrow button-arrow-large w-inline-block"
+                                    className="button-arrow action_arrow button-arrow-large w-inline-block"
                                 >
-                                    <div>Show more</div>
-                                    <div
-                                        className="arrow"
-                                        style={{
-                                            "-webkit-transform":
-                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                            "-ms-transform":
-                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                            transform:
-                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                            "-webkit-transform-style": "preserve-3d",
-                                            "-ms-transform-style": "preserve-3d",
-                                            "transform-style": "preserve-3d",
-                                        }}
-                                    >
+                                    Show more
+                                    <span className="arrow">
                                         ↘
-                                    </div>
+                                    </span>
                                 </a>
                             </div>
                             <div
@@ -379,25 +318,11 @@ function OurVision() {
                                 </div>
                                 <a
                                     href="/for-investors"
-                                    className="button-arrow button-arrow-large w-inline-block"
+                                    className="button-arrow action_arrow button-arrow-large w-inline-block"
                                 >
-                                    <div>Show more</div>
-                                    <div
-                                        className="arrow"
-                                        style={{
-                                            "-webkit-transform":
-                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                            "-ms-transform":
-                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                            transform:
-                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                            "-webkit-transform-style": "preserve-3d",
-                                            "-ms-transform-style": "preserve-3d",
-                                            "transform-style": "preserve-3d",
-                                        }}
-                                    >
-                                        ↘
-                                    </div>
+                                    Show more
+
+                                    <span className="arrow">↘</span>
                                 </a>
                             </div>
                             <div
@@ -405,10 +330,9 @@ function OurVision() {
                                 className="image-text-block image-center"
                             >
                                 <img
-                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619bf6878cc1d17312902939_aktionariat-vision-artwork.png"
+                                    src={require('../../../images/pages/homepage/vision-artwork.png')}
                                     loading="lazy"
                                     width={550}
-                                    srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619bf6878cc1d17312902939_aktionariat-vision-artwork-p-500.png 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619bf6878cc1d17312902939_aktionariat-vision-artwork-p-800.png 800w, https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619bf6878cc1d17312902939_aktionariat-vision-artwork.png 1188w"
                                     sizes="(max-width: 479px) 30.75px, (max-width: 767px) 40.5px, 100vw"
                                     alt="Ethereum Blockchain powered direct relationship artwork."
                                 />
@@ -432,6 +356,7 @@ function OurVision() {
 }
 
 function OurSolution() {
+    const [tabOpen, setTabOpen] = useState(1);
     return (
         <section id="OurSolution" className='section section-grey'>
             <div className="page-padding">
@@ -464,25 +389,21 @@ function OurSolution() {
                                 href="https://www.aktionariat.com/investor-relations#brokerbot"
                                 className="image-block image-center background-color-gradient-1 w-inline-block"
                             >
-                                <img
-                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/62c2f06c8f5e0d3a1ff2e5d1_buy.png"
-                                    loading="lazy"
+                                {tabOpen === 1 ? <img
+                                    src={require('../../../images/pages/homepage/buy.png')}
                                     width={420}
-                                    data-w-id="27d0e4a0-dda7-9b67-fc5b-6b722aff9f8d"
-                                    sizes="(max-width: 479px) 100vw, (max-width: 767px) 27.53125px, (max-width: 991px) 8.796875px, 10.046875px"
-                                    srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/62c2f06c8f5e0d3a1ff2e5d1_buy-p-500.png 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/62c2f06c8f5e0d3a1ff2e5d1_buy.png 515w"
-                                    alt
+                                    alt=""
                                     className="our-vision-image-1"
-                                />
-                                <img
-                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61994137fe057294ef9139c2_aktionariat-portfolio-app.gif"
-                                    loading="lazy"
-                                    width={321}
-                                    height
-                                    data-w-id="27d0e4a0-dda7-9b67-fc5b-6b722aff9f8e"
-                                    alt="Portfolio App Screens Gif"
-                                    className="our-vision-image-2"
-                                />
+                                /> :
+                                    <img
+                                        src={require('../../../images/pages/homepage/portfolio-app.gif')}
+
+                                        width={321}
+
+                                        alt="Portfolio App Screens Gif"
+                                        className="our-vision-image-1"
+                                    />}
+
                             </a>
                             <div
                                 id="w-node-_27d0e4a0-dda7-9b67-fc5b-6b722aff9f8f-2aff9f7c"
@@ -496,31 +417,16 @@ function OurSolution() {
                                     className="product-tabs w-tabs"
                                 >
                                     <div className="product-tabs-menu w-tab-menu" role="tablist">
-                                        <a
-                                            data-w-tab="Tab 1"
-                                            data-w-id="27d0e4a0-dda7-9b67-fc5b-6b722aff9f92"
-                                            className="product-tab-link w-inline-block w-tab-link w--current"
-                                            id="w-tabs-0-data-w-tab-0"
-                                            href="#w-tabs-0-data-w-pane-0"
-                                            role="tab"
-                                            aria-controls="w-tabs-0-data-w-pane-0"
-                                            aria-selected="true"
-                                        >
-                                            <div>Brokerbot</div>
-                                        </a>
-                                        <a
-                                            data-w-tab="Tab 2"
-                                            data-w-id="27d0e4a0-dda7-9b67-fc5b-6b722aff9f95"
-                                            className="product-tab-link w-inline-block w-tab-link"
-                                            tabIndex={-1}
-                                            id="w-tabs-0-data-w-tab-1"
-                                            href="#w-tabs-0-data-w-pane-1"
-                                            role="tab"
-                                            aria-controls="w-tabs-0-data-w-pane-1"
-                                            aria-selected="false"
-                                        >
+                                        <button onClick={() => setTabOpen(1)}
+                                            className={`product-tab-link w-inline-block w-tab-link ${tabOpen === 1 ? 'w--current' : ''}`}>
+                                            <div>Brokerbot</div></button>
+
+
+
+                                        <button onClick={() => setTabOpen(2)}
+                                            className={`product-tab-link w-inline-block w-tab-link ${tabOpen === 2 ? 'w--current' : ''}`}>
                                             <div>Portfolio&nbsp;App</div>
-                                        </a>
+                                        </button>
                                     </div>
                                     <div className="product-tabs-content w-tab-content">
                                         <div
@@ -530,7 +436,7 @@ function OurSolution() {
                                             role="tabpanel"
                                             aria-labelledby="w-tabs-0-data-w-tab-0"
                                         >
-                                            <div className="content-block space-between">
+                                            {tabOpen === 1 ? <div className="content-block space-between">
                                                 <div className="margin-bottom margin-medium">
                                                     <h3 className="text-size-xlarge text-weight-normal">
                                                         A fully automated,{" "}
@@ -556,27 +462,49 @@ function OurSolution() {
                                                 </div>
                                                 <a
                                                     href="/for-companies"
-                                                    className="button-arrow button-arrow-large w-inline-block"
+                                                    className="button-arrow action_arrow button-arrow-large w-inline-block"
                                                 >
                                                     <div>Learn more</div>
-                                                    <div
-                                                        className="arrow"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
+
+                                                    <span className="arrow">
                                                         ↘
-                                                    </div>
+                                                    </span>
                                                 </a>
-                                            </div>
+                                            </div> :
+
+                                                <div className="content-block space-between">
+                                                    <div className="margin-bottom margin-medium">
+                                                        <h3 className="text-size-xlarge text-weight-normal">
+                                                            <span className="text-gradient-1">Manage</span> and{" "}
+                                                            <span className="text-gradient-1">store</span> your assets.
+                                                        </h3>
+                                                    </div>
+                                                    <div className="margin-bottom margin-medium">
+                                                        <ul role="list" className="text-color-darkgrey">
+                                                            <li>Trade tokenized shares by connecting with the Brokerbot</li>
+                                                            <li>
+                                                                Manage Ethereum-based assets (self custody wallet) &amp; traditional
+                                                                shares
+                                                            </li>
+                                                            <li>Request the tokenization of traditional shares</li>
+                                                            <li>Transfer Ethereum and Optimism-based assets </li>
+                                                            <li>Supports the WalletConnect protocol</li>
+                                                        </ul>
+                                                    </div>
+                                                    <a
+                                                        href="/for-companies"
+                                                        className="button-arrow action_arrow button-arrow-large w-inline-block"
+                                                    >
+                                                        <div>Show more</div>
+                                                        <span className="arrow">
+                                                            ↘
+                                                        </span>
+                                                    </a>
+                                                </div>
+
+
+                                            }
+
                                         </div>
                                         <div
                                             data-w-tab="Tab 2"
