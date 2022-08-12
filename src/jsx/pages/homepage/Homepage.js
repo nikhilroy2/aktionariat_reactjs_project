@@ -21,17 +21,49 @@ export default Homepage;
 
 
 function CreateMarketSection() {
+    const company_object = [
+        {
+            id: 1,
+            img: require('../../../images/pages/homepage/nzz.svg').default,
+            link: '#',
+            width: 112,
+        },
+        {
+            id: 2,
+            img: require('../../../images/pages/homepage/hslu.svg').default,
+            link: '#',
+            width: 156,
+        },
+        {
+            id: 3,
+            img: require('../../../images/pages/homepage/bilanz.svg').default,
+            link: '#',
+            width: 156,
+        },
+        {
+            id: 4,
+            img: require('../../../images/pages/homepage/moneyca.svg').default,
+            link: '#',
+            width: 156,
+        },
+        {
+            id: 5,
+            img: require('../../../images/pages/homepage/startup.svg').default,
+            link: '#',
+            width: 161,
+        },
+
+    ]
     return (
         <section id="CreateMarketSection">
             <div className="section_container">
-                <div className="d-flex">
+                <div className="d-flex justify-content-between flex-wrap flex-lg-nowrap">
                     <div className="jumbo_text"><h1>Create a market for
                         <span className="text-gradient-3"> your&nbsp;shares</span>
                     </h1>
                         <p className="text-size-medium">We provide Swiss companies with digital tools to create a market for their shares on their website.</p>
                     </div>
-
-                    <div className="d-flex mb-3">
+                    <div className="d-flex mb-3 justify-content-end req_wrapper mt-4">
                         <a href="#" className='req_demo action_arrow align-items-end'>
                             Request a Demo
                             <span className="arrow">
@@ -40,33 +72,17 @@ function CreateMarketSection() {
                         </a>
                     </div>
                 </div>
+                <div className="row company_logo_row flex-wrap flex-sm-nowrap my-3 my-md-5 py-md-5 align-items-center">
 
-                <div className="row company_logo_row my-5">
-                    <div className="col">
-                        <a href="#">
-                            <img width={112} src={require('../../../images/pages/homepage/nzz.svg').default} alt="nzz" />
-                        </a>
-                    </div>
-                    <div className="col">
-                        <a href="#">
-                            <img width={156} src={require('../../../images/pages/homepage/hslu.svg').default} alt="hslu" />
-                        </a>
-                    </div>
-                    <div className="col">
-                        <a href="#">
-                            <img width={156} src={require('../../../images/pages/homepage/bilanz.svg').default} alt="hslu" />
-                        </a>
-                    </div>
-                    <div className="col">
-                        <a href="#">
-                            <img width={156} src={require('../../../images/pages/homepage/moneyca.svg').default} alt="hslu" />
-                        </a>
-                    </div>
-                    <div className="col">
-                        <a href="#">
-                            <img width={161} src={require('../../../images/pages/homepage/startup.svg').default} alt="hslu" />
-                        </a>
-                    </div>
+                    {company_object.map(v => {
+                        return (
+                            <div className={`col ${v.id !== 1 ? 'text-end' : ''}`}>
+                                <a href={v.link}>
+                                    <img width={v.width} src={v.img} alt="img" />
+                                </a>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </section>

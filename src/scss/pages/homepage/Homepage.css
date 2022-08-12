@@ -7,13 +7,24 @@
   background-repeat: repeat, repeat, no-repeat;
 }
 
+@media (max-width: 991px) {
+  #Homepage #CreateMarketSection {
+    padding-top: 8rem;
+  }
+}
+
 #Homepage #CreateMarketSection .jumbo_text {
   max-width: 734px;
 }
 
+@media (max-width: 991px) {
+  #Homepage #CreateMarketSection .jumbo_text {
+    max-width: 600px;
+  }
+}
+
 #Homepage #CreateMarketSection .jumbo_text h1 {
   margin-bottom: 2rem;
-  font-size: 5.5rem;
   line-height: 1;
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -27,6 +38,12 @@
   -webkit-box-decoration-break: clone;
 }
 
+@media (max-width: 991px) {
+  #Homepage #CreateMarketSection .req_wrapper {
+    width: 100%;
+  }
+}
+
 #Homepage #CreateMarketSection .req_demo {
   width: 384px;
   display: -webkit-inline-box;
@@ -35,6 +52,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  #Homepage #CreateMarketSection .req_demo {
+    width: 100%;
+  }
 }
 
 #Homepage #CreateMarketSection .company_logo_row img {
