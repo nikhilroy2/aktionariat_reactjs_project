@@ -12,12 +12,12 @@
         <a href="https://aktionariat-nl-reactjs-project.netlify.app/">https://aktionariat-nl-reactjs-project.netlify.app/</a>
     </li>
     <li>
-        <a href="https://aktionariat-nl-reactjs-project.netlify.app/for-companies">https://aktionariat-nl-reactjs-project.netlify.app/</a>
+        <a href="https://aktionariat-nl-reactjs-project.netlify.app/for-companies">https://aktionariat-nl-reactjs-project.netlify.app/for-companies</a>
     </li>
     <li>
-        <a href="https://aktionariat-nl-reactjs-project.netlify.app/for-investors">https://aktionariat-nl-reactjs-project.netlify.app/</a>
+        <a href="https://aktionariat-nl-reactjs-project.netlify.app/for-investors">https://aktionariat-nl-reactjs-project.netlify.app/for-investors</a>
     </li>
     <li>
-        <a href="https://aktionariat-nl-reactjs-project.netlify.app/our-products/brokerbot">https://aktionariat-nl-reactjs-project.netlify.app/</a>
+        <a href="https://aktionariat-nl-reactjs-project.netlify.app/our-products/brokerbot">https://aktionariat-nl-reactjs-project.netlify.app/our-products/brokerbot</a>
     </li>
 </ul>
