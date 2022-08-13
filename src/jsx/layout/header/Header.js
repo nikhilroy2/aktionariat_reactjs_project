@@ -36,14 +36,14 @@ function HeaderMenu() {
         {
             id: 2,
             name: 'Secondary Market',
-            link: '#',
+            link: '#OpenMarket',
             active: false
 
         },
         {
             id: 3,
             name: 'Our Products',
-            link: '#',
+            link: '#market-widgets',
             active: false
 
         },

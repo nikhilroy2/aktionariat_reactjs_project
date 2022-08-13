@@ -8,6 +8,10 @@
 * {
   box-sizing: border-box;
   font-family: abc_favorit;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
