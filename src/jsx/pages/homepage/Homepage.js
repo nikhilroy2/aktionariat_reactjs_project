@@ -572,6 +572,32 @@ function OurSolution() {
 }
 
 function LatestBlogs() {
+    const blogs_object = [
+        {
+            id: 1,
+            img: require('../../../images/pages/homepage/blog_img1.png'),
+            date: 'July 21, 2022',
+            description: `SIX Digital Exchange partners with Aktionariat to
+            provide greater access to capital through digital
+            securities in Switzerland`,
+            link: '/blogs/six-digital-exchange-partners-with-aktionariat'
+        },
+        {
+            id: 2,
+            img: require('../../../images/pages/homepage/wallet-p-800.png'),
+            date: 'May 10, 2022',
+            description: `Wallets for cryptocurrencies: An overview.`,
+            link: 'blogs/wallets-for-cryptocurrencies-an-overview'
+        },
+        {
+            id: 3,
+            img: require('../../../images/pages/homepage/blog-3-p-1080.jpeg'),
+            date: 'April 7, 2022',
+            description: `Reasons for Optimism: Aktionariat implemented Ethereum Layer-2 Optimism roll-up protocol`,
+            link: '/blogs/reasons-for-optimism-aktionariat-implements-ethereum-layer-2-optimism-roll-up-protocol'
+        },
+
+    ]
     return (
         <section id="LatestBlogs">
             <div className="page-padding">
@@ -589,130 +615,50 @@ function LatestBlogs() {
                             <div className="blog1_component">
                                 <div className="blog1_list-wrapper w-dyn-list">
                                     <div role="list" className="collection-grid w-dyn-items">
-                                        <div
-                                            id="w-node-_3cec4047-dc23-a95a-b6f8-b68a04997983-04997981"
-                                            role="listitem"
-                                            className="blog1_item w-dyn-item"
-                                        >
-                                            <div className="blog_content-wrapper">
-                                                <div className="blog_image-wrapper">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX.png"
-                                                        loading="lazy"
-                                                        alt
-                                                        sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
-                                                        srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX-p-500.png 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX.png 714w"
-                                                        className="image-100"
-                                                    />
-                                                </div>
-                                                <div className="blog_content">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-large text-weight-normal">
-                                                            SIX Digital Exchange partners with Aktionariat to
-                                                            provide greater access to capital through digital
-                                                            securities in Switzerland
-                                                        </h3>
-                                                    </div>
-                                                    <div className="text-size-small text-color-lightgrey">
-                                                        July 21, 2022
-                                                    </div>
-                                                </div>
-                                                <a
-                                                    href="/blogs/six-digital-exchange-partners-with-aktionariat"
-                                                    className="blog1_item-link w-inline-block"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div
-                                            id="w-node-_3cec4047-dc23-a95a-b6f8-b68a04997983-04997981"
-                                            role="listitem"
-                                            className="blog1_item w-dyn-item"
-                                        >
-                                            <div className="blog_content-wrapper">
-                                                <div className="blog_image-wrapper">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet.png"
-                                                        loading="lazy"
-                                                        alt="Wallets for cryptocurrencies: A comparison of hot, cold and smart wallets."
-                                                        sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
-                                                        srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet-p-500.png 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet-p-800.png 800w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet-p-1080.png 1080w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet-p-1600.png 1600w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet-p-2000.png 2000w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet.png 2136w"
-                                                        className="image-100"
-                                                    />
-                                                </div>
-                                                <div className="blog_content">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-large text-weight-normal">
-                                                            Wallets for cryptocurrencies: An overview.
-                                                        </h3>
-                                                    </div>
-                                                    <div className="text-size-small text-color-lightgrey">
-                                                        May 10, 2022
+
+                                        {blogs_object.map(v => {
+                                            return (
+                                                <div key={v.id}
+                                                    id="w-node-_3cec4047-dc23-a95a-b6f8-b68a04997983-04997981"
+                                                    role="listitem"
+                                                    className="blog1_item w-dyn-item"
+                                                >
+                                                    <div className="blog_content-wrapper">
+                                                        <div className="blog_image-wrapper">
+                                                            <img
+                                                                src={v.img}
+                                                                loading="lazy"
+                                                                alt="img"
+                                                                className="image-100"
+                                                            />
+                                                        </div>
+                                                        <div className="blog_content">
+                                                            <div className="margin-bottom margin-small">
+                                                                <h3 className="text-size-large text-weight-normal">
+                                                                    {v.description}
+                                                                </h3>
+                                                            </div>
+                                                            <div className="text-size-small text-color-lightgrey">
+                                                                {v.date}
+                                                            </div>
+                                                        </div>
+                                                        <a href={v.link} className="blog1_item-link w-inline-block"> </a>
                                                     </div>
                                                 </div>
-                                                <a
-                                                    href="/blogs/wallets-for-cryptocurrencies-an-overview"
-                                                    className="blog1_item-link w-inline-block"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div
-                                            id="w-node-_3cec4047-dc23-a95a-b6f8-b68a04997983-04997981"
-                                            role="listitem"
-                                            className="blog1_item w-dyn-item"
-                                        >
-                                            <div className="blog_content-wrapper">
-                                                <div className="blog_image-wrapper">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/624ea4878fb43cb4988be640_aktionariat-layer-2-optimisasdm-blog-3.jpeg"
-                                                        loading="lazy"
-                                                        alt="Reasons for Optimism: Aktionariat implemented Ethereum Layer-2 Optimism roll-up protocol"
-                                                        sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
-                                                        srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/624ea4878fb43cb4988be640_aktionariat-layer-2-optimisasdm-blog-3-p-500.jpeg 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/624ea4878fb43cb4988be640_aktionariat-layer-2-optimisasdm-blog-3-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/624ea4878fb43cb4988be640_aktionariat-layer-2-optimisasdm-blog-3-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/624ea4878fb43cb4988be640_aktionariat-layer-2-optimisasdm-blog-3-p-2000.jpeg 2000w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/624ea4878fb43cb4988be640_aktionariat-layer-2-optimisasdm-blog-3.jpeg 2560w"
-                                                        className="image-100"
-                                                    />
-                                                </div>
-                                                <div className="blog_content">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-large text-weight-normal">
-                                                            Reasons for Optimism: Aktionariat implemented Ethereum
-                                                            Layer-2 Optimism roll-up protocol
-                                                        </h3>
-                                                    </div>
-                                                    <div className="text-size-small text-color-lightgrey">
-                                                        April 7, 2022
-                                                    </div>
-                                                </div>
-                                                <a
-                                                    href="/blogs/reasons-for-optimism-aktionariat-implements-ethereum-layer-2-optimism-roll-up-protocol"
-                                                    className="blog1_item-link w-inline-block"
-                                                />
-                                            </div>
-                                        </div>
+                                            )
+                                        })}
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <a
                             href="/blog"
-                            className="button-arrow button-arrow-large w-inline-block"
+                            className="action_arrow button-arrow button-arrow-large w-inline-block"
                         >
                             <div>Show more</div>
-                            <div
-                                className="arrow"
-                                style={{
-                                    "-webkit-transform":
-                                        "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                    "-ms-transform":
-                                        "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                    transform:
-                                        "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                    "-webkit-transform-style": "preserve-3d",
-                                    "-ms-transform-style": "preserve-3d",
-                                    "transform-style": "preserve-3d",
-                                }}
-                            >
+                            <spaan className="arrow">
                                 ↘
-                            </div>
+                            </spaan>
                         </a>
                     </div>
                 </div>
@@ -722,6 +668,27 @@ function LatestBlogs() {
 }
 
 function LatestNews() {
+    const news_object = [
+        {
+            id: 1,
+            link: '/blogs/six-digital-exchange-partners-with-aktionariat',
+            img: require('../../../images/pages/homepage/blog_img1.png'),
+            description: `SIX Digital Exchange partners with Aktionariat to provide greater access to capital through digital securities in Switzerland
+            `
+        },
+        {
+            id: 2,
+            link: 'https://www.nzz.ch/finanzen/private-finanzen/startups-und-fintech-neue-finanzprodukte-fuer-privatanleger-ld.1692186',
+            img: require('../../../images/pages/homepage/Aktionariat-0016-p-800.jpg'),
+            description: `Startups für alle: Die «Demokratisierung» von Private Equity und Venture Capital hat begonnen`
+        },
+        {
+            id: 3,
+            link: 'https://www.moneycab.com/finanz/realunit-schweiz-erstmals-aktien-einer-schweizer-boersenkotierten-gesellschaft-direkt-ueber-blockchain-erwerben/',
+            img: require('../../../images/pages/homepage/realuXaktionariat-p-800.jpeg'),
+            description: `Erstmals Aktien einer Schweizer börsenkotierten Gesellschaft direkt über Blockchain erwerben`
+        },
+    ]
     return (
         <section id="LatestNews" className='section section-grey'>
             <div className="page-padding">
@@ -739,103 +706,39 @@ function LatestNews() {
                             <div className="blog1_component">
                                 <div className="blog1_list-wrapper w-dyn-list">
                                     <div role="list" className="collection-grid w-dyn-items">
-                                        <div
-                                            id="w-node-b6f51d02-9f4a-53e5-7a6c-3f373218c71a-3218c718"
-                                            role="listitem"
-                                            className="blog1_item w-dyn-item"
-                                        >
-                                            <div className="blog_content-wrapper">
-                                                <div className="blog_image-wrapper">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX.png"
-                                                        loading="lazy"
-                                                        alt
-                                                        sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
-                                                        srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX-p-500.png 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX.png 714w"
-                                                        className="image-100"
-                                                    />
-                                                </div>
-                                                <div className="blog_content">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-large text-weight-normal">
-                                                            SIX Digital Exchange partners with Aktionariat to
-                                                            provide greater access to capital through digital
-                                                            securities in Switzerland
-                                                        </h3>
+                                        {news_object.map(v => {
+                                            return (
+                                                <div
+                                                    id="w-node-b6f51d02-9f4a-53e5-7a6c-3f373218c71a-3218c718"
+                                                    role="listitem"
+                                                    className="blog1_item w-dyn-item"
+                                                >
+                                                    <div className="blog_content-wrapper">
+                                                        <div className="blog_image-wrapper">
+                                                            <img
+                                                                src={v.img}
+                                                                loading="lazy"
+                                                                alt=""
+                                                                className="image-100"
+                                                            />
+                                                        </div>
+                                                        <div className="blog_content">
+                                                            <div className="margin-bottom margin-small">
+                                                                <h3 className="text-size-large text-weight-normal">
+                                                                    {v.description}
+                                                                </h3>
+                                                            </div>
+                                                            <div className="text-size-small text-color-lightgrey w-dyn-bind-empty" />
+                                                        </div>
+                                                        <a
+                                                            href={v.link}
+                                                            target="_blank" rel='noreferrer' className="blog1_item-link w-inline-block">
+                                                        </a>
                                                     </div>
-                                                    <div className="text-size-small text-color-lightgrey w-dyn-bind-empty" />
                                                 </div>
-                                                <a
-                                                    href="https://www.aktionariat.com/blogs/six-digital-exchange-partners-with-aktionariat"
-                                                    target="_blank"
-                                                    className="blog1_item-link w-inline-block"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div
-                                            id="w-node-b6f51d02-9f4a-53e5-7a6c-3f373218c71a-3218c718"
-                                            role="listitem"
-                                            className="blog1_item w-dyn-item"
-                                        >
-                                            <div className="blog_content-wrapper">
-                                                <div className="blog_image-wrapper">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016.jpg"
-                                                        loading="lazy"
-                                                        alt
-                                                        sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
-                                                        srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-500.jpg 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-800.jpg 800w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-1600.jpg 1600w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-2000.jpg 2000w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-2600.jpg 2600w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-3200.jpg 3200w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016.jpg 3680w"
-                                                        className="image-100"
-                                                    />
-                                                </div>
-                                                <div className="blog_content">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-large text-weight-normal">
-                                                            Startups für alle: Die «Demokratisierung» von Private
-                                                            Equity und Venture Capital hat begonnen
-                                                        </h3>
-                                                    </div>
-                                                    <div className="text-size-small text-color-lightgrey w-dyn-bind-empty" />
-                                                </div>
-                                                <a
-                                                    href="https://www.nzz.ch/finanzen/private-finanzen/startups-und-fintech-neue-finanzprodukte-fuer-privatanleger-ld.1692186"
-                                                    target="_blank"
-                                                    className="blog1_item-link w-inline-block"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div
-                                            id="w-node-b6f51d02-9f4a-53e5-7a6c-3f373218c71a-3218c718"
-                                            role="listitem"
-                                            className="blog1_item w-dyn-item"
-                                        >
-                                            <div className="blog_content-wrapper">
-                                                <div className="blog_image-wrapper">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat.jpeg"
-                                                        loading="lazy"
-                                                        alt
-                                                        sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
-                                                        srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat-p-500.jpeg 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat-p-800.jpeg 800w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat-p-2000.jpeg 2000w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat-p-2600.jpeg 2600w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat.jpeg 2662w"
-                                                        className="image-100"
-                                                    />
-                                                </div>
-                                                <div className="blog_content">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-large text-weight-normal">
-                                                            Erstmals Aktien einer Schweizer börsenkotierten
-                                                            Gesellschaft direkt über Blockchain erwerben
-                                                        </h3>
-                                                    </div>
-                                                    <div className="text-size-small text-color-lightgrey w-dyn-bind-empty" />
-                                                </div>
-                                                <a
-                                                    href="https://www.moneycab.com/finanz/realunit-schweiz-erstmals-aktien-einer-schweizer-boersenkotierten-gesellschaft-direkt-ueber-blockchain-erwerben/"
-                                                    target="_blank"
-                                                    className="blog1_item-link w-inline-block"
-                                                />
-                                            </div>
-                                        </div>
+                                            )
+                                        })}
+
                                     </div>
                                 </div>
                             </div>
