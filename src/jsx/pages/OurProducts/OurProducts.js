@@ -5,6 +5,7 @@ function OurProducts(props) {
         <div id='OurProducts'>
             <SectionHero></SectionHero>
             <ExploreProduct></ExploreProduct>
+            <QAFurther></QAFurther>
         </div>
     );
 }
@@ -695,6 +696,58 @@ const ExploreProduct = () => {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+const QAFurther = () => {
+    return (
+        <section>
+            <div className="page-padding">
+                <div className="container-large">
+                    <div className="padding-vertical padding-xlarge">
+                        <div className="cta_component margin-bottom margin-small">
+                            <div className="max-width-full">
+                                <div className="margin-bottom margin-medium">
+                                    <p className="heading-xlarge text-weight-bold">
+                                        Any further questions?
+                                        <span className="text-gradient-2">
+                                            <br />
+                                            Request a demo.
+                                        </span>
+                                    </p>
+                                </div>
+                                <div className="displayonly_margin-top">
+                                    <a
+                                        data-w-id="ce9baed1-57d0-3aec-2f62-af58dbe9c817"
+                                        href="https://meetings-eu1.hubspot.com/bela?__hstc=180372984.110723e7ee79c8b5cad6e8378037cce7.1659973797909.1660383757307.1660400542472.23&__hssc=180372984.6.1660400542472&__hsfp=3929547609"
+                                        target="_blank"
+                                        className="button w-button"
+                                    >
+                                        Request a demo
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="max-width-small" />
+                        </div>
+                        <div className="cta2_component">
+                            <div className="cta2_content">
+                                <div className="cta2_content-left">
+                                    <div className="max-width-large">
+                                        <div className="margin-bottom margin-small">
+                                            <h4>Or use the contact form</h4>
+                                        </div>
+                                        <p>Send us your questions, we will get back to you asap.</p>
+                                    </div>
+                                </div>
+                                <a href="/contact" className="button invert-colors w-button">
+                                    Contact form
+                                </a>
                             </div>
                         </div>
                     </div>

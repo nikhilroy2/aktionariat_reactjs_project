@@ -1,0 +1,35 @@
+#BossInfo {
+  background: white;
+  width: 100%;
+  min-height: 100vh;
+  * {
+    color: black;
+  }
+  .page_wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .section_wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  #Registration {
+    background: #f4f6f6;
+    padding-top: 7.78rem;
+    padding-bottom: 7.78rem;
+    .wpb_wrapper {
+      h2 {
+        font-size: 2.7777777777777777rem;
+        line-height: 1.14;
+        margin-bottom: 0.222rem;
+        line-height: 1.13;
+      }
+      p {
+        font-size: 1.2222222222222223rem;
+      }
+    }
+    .wpb_title {
+      padding-bottom: 5rem;
+    }
+  }
+}

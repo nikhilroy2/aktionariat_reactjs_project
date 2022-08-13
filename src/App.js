@@ -11,6 +11,8 @@ import Homepage from './jsx/pages/homepage/Homepage'
 import ForCompanies from './jsx/pages/for_companies/for_companies';
 import ForInvestors from './jsx/pages/ForInvestors/ForInvestors';
 import OurProducts from './jsx/pages/OurProducts/OurProducts';
+import Login from './jsx/pages/login/login';
+import BossInfo from './jsx/pages/bossInfo/bossInfo';
 function App() {
   return (
     <div className="App">
@@ -21,11 +23,12 @@ function App() {
             <Route path="/for-companies" element={<ForCompanies></ForCompanies>}></Route>
             <Route path="/for-investors" element={<ForInvestors></ForInvestors>}></Route>
             <Route path="/our-products/brokerbot" element={<OurProducts></OurProducts>}></Route>
+            <Route path="/login" element={<Login></Login>}></Route>
+            <Route path="/bossinfo" element={<BossInfo></BossInfo>}></Route>
           </Routes>
         </Base>
       </BrowserRouter>
     </div>
-  );
+  )
 }
-
 export default App;
