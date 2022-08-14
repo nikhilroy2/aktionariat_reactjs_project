@@ -2,10 +2,12 @@
   background: white;
   width: 100%;
   min-height: 100vh;
+  font-size: 1rem;
 }
 
 #BossInfo * {
   color: black;
+  font-family: "Roboto", sans-serif;
 }
 
 #BossInfo .page_wrapper {
@@ -37,5 +39,57 @@
 
 #BossInfo #Registration .wpb_title {
   padding-bottom: 5rem;
+}
+
+#BossInfo #Registration .form_wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  color: #323131;
+}
+
+#BossInfo #Registration .form_wrapper input,
+#BossInfo #Registration .form_wrapper textarea {
+  width: 240px;
+  border: 1px solid #323131;
+  display: inline-block;
+}
+
+#BossInfo #Registration .form_wrapper input:focus,
+#BossInfo #Registration .form_wrapper textarea:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem #0d6efd40;
+          box-shadow: 0 0 0 0.25rem #0d6efd40;
+  border: 1px solid #323131 !important;
+  outline: none;
+}
+
+#BossInfo #Registration .form_wrapper textarea {
+  height: 9rem;
+  display: inline-block;
+}
+
+#BossInfo #Registration .form_wrapper .form_control_sm {
+  width: 135px;
+}
+
+#BossInfo #Registration .form_wrapper * {
+  color: #323131;
+  font-weight: 300;
+}
+
+#BossInfo #Registration .form_wrapper p {
+  font-size: 16px;
+}
+
+#BossInfo #Registration .form_wrapper .btn-connect-wallet {
+  background-color: #085ed0;
+  color: #fff;
+  line-height: 1.5;
+  padding: 6px 25px;
+  font-size: inherit;
+  margin-top: 15px;
+  border-radius: 5px;
+  display: inline-block;
+  min-width: 238px;
 }
 /*# sourceMappingURL=bossinfo.css.map */
