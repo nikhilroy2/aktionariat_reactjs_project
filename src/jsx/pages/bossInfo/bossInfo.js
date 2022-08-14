@@ -7,6 +7,7 @@ function BossInfo(props) {
             <div className="page_wrapper">
                 <Registration></Registration>
                 <Brokerbot></Brokerbot>
+                <PriceChart></PriceChart>
             </div>
         </div>
     );
@@ -96,6 +97,7 @@ const Registration = () => {
 
 const Brokerbot = () => {
     const [btnSelection, setBtnSelection] = useState('buy');
+    const [btnSelection2, setBtnSelection2] = useState(1);
     return (
         <div id="Brokerbot">
             <div className="section_wrapper">
@@ -151,8 +153,7 @@ const Brokerbot = () => {
                                                 stroke=" #004d9e"
                                                 strokeWidth={1}
                                                 fillOpacity={0}
-                                                style={{ "stroke-dasharray": "100, 100", "stroke-dashoffset": "100" }}
-                                            />
+                                                style={{ "stroke-dasharray": "100, 100", "stroke-dashoffset": "100" }} />
                                         </svg>
                                     </div>
                                 </div>
@@ -162,7 +163,7 @@ const Brokerbot = () => {
                             <h3 className="title">
                                 Boss Info AG
                             </h3>
-                            <div className="form_control">
+                            <div className="form_control mb-2">
                                 <label htmlFor="" className="form_label">
                                     Number of Shares
                                 </label>
@@ -171,12 +172,69 @@ const Brokerbot = () => {
                                     <button onClick={() => setBtnSelection('sell')} className={`btn_selection ${btnSelection === 'sell' ? 'active_btn' : ''}`}>Sell</button>
                                 </div>
                             </div>
+                            <div className="form_control d-flex control_boss mb-2 rounded-3">
+                                <input type="text" className='w-100 inside_text' />
+                                <label htmlFor="" className='inside_text me-0'>BOSS</label>
+                            </div>
 
+                            <div className="form_control mb-2">
+                                <div className="btn_control">
+                                    <button onClick={() => setBtnSelection2(1)} className={`btn_selection ${btnSelection2 === 1 ? 'active_btn' : ''}`}>Bank Transfer</button>
+                                    <button onClick={() => setBtnSelection2(2)} className={`btn_selection ${btnSelection2 === 2 ? 'active_btn' : ''}`}>Cryptocurrency</button>
+                                </div>
+                            </div>
+
+                            {btnSelection2 === 1 ? <div className="form_control d-flex control_boss mb-2 rounded-3">
+                                <span className="w-100 d-inline-block inside_text">28.53</span>
+                                <label htmlFor="" className='d-flex align-items-center justify-content-center mb-0'>CHF</label>
+                            </div> : <div className="form_control d-flex control_boss mb-2 rounded-3">
+                                <span className="w-100 d-inline-block inside_text">0.0154</span>
+                                <select name="" id="" className='d-flex bg-transparent border-0 outline-0 px-2 align-items-center justify-content-center mb-0'>
+                                    <option value="ETH">ETH</option>
+                                    <option value="XCHF">XCHF</option>
+                                </select>
+                            </div>}
+
+                            <div className="form_control d-flex control_boss mb-2 rounded-3">
+                                <span className="w-100 d-inline-block inside_text text-center">
+                                    You are buying 3 BOSS for 28.53 CHF.
+                                </span>
+                                <label htmlFor="" className='d-flex align-items-center text-center px-2 justify-content-center mb-0 hover_border me-0'>
+                                    <button>Details</button>
+                                </label>
+                            </div>
+                            <div className="form_control mt-3">
+                                <button className="btn_submit_action">
+                                    Start Buying BOSS
+                                </button>
+                            </div>
                         </div>
-                        <div className="card_footer"></div>
+                        <div className="card_footer text-center">
+                            <a href="#" className='d-inline-block' style={{ padding: '12px' }}>
+                                © <img height="12px" src={require('../../../icons/aktionariat.svg').default} alt="logo" />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="cta_box">
+                        <div className="cta_text">
+                            Anleitung Wie kaufe ich Token?
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    )
+}
+const PriceChart = () => {
+    return (
+        <section id="PriceChart">
+            <div className="section_wrapper">
+                <div className="wpb_wrapper">
+                    <h3 className="section_title">
+                        Price Chart
+                    </h3>
+                </div>
+            </div>
+        </section>
     )
 }
