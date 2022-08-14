@@ -51,25 +51,10 @@ const SectionHero = () => {
                                         <div className="margin-top margin-medium">
                                             <a
                                                 href="#newsletter"
-                                                className="button-arrow button-arrow-large modal-open_btn w-inline-block"
+                                                className="button-arrow action_arrow button-arrow-large modal-open_btn w-inline-block"
                                             >
                                                 <div>Stay informed</div>
-                                                <div
-                                                    className="arrow"
-                                                    style={{
-                                                        "-webkit-transform":
-                                                            "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                        "-ms-transform":
-                                                            "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                        transform:
-                                                            "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                        "-webkit-transform-style": "preserve-3d",
-                                                        "-ms-transform-style": "preserve-3d",
-                                                        "transform-style": "preserve-3d",
-                                                    }}
-                                                >
-                                                    ↘
-                                                </div>
+                                                <span className="arrow">↘</span>
                                             </a>
                                         </div>
                                     </div>
@@ -153,25 +138,10 @@ const MobileWallet = () => {
                                 </div>
                                 <a
                                     href="/our-products/portfolio-app#details"
-                                    className="button-arrow button-arrow-large w-inline-block"
+                                    className="button-arrow action_arrow button-arrow-large w-inline-block"
                                 >
                                     <div>Learn more</div>
-                                    <div
-                                        className="arrow"
-                                        style={{
-                                            "-webkit-transform":
-                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                            "-ms-transform":
-                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                            transform:
-                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                            "-webkit-transform-style": "preserve-3d",
-                                            "-ms-transform-style": "preserve-3d",
-                                            "transform-style": "preserve-3d",
-                                        }}
-                                    >
-                                        ↘
-                                    </div>
+                                    <span className="arrow">↘</span>
                                 </a>
                             </div>
                             <div
@@ -183,14 +153,14 @@ const MobileWallet = () => {
                                         src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/62c7cedfdd4868998d6531a6_mobile-wallet.png"
                                         loading="lazy"
                                         height={430}
-                                        alt
+                                        alt=""
                                     />
                                 </div>
                                 <div className="horizontal-center">
                                     <div className="margin-right margin-xsmall">
                                         <a
                                             href="https://apps.apple.com/ch/app/aktionariat/id1518326813#?platform=iphone"
-                                            target="_blank"
+                                            target="_blank" rel='noreferrer'
                                             className="w-inline-block"
                                         >
                                             <img
@@ -202,7 +172,7 @@ const MobileWallet = () => {
                                     </div>
                                     <a
                                         href="https://play.google.com/store/apps/details?id=com.aktionariat.app"
-                                        target="_blank"
+                                        target="_blank" rel='noreferrer'
                                         className="w-inline-block"
                                     >
                                         <img
