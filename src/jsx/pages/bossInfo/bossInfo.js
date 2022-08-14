@@ -6,6 +6,7 @@ function BossInfo(props) {
         <div id='BossInfo'>
             <div className="page_wrapper">
                 <Registration></Registration>
+                <Brokerbot></Brokerbot>
             </div>
         </div>
     );
@@ -22,7 +23,7 @@ const Registration = () => {
                     <p>Hier können Sie Ihr Investment online durchführen, sich registrieren und Ihr Wallet verknüpfen.</p>
                 </div>
 
-                <h3>
+                <h3 className='section_title'>
                     Registration
                 </h3>
                 <div className="form_wrapper">
@@ -90,5 +91,92 @@ const Registration = () => {
                 </div>
             </div>
         </section>
+    )
+}
+
+const Brokerbot = () => {
+    const [btnSelection, setBtnSelection] = useState('buy');
+    return (
+        <div id="Brokerbot">
+            <div className="section_wrapper">
+                <div className="wpb_wrapper">
+                    <h3 className="section_title">
+                        Brokerbot
+                    </h3>
+                    <div className="brokerbot_wrapper">
+                        <div className="card_header">
+                            <div className="row gx-0">
+                                <div className="col text-center">Amount
+                                    <div id="progress-amount" className="progress-bar">
+                                        <svg
+                                            viewBox="0 0 100 1"
+                                            preserveAspectRatio="none"
+                                            className='w-100 d-block'
+                                        >
+                                            <path
+                                                d="M 0,0.5 L 100,0.5"
+                                                stroke=" #004d9e"
+                                                strokeWidth={1}
+                                                fillOpacity={0}
+                                                style={{ "stroke-dasharray": "100, 100", "stroke-dashoffset": "0" }}
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className="col text-center">Registration
+                                    <div id="progress-verification" className="progress-bar">
+                                        <svg
+                                            viewBox="0 0 100 1"
+                                            preserveAspectRatio="none"
+                                            className='d-block w-100'>
+                                            <path
+                                                d="M 0,0.5 L 100,0.5"
+                                                stroke=" #004d9e"
+                                                strokeWidth={1}
+                                                fillOpacity={0}
+                                                style={{ "stroke-dasharray": "100, 100", "stroke-dashoffset": "100" }}
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className="col text-center">Confirmation
+
+                                    <div id="progress-verification" className="progress-bar">
+                                        <svg
+                                            viewBox="0 0 100 1"
+                                            preserveAspectRatio="none"
+                                            className='d-block w-100'>
+                                            <path
+                                                d="M 0,0.5 L 100,0.5"
+                                                stroke=" #004d9e"
+                                                strokeWidth={1}
+                                                fillOpacity={0}
+                                                style={{ "stroke-dasharray": "100, 100", "stroke-dashoffset": "100" }}
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card_body">
+                            <h3 className="title">
+                                Boss Info AG
+                            </h3>
+                            <div className="form_control">
+                                <label htmlFor="" className="form_label">
+                                    Number of Shares
+                                </label>
+                                <div className="btn_control">
+                                    <button onClick={() => setBtnSelection('buy')} className={`btn_selection ${btnSelection === 'buy' ? 'active_btn' : ''}`}>Buy</button>
+                                    <button onClick={() => setBtnSelection('sell')} className={`btn_selection ${btnSelection === 'sell' ? 'active_btn' : ''}`}>Sell</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="card_footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }

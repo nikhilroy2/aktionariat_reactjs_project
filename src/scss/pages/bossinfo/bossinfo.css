@@ -20,6 +20,10 @@
   margin: 0 auto;
 }
 
+#BossInfo .section_title {
+  font-size: 1.7777777777777777rem;
+}
+
 #BossInfo #Registration {
   background: #f4f6f6;
   padding-top: 7.78rem;
@@ -91,5 +95,102 @@
   border-radius: 5px;
   display: inline-block;
   min-width: 238px;
+}
+
+#BossInfo #Brokerbot {
+  background: #f4f6f6;
+}
+
+#BossInfo #Brokerbot ::-moz-selection {
+  background: #004d9e;
+  color: #fff;
+}
+
+#BossInfo #Brokerbot ::selection {
+  background: #004d9e;
+  color: #fff;
+}
+
+#BossInfo #Brokerbot .brokerbot_wrapper {
+  width: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 24px;
+  border: 1px solid #dcdcdc;
+  background-color: #fafafa;
+}
+
+#BossInfo #Brokerbot .brokerbot_wrapper .card_header {
+  padding: 16px 20px;
+  background-color: #fafafa;
+  border-radius: 24px 24px 0 0;
+}
+
+#BossInfo #Brokerbot .brokerbot_wrapper .card_header .progress-bar {
+  background-color: #f0f0f0;
+  height: 2px;
+  margin-top: 10px;
+  color: #004d9e;
+}
+
+#BossInfo #Brokerbot .brokerbot_wrapper .card_body {
+  background-color: #f0f0f0;
+  border-radius: 24px;
+  padding: 28px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+}
+
+#BossInfo #Brokerbot .brokerbot_wrapper .card_body .title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+#BossInfo #Brokerbot .brokerbot_wrapper .card_body .form_control .form_label {
+  font-size: 20px;
+  color: #000;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+#BossInfo #Brokerbot .brokerbot_wrapper .card_body .btn_control {
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid #d6d6d6;
+}
+
+#BossInfo #Brokerbot .brokerbot_wrapper .card_body .btn_control .btn_selection {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  padding: 12px;
+  color: #0009;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#BossInfo #Brokerbot .brokerbot_wrapper .card_body .btn_control .btn_selection.active_btn {
+  background-color: #fafafa;
+  color: #004d9e;
+  border: 1px solid #004d9e;
 }
 /*# sourceMappingURL=bossinfo.css.map */

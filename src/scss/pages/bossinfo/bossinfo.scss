@@ -15,6 +15,9 @@
     max-width: 1500px;
     margin: 0 auto;
   }
+  .section_title {
+    font-size: 1.7777777777777777rem;
+  }
   #Registration {
     background: #f4f6f6;
     padding-top: 7.78rem;
@@ -53,7 +56,7 @@
         height: 9rem;
         display: inline-block;
       }
-      .form_control_sm{
+      .form_control_sm {
         width: 135px;
       }
       * {
@@ -63,7 +66,7 @@
       p {
         font-size: 16px;
       }
-      .btn-connect-wallet{
+      .btn-connect-wallet {
         background-color: #085ed0;
         color: #fff;
         line-height: 1.5;
@@ -73,6 +76,80 @@
         border-radius: 5px;
         display: inline-block;
         min-width: 238px;
+      }
+    }
+  }
+  #Brokerbot {
+    background: #f4f6f6;
+    ::selection {
+      background: #004d9e;
+      color: #fff;
+    }
+    .brokerbot_wrapper {
+      width: 100%;
+      max-width: 640px;
+      min-width: 320px;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 24px;
+      border: 1px solid #dcdcdc;
+      background-color: #fafafa;
+      .card_header {
+        padding: 16px 20px;
+        background-color: #fafafa;
+        border-radius: 24px 24px 0 0;
+        .progress-bar {
+          background-color: #f0f0f0;
+          height: 2px;
+          margin-top: 10px;
+          color: #004d9e;
+        }
+      }
+      .card_body {
+        background-color: #f0f0f0;
+        border-radius: 24px;
+        padding: 28px;
+        box-sizing: border-box;
+        border: 1px solid #dcdcdc;
+        .title {
+          font-size: 28px;
+          font-weight: 700;
+          color: #000;
+        }
+        .form_control {
+          .form_label {
+            font-size: 20px;
+            color: #000;
+            margin-top: 24px;
+            margin-bottom: 16px;
+          }
+        }
+        .btn_control {
+          background-color: #e6e6e6;
+          border-radius: 4px;
+          display: flex;
+          flex-direction: row;
+          border: 1px solid #d6d6d6;
+          .btn_selection {
+            flex-basis: 0;
+            flex-grow: 1;
+            text-align: center;
+            padding: 12px;
+            color: #0009;
+            border-radius: 4px;
+            background-color: transparent;
+            border: 1px solid transparent;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+            &.active_btn {
+              background-color: #fafafa;
+              color: #004d9e;
+              border: 1px solid #004d9e;
+            }
+          }
+        }
       }
     }
   }
