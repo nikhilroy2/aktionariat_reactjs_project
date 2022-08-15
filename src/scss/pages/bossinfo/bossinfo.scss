@@ -216,4 +216,29 @@
   #PriceChart {
     background: #f4f6f6;
   }
+  #DownloadContent {
+    background: #f4f6f6;
+    .document_pdf {
+      font-size: 1.2222222222222223rem;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      .pdf_icon {
+        display: inline-block;
+        height: 28px;
+        width: 24px;
+        background-position: 0 -22px;
+        background-image: url("../../../icons/iconset.png");
+        background-repeat: no-repeat;
+        background-size: 302px;
+      }
+    }
+    .primary_custom {
+      background: #004d9e;
+      color: #fff;
+      &:hover {
+        background: #003a77;
+      }
+    }
+  }
 }

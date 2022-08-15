@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import '../../../scss/pages/bossinfo/bossinfo.css';
 import CountryJson from '../../../json/country_list.json';
+
+import Highcharts from 'highcharts'
+import HighchartsReact from 'highcharts-react-official'
+
 function BossInfo(props) {
     return (
         <div id='BossInfo'>
@@ -8,6 +12,7 @@ function BossInfo(props) {
                 <Registration></Registration>
                 <Brokerbot></Brokerbot>
                 <PriceChart></PriceChart>
+                <DownloadContent></DownloadContent>
             </div>
         </div>
     );
@@ -226,6 +231,45 @@ const Brokerbot = () => {
     )
 }
 const PriceChart = () => {
+    const [chartData, setChartData] = useState([]);
+
+    fetch('https://demo-live-data.highcharts.com/aapl-historical.json')
+        .then(res => res.json())
+        .then(data => {
+            setChartData(data);
+        })
+    const options = {
+        chart: {
+            backgroundColor: '#f4f6f6',
+            type: 'line'
+        },
+        yAxis: [
+            {
+                min: 0,
+                type: 'linear',
+                title: {
+                    text: 'Price in Swiss Francs (CHF)'
+                },
+                opposite: true
+            }],
+
+
+
+        title: {
+            text: 'Historic Market Prices of BOSS'
+        },
+        xAxis: {
+            minRange: 3600 * 1000 // one hour
+        },
+
+        series: [{
+            data: chartData,
+            dataGrouping: {
+                enabled: false
+            }
+        }]
+    }
+
     return (
         <section id="PriceChart">
             <div className="section_wrapper">
@@ -233,6 +277,43 @@ const PriceChart = () => {
                     <h3 className="section_title">
                         Price Chart
                     </h3>
+                    <div className="chart_wrapper">
+                        <HighchartsReact
+                            highcharts={Highcharts}
+                            options={options}
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+const DownloadContent = () => {
+    return (
+        <section id="DownloadContent">
+            <div className="section_wrapper py-4">
+                <h3 className='section_title mb-2'>
+                    Download
+                </h3>
+                <a href="https://www.bossinfo.com/wp-content/uploads/Boss_Info_AG-Registration_Regulations-CMTA_compatible_220524_signiert.pdf"
+                    className="document_pdf" target="_blank" rel="noreferrer">
+                    <span className="pdf_icon me-2"></span>  Tokenization and Registration Regulations of Boss Info AG 2.0 – EN (signed PDF)
+                </a>
+            </div>
+
+            <div className="section_wrapper py-5">
+                <h3 className='section_title mb-2'>
+                    Contract Address
+                </h3>
+                <a href="https://www.bossinfo.com/wp-content/uploads/Boss_Info_AG-Registration_Regulations-CMTA_compatible_220524_signiert.pdf"
+                    className="document_pdf">
+                    0x2e880962a9609aa3eab4def919fe9e917e99073b
+                </a>
+                <div className="btn_wrapper pt-4">
+                    <a href='https://etherscan.io/token/0x2e880962a9609aa3eab4def919fe9e917e99073b' target="_blank" rel="noreferrer" className="btn btn-primary primary_custom">
+                        View on etherscan
+                    </a>
                 </div>
             </div>
         </section>
