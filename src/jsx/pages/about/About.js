@@ -8,6 +8,7 @@ function About(props) {
             <OurCoreValues></OurCoreValues>
             <OpenPosition></OpenPosition>
             <Team></Team>
+            <PartnerExpert></PartnerExpert>
         </div>
     );
 }
@@ -382,8 +383,156 @@ const Team = () => {
                 link: 'http://linkedin.com/in/piotr-błądek-8a3a60120'
             }
         },
-
-
+        {
+            id: 5,
+            img: require('../../../images/pages/about/jan.jpg'),
+            name: 'Jan Krepelka',
+            role: 'Frontend Lead',
+            description: 'Software engineer, economist, wordsmith',
+            email: {
+                img: require('../../../icons/email.svg').default,
+                link: 'mailto:jan@aktionariat.com'
+            },
+            linkedin: {
+                img: require('../../../icons/linkedin.svg').default,
+                link: 'https://www.linkedin.com/in/jankrepelka/'
+            }
+        },
+        {
+            id: 6,
+            img: require('../../../images/pages/about/bernhard.jpg'),
+            name: 'Bernhard Ruf',
+            role: 'Blockchain Engineer',
+            description: '“Shadowy super-coder”, DeFi & blockchain evangelist, kitesurfer',
+            email: {
+                img: require('../../../icons/email.svg').default,
+                link: 'mailto:bernhard@aktionariat.com'
+            },
+            linkedin: {
+                img: require('../../../icons/linkedin.svg').default,
+                link: 'http://linkedin.com/in/bernhard-ruf'
+            }
+        },
+        {
+            id: 7,
+            img: require('../../../images/pages/about/bela.jpg'),
+            name: 'Béla von Mérey',
+            role: 'Customer Success Manager',
+            description: 'Entrepreneur',
+            email: {
+                img: require('../../../icons/email.svg').default,
+                link: 'mailto:bela@aktionariat.com'
+            },
+            linkedin: {
+                img: require('../../../icons/linkedin.svg').default,
+                link: 'http://linkedin.com/in/béla-von-mérey-b49714bb'
+            }
+        },
+        {
+            id: 8,
+            img: require('../../../images/pages/about/prof-small.png'),
+            name: 'Mateusz Staszków',
+            role: 'Senior Full Stack Engineer',
+            description: '',
+            email: {
+                img: require('../../../icons/email.svg').default,
+                link: 'mailto:mateusz@aktionariat.com'
+            },
+            linkedin: {
+                img: require('../../../icons/linkedin.svg').default,
+                link: 'https://www.linkedin.com/in/mateusz-staszk%C3%B3w-4bb952121/'
+            }
+        },
+        {
+            id: 9,
+            img: require('../../../images/pages/about/prof-small.png'),
+            name: 'Mateusz Staszków',
+            role: 'Senior Full Stack Engineer',
+            description: '',
+            email: {
+                img: require('../../../icons/email.svg').default,
+                link: 'mailto:mateusz@aktionariat.com'
+            },
+            linkedin: {
+                img: require('../../../icons/linkedin.svg').default,
+                link: 'https://www.linkedin.com/in/mateusz-staszk%C3%B3w-4bb952121/'
+            }
+        },
+        {
+            id: 10,
+            img: require('../../../images/pages/about/kostas.jpg'),
+            name: 'Konstantinos Zavoudakis',
+            role: 'Project Portfolio Manager',
+            description: '',
+            email: {
+                img: require('../../../icons/email.svg').default,
+                link: 'mailto:konstantinos@aktionariat.com'
+            },
+            linkedin: {
+                img: require('../../../icons/linkedin.svg').default,
+                link: 'https://www.linkedin.com/in/konstantinos-zavoudakis/'
+            }
+        },
+        {
+            id: 11,
+            img: require('../../../images/pages/about/jenny.jpg'),
+            name: 'Jenny Kozorez',
+            role: 'Senior QA & Automation Engineer',
+            description: '',
+            email: {
+                img: require('../../../icons/email.svg').default,
+                link: 'mailto:jenny@aktionariat.com'
+            },
+            linkedin: {
+                img: require('../../../icons/linkedin.svg').default,
+                link: 'https://www.linkedin.com/in/jenny-kozorez-7b1a25140/'
+            }
+        },
+        {
+            id: 12,
+            img: require('../../../images/pages/about/CemIlhan.jpg'),
+            name: 'Cem İlhan',
+            role: 'Visual Designer',
+            description: '',
+            email: {
+                img: require('../../../icons/email.svg').default,
+                link: 'mailto:hello@cemilhan.com'
+            },
+            linkedin: {
+                img: require('../../../icons/linkedin.svg').default,
+                link: 'https://www.linkedin.com/in/ercancemilhan/'
+            }
+        },
+        {
+            id: 13,
+            img: require('../../../images/pages/about/raphael.jpg'),
+            name: 'Raphael Aebersold',
+            role: 'Marketing Manager',
+            description: 'A generalist at heart with profound behavioral and psychological knowledge',
+            email: {
+                img: require('../../../icons/email.svg').default,
+                link: 'mailto:raphael@aktionariat.com'
+            },
+            linkedin: {
+                img: require('../../../icons/linkedin.svg').default,
+                link: 'https://www.linkedin.com/in/raphael-aebersold-0a0323194/'
+            }
+        },
+        {
+            id: 14,
+            img: require('../../../images/pages/about/michael.jpg'),
+            name: 'Michael Kennaelly',
+            role: 'Strategic Partnership Manager',
+            description: 'A generalist at heart with profound behavioral and psychological knowledge',
+            email: {
+                img: require('../../../icons/email.svg').default,
+                link: 'mailto:michael@aktionariat.com'
+            },
+            linkedin: {
+                img: require('../../../icons/linkedin.svg').default,
+                link: 'https://www.linkedin.com/in/michael-kenneally-54740a158/'
+            }
+        },
     ]
     return (
         <section id="team">
@@ -470,6 +619,135 @@ const Team = () => {
                     </div>
                 </div>
             </div>
+        </section>
+    )
+}
+
+const PartnerExpert = () => {
+
+    const [cardAccordion1, setCardAccordion1] = useState(false);
+    const partner_object = [
+        {
+            id: 1,
+            img: require('../../../images/pages/about/Partner-Christian.jpg'),
+            name: 'LEXR',
+            role: 'Legal Partner',
+            description: 'Lexr is our legal partner and the recommended choice for all the legal work related to tokenized securities. Founder Christian Meisser is an entrepreneur and lawyer. He regularly publishes and advises on blockchain-related topics and financial market regulation.',
+            link: 'https://www.lexr.ch/'
+        },
+    ]
+    return (
+        <section className="section section-grey">
+            <div className="page-padding">
+                <div className="container-large">
+                    <div className="padding-vertical padding-xxlarge">
+                        <div className="section-title">
+                            <div className="margin-bottom margin-xlarge">
+                                <h2>
+                                    Partners &amp;&nbsp;Experts
+                                    <span className="text-gradient-1" />
+                                </h2>
+                            </div>
+                        </div>
+                        <div className="margin-bottom">
+                            <div className="blog1_component">
+                                <div className="w-dyn-list">
+                                    <div role="list" className="collection-grid w-dyn-items">
+                                        {
+                                            partner_object.map(v => {
+                                                return (
+                                                    <div role="listitem" className="collection-item w-dyn-item">
+                                                        <div className="member-item-wrapper">
+                                                            <div className="member_image-wrapper">
+                                                                <div style={{ backgroundImage: `url(${v.img})` }} className="square-image" />
+                                                            </div>
+                                                            <div className="member_content space-between">
+                                                                <div className="member-info">
+                                                                    <div className="margin-bottom margin-small">
+                                                                        <div className="margin-bottom margin-xsmall">
+                                                                            <h3 className="text-size-large text-weight-normal">
+                                                                                {v.name}
+                                                                            </h3>
+                                                                        </div>
+                                                                        <div className="text-color-darkgrey">{v.role}</div>
+                                                                    </div>
+                                                                    <div className="hide-mobile">
+                                                                        <div className="margin-bottom margin-small">
+                                                                            <p className="text-size-small text-color-darkgrey">
+                                                                                {v.description}
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="hide-desktop-m">
+                                                                        <div className="margin-bottom margin-small">
+                                                                            <div
+                                                                                className="accordion-item w-dyn-item"
+                                                                                style={{ opacity: "0.6" }}
+                                                                            >
+                                                                                <div
+                                                                                    data-w-id="9f362517-6f33-4de4-c83f-bfbcfdc38a72"
+                                                                                    className="accordion-trigger"
+                                                                                    data-mdb-toggle="collapse"
+                                                                                    data-mdb-target="#cardAccordion1" onClick={() => setCardAccordion1(!cardAccordion1)}
+                                                                                >
+                                                                                    <div className="dropdown-title">
+                                                                                        <div className="horizontal-center">
+                                                                                            <div>About</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        className="icon accordion-icon" style={{ transform: `rotate(${cardAccordion1 ? '45deg' : '0deg'})` }}
+                                                                                    >
+                                                                                        <img
+                                                                                            src={require('../../../icons/plus.svg').default}
+                                                                                            loading="lazy"
+                                                                                            alt="Plus Icon"
+                                                                                        />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div id='cardAccordion1'
+                                                                                    className="accordion-item-content accordion-collapse collapse">
+                                                                                    <div className="accordion-description">
+                                                                                        <p className="text-size-small text-color-darkgrey">
+                                                                                            Lexr is our legal partner and the recommended
+                                                                                            choice for all the legal work related to
+                                                                                            tokenized securities. Founder Christian
+                                                                                            Meisser is an entrepreneur and lawyer. He
+                                                                                            regularly publishes and advises on
+                                                                                            blockchain-related topics and financial market
+                                                                                            regulation.
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <a
+                                                                    href="https://www.lexr.ch/"
+                                                                    target="_blank" rel="noreferrer"
+                                                                    className="button-arrow action_arrow button-arrow-large w-inline-block"
+                                                                >
+                                                                    <div>Learn more</div>
+
+                                                                    <span className="arrow">↘</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                )
+                                            })
+                                        }
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
     )
 }
