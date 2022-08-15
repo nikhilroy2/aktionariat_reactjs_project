@@ -75,3 +75,14 @@ a:hover {
     padding-top: 8rem;
   }
 }
+
+.w-button {
+  &:hover {
+    color: #000 !important;
+  }
+}
+.invert-colors {
+  &:hover {
+    color: #fff !important;
+  }
+}

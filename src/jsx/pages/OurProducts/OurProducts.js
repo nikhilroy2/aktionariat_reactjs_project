@@ -14,6 +14,35 @@ export default OurProducts;
 
 
 const SectionHero = () => {
+    const hero_object = [
+        {
+            id: 1,
+            img: require('../../../icons/question.svg').default,
+            title: 'Problem',
+            description: `A meaningful trading venue provides a share with sufficient
+            liquidity. Unfortunately, even shares listed on central trading
+            venues are sometimes affected by illiquidity, especially if they
+            are not traded frequently enough (e.g. SIX listed titles are not
+            necessarily liquid).`
+        },
+
+        {
+            id: 2,
+            img: require('../../../icons/icon-check.svg').default,
+            title: 'Solution',
+            description: `Following the successful model of Uniswap, we enable companies to
+            provide a liquidity pool themselves.`
+        },
+        {
+            id: 3,
+            img: require('../../../icons/paragraph-center.svg').default,
+            title: 'Summary',
+            description: `Thanks to this fully decentralized approach, we achieve high
+            liquidity, full market control and maximum decentralization in
+            line with the blockchain philosophy.`
+        },
+
+    ]
     return (
         <section className="section section-hero our-products">
             <div className="page-padding">
@@ -63,91 +92,49 @@ const SectionHero = () => {
                                     </h3>
                                 </div>
                             </div>
-                            <div
-                                id="w-node-_8d5612e3-338d-3f68-ae46-c1e824f04307-369110f3"
-                                className="content-block"
-                            >
-                                <div className="margin-bottom">
-                                    <div className="margin-bottom margin-small">
-                                        <div className="horizontal-center">
-                                            <div className="margin-right margin-small">
-                                                <img
-                                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c87420e02bcc02350d44a3_icon-question.svg"
-                                                    loading="lazy"
-                                                    alt="Question Mark Icon"
-                                                    className="icon-1x1-small"
-                                                />
+
+                            {
+                                hero_object.map(v => {
+                                    return (
+                                        <div key={v.id}
+                                            id="w-node-_8d5612e3-338d-3f68-ae46-c1e824f04307-369110f3"
+                                            className="content-block"
+                                        >
+                                            <div className="margin-bottom">
+                                                <div className="margin-bottom margin-small">
+                                                    <div className="horizontal-center">
+                                                        <div className="margin-right margin-small">
+                                                            <img
+                                                                src={v.img}
+                                                                loading="lazy"
+                                                                alt="Question Mark Icon"
+                                                                className="icon-1x1-small"
+                                                            />
+                                                        </div>
+                                                        <div className="text-size-large">{v.title}</div>
+                                                    </div>
+                                                </div>
+                                                <p className="text-size-small text-color-darkgrey">
+                                                    {v.description}
+                                                </p>
                                             </div>
-                                            <div className="text-size-large">Problem</div>
+
+                                            {v.id === hero_object.length && (
+                                                <a
+                                                    href="/blogs/about-the-superiority-of-uniswap-style-markets-over-traditional-order-books"
+                                                    className="button-arrow action_arrow w-inline-block small mt-3"
+                                                >
+                                                    <div>Learn more</div>
+                                                    <span className="arrow">
+                                                        ↘
+                                                    </span>
+                                                </a>
+                                            )}
                                         </div>
-                                    </div>
-                                    <p className="text-size-small text-color-darkgrey">
-                                        A meaningful trading venue provides a share with sufficient
-                                        liquidity. Unfortunately, even shares listed on central trading
-                                        venues are sometimes affected by illiquidity, especially if they
-                                        are not traded frequently enough (e.g. SIX listed titles are not
-                                        necessarily liquid).
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-_8d5612e3-338d-3f68-ae46-c1e824f0430e-369110f3"
-                                className="content-block"
-                            >
-                                <div className="margin-bottom">
-                                    <div className="margin-bottom margin-small">
-                                        <div className="horizontal-center">
-                                            <div className="margin-right margin-small">
-                                                <img
-                                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c874201fece310393b4ae5_icon-check.svg"
-                                                    loading="lazy"
-                                                    alt="Check Icon"
-                                                    className="icon-1x1-small"
-                                                />
-                                            </div>
-                                            <div className="text-size-large">Solution</div>
-                                        </div>
-                                    </div>
-                                    <p className="text-size-small text-color-darkgrey">
-                                        Following the successful model of Uniswap, we enable companies to
-                                        provide a liquidity pool themselves.
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-_8d5612e3-338d-3f68-ae46-c1e824f04315-369110f3"
-                                className="content-block"
-                            >
-                                <div className="margin-bottom margin-small">
-                                    <div className="margin-bottom margin-small">
-                                        <div className="horizontal-center">
-                                            <div className="margin-right margin-small">
-                                                <img
-                                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c87420f6120ec878f00440_icon-paragraph-center.svg"
-                                                    loading="lazy"
-                                                    alt="Center Paragraph Icon"
-                                                    className="icon-1x1-small"
-                                                />
-                                            </div>
-                                            <div className="text-size-large">Summary</div>
-                                        </div>
-                                    </div>
-                                    <p className="text-size-small text-color-darkgrey">
-                                        Thanks to this fully decentralized approach, we achieve high
-                                        liquidity, full market control and maximum decentralization in
-                                        line with the blockchain philosophy.
-                                    </p>
-                                </div>
-                                <a
-                                    href="/blogs/about-the-superiority-of-uniswap-style-markets-over-traditional-order-books"
-                                    className="button-arrow action_arrow w-inline-block"
-                                >
-                                    <div>Learn more</div>
-                                    <span className="arrow">
-                                        ↘
-                                    </span>
-                                </a>
-                            </div>
+                                    )
+                                })
+                            }
+
                         </div>
                     </div>
                 </div>
@@ -162,535 +149,361 @@ const ExploreProduct = () => {
         <section className='section section-grey'>
             <div id="details" className="page-padding">
                 <div className="container-large">
-                    <div className="padding-vertical padding-xxlarge">
-                        <div className="our-products-menu">
-                            <div className="margin-bottom margin-xlarge">
-                                <h2 className="heading-medium">Explore our products</h2>
-                            </div>
-                            <div className="margin-bottom margin-xxlarge">
-                                <div className="tabs-menu">
-                                    <a
-                                        href="https://www.aktionariat.com/our-products/brokerbot#details"
-                                        className="tab-link w-inline-block"
-                                    >
-                                        <div>Brokerbot</div>
-                                    </a>
-                                    <a
-                                        href="https://www.aktionariat.com/our-products/portfolio-app#details"
-                                        className="tab-link w-inline-block"
-                                    >
-                                        <div>Portfolio App</div>
-                                    </a>
-                                    <a
-                                        href="https://www.aktionariat.com/our-products/corporate-dashboard#details"
-                                        className="tab-link w-inline-block"
-                                    >
-                                        <div>Corporate Dashboard</div>
-                                    </a>
-                                    <a
-                                        href="https://www.aktionariat.com/our-products/investor-widgets#details"
-                                        className="tab-link w-inline-block"
-                                    >
-                                        <div>Investor Widgets</div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="tab-content-products">
-                            <div className="container-large">
-                                <div className="margin-bottom margin-xlarge">
-                                    <div className="content-grid rows-4 mobile-grid">
-                                        <div
-                                            id="w-node-_377faedc-6048-0ed3-2223-239a40218be1-9cd4fe06"
-                                            className="content-block"
-                                        >
-                                            <div className="margin-bottom margin-medium">
-                                                <div className="margin-bottom margin-medium">
-                                                    <h3>
-                                                        Our automated trading machine called{" "}
-                                                        <span className="text-gradient-2">Brokerbot.</span>
-                                                    </h3>
-                                                </div>
-                                                <p className="text-color-darkgrey">
-                                                    Make your shares tradable by integrating our Brokerbot into
-                                                    your website on a separate investors page.<em> </em>This
-                                                    gives investors easy access to your company's shares.
-                                                    Investments can be placed without unnecessary hurdles via
-                                                    bank transfer or directly with crypto. <br />
-                                                    <br />
-                                                    Allow investors to sell shares back to the company to take
-                                                    advantage of liquid shares. <br />
-                                                    Why? <br />
-                                                    Traditional market makers are expensive and mean an
-                                                    additional intermediary between the issuer of shares and
-                                                    investors. Smart contracts on the blockchain can handle
-                                                    trading much more efficiently. Therefore our approach
-                                                    enables not only the sale of shares but, when desired, also
-                                                    a secondary market in an unprecedented form.
-                                                    <br />
-                                                    The issuer thereby always retains full control over its own
-                                                    stock market.
-                                                    <br />‍<br />
-                                                    The Aktionariat Brokerbot® is the most efficient market
-                                                    maker available.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <a
-                                            id="w-node-_377faedc-6048-0ed3-2223-239a40218bf7-9cd4fe06"
-                                            href="#"
-                                            className="image-block image-center background-color-gradient-1 w-inline-block"
-                                        >
-                                            <img
-                                                src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/62c2f06c8f5e0d3a1ff2e5d1_buy.png"
-                                                loading="lazy"
-                                                srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/62c2f06c8f5e0d3a1ff2e5d1_buy-p-500.png 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/62c2f06c8f5e0d3a1ff2e5d1_buy.png 515w"
-                                                width="1004.5"
-                                                sizes="(max-width: 479px) 83vw, (max-width: 767px) 89vw, (max-width: 991px) 100vw, 15.010416984558105px"
-                                                alt
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="divider" />
-                            <div className="container-large">
-                                <div className="margin-bottom margin-xlarge">
-                                    <div className="max-width-medium">
-                                        <div className="margin-bottom margin-xlarge">
-                                            <h2>
-                                                Fundamentals of{" "}
-                                                <span className="text-gradient-2">Brokerbot</span>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                    <div className="content-grid">
-                                        <div
-                                            id="w-node-_377faedc-6048-0ed3-2223-239a40218c03-9cd4fe06"
-                                            className="hover-card-item background-color-gradient-1"
-                                        >
-                                            <div className="hover-card-content">
-                                                <div className="margin-bottom margin-medium">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c8a64249eee80069bfd480_history.svg"
-                                                        loading="lazy"
-                                                        alt="Background Icon"
-                                                        className="icon-1x1-large"
-                                                        style={{ filter: "saturate(0%) brightness(200%)" }}
-                                                    />
-                                                </div>
-                                                <div className="max-width-full">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-xlarge text-weight-normal">
-                                                            Background
-                                                        </h3>
-                                                    </div>
-                                                    <p className="text-color-darkgrey">
-                                                        Today, only 230 out of more than 500′000 Swiss companies
-                                                        are publicly traded on the stock market. We believe many
-                                                        more could and should be traded – thanks to our Brokerbot.
-                                                        <br />
-                                                        <br />
-                                                        We have the legal, technical, and economic ideas to create
-                                                        liquid markets for thousands of additional Swiss
-                                                        companies, potentially unlocking billions in dormant
-                                                        economic value.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div
-                                            id="w-node-_377faedc-6048-0ed3-2223-239a40218c10-9cd4fe06"
-                                            className="hover-card-item background-color-gradient-1"
-                                        >
-                                            <div className="hover-card-content">
-                                                <div className="margin-bottom margin-medium">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c8a643f3078834c6ded300_legal-foundations.svg"
-                                                        loading="lazy"
-                                                        alt="Legal Foundations Icon"
-                                                        className="icon-1x1-large"
-                                                        style={{ filter: "saturate(0%) brightness(200%)" }}
-                                                    />
-                                                </div>
-                                                <div className="max-width-full">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-xlarge text-weight-normal">
-                                                            Strong Legal Foundations
-                                                        </h3>
-                                                    </div>
-                                                    <p className="text-color-darkgrey">
-                                                        Since February 1st, 2021, Swiss DLT (Distributed Ledger
-                                                        Technology) Law enables the introduction of ledger-based
-                                                        securities that are represented on a blockchain. <br />
-                                                        <br />
-                                                        Aktionariat AG has been at the forefront of the new
-                                                        frontiers offered by this fresh legal framework since day
-                                                        one: we’ve been selling our own shares using Brokerbot
-                                                        immediately after the new legislation took effect.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div
-                                            id="w-node-_377faedc-6048-0ed3-2223-239a40218c1d-9cd4fe06"
-                                            className="hover-card-item background-color-gradient-1"
-                                        >
-                                            <div className="hover-card-content">
-                                                <div className="margin-bottom margin-medium">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c8a64370a3e56173bbc59f_economics-rationale.svg"
-                                                        loading="lazy"
-                                                        alt="Economic Rationale Icon"
-                                                        className="icon-1x1-large"
-                                                        style={{ filter: "saturate(0%) brightness(200%)" }}
-                                                    />
-                                                </div>
-                                                <div className="max-width-full">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-xlarge text-weight-normal">
-                                                            Economics Rationale
-                                                        </h3>
-                                                    </div>
-                                                    <p className="text-color-darkgrey">
-                                                        Assets are more valuable when they are liquid. Our
-                                                        Brokerbot not only makes your shares tradable, but also
-                                                        ensures the necessary liquidity in trading.
-                                                        <br />
-                                                        <br />
-                                                        Thanks to a liquidity pool provided by the company, it
-                                                        achieves a high degree of liquidity while maintaining
-                                                        control over its own stock market. The most rational
-                                                        approach to making SME shares tradable.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div
-                                            id="w-node-_377faedc-6048-0ed3-2223-239a40218c2a-9cd4fe06"
-                                            className="hover-card-item background-color-gradient-1"
-                                        >
-                                            <div className="hover-card-content">
-                                                <div className="margin-bottom margin-medium">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c8a64249521cc76f2b069b_innovative-tech.svg"
-                                                        loading="lazy"
-                                                        alt="Innovative Tech Icon"
-                                                        className="icon-1x1-large"
-                                                        style={{ filter: "saturate(0%) brightness(200%)" }}
-                                                    />
-                                                </div>
-                                                <div className="max-width-full">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-xlarge text-weight-normal">
-                                                            Innovative Technologies
-                                                        </h3>
-                                                    </div>
-                                                    <p className="text-color-darkgrey">
-                                                        Smart Contracts on distributed networks (Blockchain
-                                                        Technology) make it possible to create digital
-                                                        representations of physical objects and the peer-to-peer
-                                                        exchange of them. <br />
-                                                        <br />
-                                                        Brokerbot runs based on an innovative smart contract (our
-                                                        Market Contract), on the Ethereum blockchain, with each
-                                                        Brokerbot installation bound to a specific Ethereum
-                                                        Address. Delivered as a web-based widget, Brokerbot makes
-                                                        the automated market-making of tokenized equity possible
-                                                        on any website.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="divider" />
-                            <div className="container-large">
-                                <div className="cta_component margin-bottom margin-small">
-                                    <div className="max-width-full">
-                                        <div className="margin-bottom margin-medium">
-                                            <p className="heading-xlarge text-weight-bold">
-                                                Discover companies using{" "}
-                                                <span className="text-gradient-2">our toolkit.</span>
-                                            </p>
-                                        </div>
-                                        <a href="#" className="button w-button">
-                                            Show more
-                                        </a>
-                                    </div>
-                                    <div className="max-width-small" />
-                                </div>
-                            </div>
-                            <div className="divider" />
-                            <div className="container-large">
-                                <div className="max-width-large">
-                                    <div className="margin-bottom margin-xlarge">
-                                        <div className="margin-bottom margin-medium">
-                                            <h2 className="text-gradient-2">Key Features</h2>
-                                        </div>
-                                        <div className="text-size-medium">
-                                            Shares are meant to be transferable. Markets work best when they
-                                            are free and open. We create transferability and transparency
-                                            for private equity markets by leveraging the latest legal and
-                                            technical developments. By tokenizing your equity and allowing
-                                            it to be freely traded you can expect the following benefits:
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="margin-bottom margin-medium">
-                                    <div
-                                        id="w-node-_377faedc-6048-0ed3-2223-239a40218c44-9cd4fe06"
-                                        className="hover-card-item background-color-gradient-1"
-                                    >
-                                        <div className="hover-card-content horizontal-card">
-                                            <div className="dont-shrink">
-                                                <div className="margin-right margin-large">
-                                                    <div className="margin-bottom margin-medium">
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c8a999090c123f13202d1b_open.svg"
-                                                            loading="lazy"
-                                                            alt="Open Icon"
-                                                            className="icon-1x1-large"
-                                                            style={{ filter: "saturate(0%) brightness(200%)" }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="horizontal-card-text">
-                                                <div className="margin-right margin-medium">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-xlarge text-weight-normal">
-                                                            Transparent Technical Basis
-                                                        </h3>
-                                                    </div>
-                                                    <p className="text-color-darkgrey">
-                                                        Both the source code and the actual contract a given
-                                                        Brokerbot is running on are all open source, freely and
-                                                        openly accessible, on the blockchain, safe from
-                                                        alterations. The Brokerbot that you see on this page and
-                                                        our Investor Relations page, for instance, is on
-                                                        0xbddE...bB84.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div className="dont-shrink">
-                                                <a
-                                                    data-w-id="377faedc-6048-0ed3-2223-239a40218c52"
-                                                    href="https://etherscan.io/address/0xbddE35780e3986a47e54a580017d8213f0D2bB84"
-                                                    target="_blank"
-                                                    className="button-arrow button-arrow-large w-inline-block"
-                                                >
-                                                    <div>View Smart Contract</div>
-                                                    <div
-                                                        className="arrow"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        ↘
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="margin-bottom margin-medium">
-                                    <div
-                                        id="w-node-_377faedc-6048-0ed3-2223-239a40218c58-9cd4fe06"
-                                        className="hover-card-item background-color-gradient-1"
-                                    >
-                                        <div className="hover-card-content horizontal-card">
-                                            <div className="dont-shrink">
-                                                <div className="margin-right margin-large">
-                                                    <div className="margin-bottom margin-medium">
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c8a9998bee1b789ca2a6c1_curve-chart.svg"
-                                                            loading="lazy"
-                                                            alt="Curve Icon"
-                                                            className="icon-1x1-large"
-                                                            style={{ filter: "saturate(0%) brightness(200%)" }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="horizontal-card-text">
-                                                <div className="margin-right margin-medium">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-xlarge text-weight-normal">
-                                                            A Bonding Curve – Under Your Control
-                                                        </h3>
-                                                    </div>
-                                                    <p className="text-color-darkgrey">
-                                                        The smart contract establishes a linear relationship
-                                                        between the (net) number of shares sold and the current
-                                                        price. The price mechanism of the Brokerbot operates on
-                                                        simple parameters which the operating company can easily
-                                                        configure in our Corporate Dashboard. In concrete terms,
-                                                        this means that the issuer can define by how many
-                                                        francs/rappen the share price moves for each purchase/sale
-                                                        of shares.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="margin-bottom margin-medium">
-                                    <div
-                                        id="w-node-_377faedc-6048-0ed3-2223-239a40218c6c-9cd4fe06"
-                                        className="hover-card-item background-color-gradient-1"
-                                    >
-                                        <div className="hover-card-content horizontal-card">
-                                            <div className="dont-shrink">
-                                                <div className="margin-right margin-large">
-                                                    <div className="margin-bottom margin-medium">
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c8a98d49eee82280bfdd7e_liquidity.svg"
-                                                            loading="lazy"
-                                                            alt="Liquidity Icon"
-                                                            className="icon-1x1-large"
-                                                            style={{ filter: "saturate(0%) brightness(200%)" }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="horizontal-card-text">
-                                                <div className="margin-right margin-medium">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-xlarge text-weight-normal">
-                                                            Liquidity Premium
-                                                        </h3>
-                                                    </div>
-                                                    <p className="text-color-darkgrey">
-                                                        Investors are likely to pay a higher price per share when
-                                                        there is a reliable market price and an option to
-                                                        liquidate their positions. Damodaran (2005) empirically
-                                                        estimates this effect to be at least 25%, even more for
-                                                        smaller firms.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div className="dont-shrink">
-                                                <a
-                                                    data-w-id="377faedc-6048-0ed3-2223-239a40218c7a"
-                                                    href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=841484"
-                                                    target="_blank"
-                                                    className="button-arrow button-arrow-large w-inline-block"
-                                                >
-                                                    <div>View Report</div>
-                                                    <div
-                                                        className="arrow"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        ↘
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="margin-bottom margin-medium">
-                                    <div
-                                        id="w-node-_377faedc-6048-0ed3-2223-239a40218c80-9cd4fe06"
-                                        className="hover-card-item background-color-gradient-1"
-                                    >
-                                        <div className="hover-card-content horizontal-card">
-                                            <div className="dont-shrink">
-                                                <div className="margin-right margin-large">
-                                                    <div className="margin-bottom margin-medium">
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c8a98e8bee1b34f6a2a6bf_reduced-price.svg"
-                                                            loading="lazy"
-                                                            alt="Reduced Icon"
-                                                            className="icon-1x1-large"
-                                                            style={{ filter: "saturate(0%) brightness(200%)" }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="horizontal-card-text">
-                                                <div className="margin-right margin-medium">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-xlarge text-weight-normal">
-                                                            Reduced Price Uncertainty
-                                                        </h3>
-                                                    </div>
-                                                    <p className="text-color-darkgrey">
-                                                        Founders, employees and investors benefit as their
-                                                        tokenized shares gain a tangible and predictable value.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="margin-bottom margin-medium">
-                                    <div
-                                        id="w-node-_377faedc-6048-0ed3-2223-239a40218c8e-9cd4fe06"
-                                        className="hover-card-item background-color-gradient-1"
-                                    >
-                                        <div className="hover-card-content horizontal-card">
-                                            <div className="dont-shrink">
-                                                <div className="margin-right margin-large">
-                                                    <div className="margin-bottom margin-medium">
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c8a98daa2c8d18a6596aaa_meeting.svg"
-                                                            loading="lazy"
-                                                            alt="Meeting Icon"
-                                                            className="icon-1x1-large"
-                                                            style={{ filter: "saturate(0%) brightness(200%)" }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="horizontal-card-text">
-                                                <div className="margin-right margin-medium">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-xlarge text-weight-normal">
-                                                            More Potential Investors
-                                                        </h3>
-                                                    </div>
-                                                    <p className="text-color-darkgrey">
-                                                        Less uncertainty allows to create appeal to new types of
-                                                        less adventurous investors. Smaller ticket sizes lower the
-                                                        entry level for smaller investors. Ease of use allows
-                                                        anyone to purchase shares, even if not familiar with stock
-                                                        exchanges. Since our tools work on the Ethereum
-                                                        Blockchain, issuers automatically get access to 50 million
-                                                        Ethereum users; all potential investors.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <BrokerbotTab></BrokerbotTab>
                 </div>
             </div>
         </section>
     )
 }
+
+const BrokerbotTab = () => {
+    const explore_object = [
+        {
+            id: 1,
+            name: 'Brokerbot',
+            link: 'our-products/brokerbot#details'
+        },
+        {
+            id: 2,
+            name: 'Portfolio App',
+            link: 'our-products/portfolio-app#details'
+        },
+        {
+            id: 3,
+            name: 'Corporate Dashboard',
+            link: 'our-products/corporate-dashboard#details'
+        },
+        {
+            id: 4,
+            name: 'Investor Widgets',
+            link: 'our-products/investor-widgets#details'
+        },
+    ]
+    const tab_content_object = [
+        {
+            id: 1,
+            img: require('../../../icons/history.svg').default,
+            title: 'Background',
+            description: <>
+                Today, only 230 out of more than 500′000 Swiss companies are publicly traded on the stock market. We believe many more could and should be traded – thanks to our Brokerbot.
+                <br /><br />
+                We have the legal, technical, and economic ideas to create liquid markets for thousands of additional Swiss companies, potentially unlocking billions in dormant economic value.
+            </>
+        },
+        {
+            id: 2,
+            img: require('../../../icons/legal-foundations.svg').default,
+            title: 'Strong Legal Foundations',
+            description: <>
+
+                Since February 1st, 2021, Swiss DLT (Distributed Ledger Technology) Law enables the introduction of ledger-based securities that are represented on a blockchain.
+
+                <br /><br />
+                Aktionariat AG has been at the forefront of the new frontiers offered by this fresh legal framework since day one: we’ve been selling our own shares using Brokerbot immediately after the new legislation took effect.
+            </>
+        },
+        {
+            id: 3,
+            img: require('../../../icons/economics-rationale.svg').default,
+            title: 'Economics Rationale',
+            description: <>
+
+                Assets are more valuable when they are liquid. Our Brokerbot not only makes your shares tradable, but also ensures the necessary liquidity in trading.
+                <br />
+                <br />
+                Thanks to a liquidity pool provided by the company, it achieves a high degree of liquidity while maintaining control over its own stock market. The most rational approach to making SME shares tradable.
+            </>
+        },
+        {
+            id: 4,
+            img: require('../../../icons/innovative-tech.svg').default,
+            title: 'Innovative Technologies',
+            description: <>
+                Smart Contracts on distributed networks (Blockchain Technology) make it possible to create digital representations of physical objects and the peer-to-peer exchange of them.
+                <br />
+                <br />
+                Brokerbot runs based on an innovative smart contract (our Market Contract), on the Ethereum blockchain, with each Brokerbot installation bound to a specific Ethereum Address. Delivered as a web-based widget, Brokerbot makes the automated market-making of tokenized equity possible on any website.
+            </>
+        },
+    ]
+
+    const key_features_object = [
+        {
+            id: 1,
+            img: require('../../../icons/open.svg').default,
+            title: 'Transparent Technical Basis',
+            description: `
+            Both the source code and the actual contract a given Brokerbot is running on are all open source, freely and openly accessible, on the blockchain, safe from alterations. The Brokerbot that you see on this page and our Investor Relations page, for instance, is on 0xbddE...bB84.
+            `,
+            isShrink: true,
+            shrink_info: {
+                link: 'https://etherscan.io/address/0xbddE35780e3986a47e54a580017d8213f0D2bB84',
+                name: 'View Smart Contract'
+            }
+        },
+        {
+            id: 2,
+            img: require('../../../icons/curve-chart.svg').default,
+            title: 'A Bonding Curve – Under Your Control',
+            description: `
+            A Bonding Curve – Under Your Control
+    The smart contract establishes a linear relationship between the (net) number of shares sold and the current price. The price mechanism of the Brokerbot operates on simple parameters which the operating company can easily configure in our Corporate Dashboard. In concrete terms, this means that the issuer can define by how many francs/rappen the share price moves for each purchase/sale of shares.
+            `,
+            isShrink: false,
+        },
+
+        {
+            id: 3,
+            img: require('../../../icons/liquidity.svg').default,
+            title: 'Liquidity Premium',
+            description: ` Investors are likely to pay a higher price per share when there is a reliable market price and an option to liquidate their positions. Damodaran (2005) empirically estimates this effect to be at least 25%, even more for smaller firms.
+            `,
+            isShrink: true,
+            shrink_info: {
+                link: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=841484',
+                name: 'View Report'
+            }
+        },
+        {
+            id: 4,
+            img: require('../../../icons/reduced-price.svg').default,
+            title: 'Reduced Price Uncertainty',
+            description: ` Founders, employees and investors benefit as their tokenized shares gain a tangible and predictable value.`,
+            isShrink: false,
+        },
+        {
+            id: 5,
+            img: require('../../../icons/meeting.svg').default,
+            title: 'More Potential Investors',
+            description: `Less uncertainty allows to create appeal to new types of less adventurous investors. Smaller ticket sizes lower the entry level for smaller investors. Ease of use allows anyone to purchase shares, even if not familiar with stock exchanges. Since our tools work on the Ethereum Blockchain, issuers automatically get access to 50 million Ethereum users; all potential investors.`,
+            isShrink: false,
+        },
+
+
+    ]
+    return (
+        <div id="BrokerbotTab">
+            <div className="padding-vertical padding-xxlarge">
+                <div className="our-products-menu">
+                    <div className="margin-bottom margin-xlarge">
+                        <h2 className="heading-medium">Explore our products</h2>
+                    </div>
+                    <div className="margin-bottom margin-xxlarge">
+                        <div className="tabs-menu">
+                            {
+                                explore_object.map(v => {
+                                    return (
+                                        <a key={v.id}
+                                            href={v.link}
+                                            className="tab-link w-inline-block"
+                                        >
+                                            <div>{v.name}</div>
+                                        </a>
+                                    )
+                                })
+                            }
+
+                        </div>
+                    </div>
+                </div>
+                <div className="tab-content-products">
+                    <div className="container-large">
+                        <div className="margin-bottom margin-xlarge">
+                            <div className="content-grid rows-4 mobile-grid">
+                                <div
+                                    id="w-node-_377faedc-6048-0ed3-2223-239a40218be1-9cd4fe06"
+                                    className="content-block"
+                                >
+                                    <div className="margin-bottom margin-medium">
+                                        <div className="margin-bottom margin-medium">
+                                            <h3>
+                                                Our automated trading machine called{" "}
+                                                <span className="text-gradient-2">Brokerbot.</span>
+                                            </h3>
+                                        </div>
+                                        <p className="text-color-darkgrey">
+                                            Make your shares tradable by integrating our Brokerbot into
+                                            your website on a separate investors page.<em> </em>This
+                                            gives investors easy access to your company's shares.
+                                            Investments can be placed without unnecessary hurdles via
+                                            bank transfer or directly with crypto. <br />
+                                            <br />
+                                            Allow investors to sell shares back to the company to take
+                                            advantage of liquid shares. <br />
+                                            Why? <br />
+                                            Traditional market makers are expensive and mean an
+                                            additional intermediary between the issuer of shares and
+                                            investors. Smart contracts on the blockchain can handle
+                                            trading much more efficiently. Therefore our approach
+                                            enables not only the sale of shares but, when desired, also
+                                            a secondary market in an unprecedented form.
+                                            <br />
+                                            The issuer thereby always retains full control over its own
+                                            stock market.
+                                            <br />‍<br />
+                                            The Aktionariat Brokerbot® is the most efficient market
+                                            maker available.
+                                        </p>
+                                    </div>
+                                </div>
+                                <a
+                                    id="w-node-_377faedc-6048-0ed3-2223-239a40218bf7-9cd4fe06"
+                                    href="#"
+                                    className="image-block image-center background-color-gradient-1 w-inline-block"
+                                >
+                                    <img
+                                        src={require('../../../images/pages/our_product/buy-p-500.png')}
+                                        loading="lazy"
+                                        width="1004.5"
+
+                                        alt="img"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="divider" />
+                    <div className="container-large">
+                        <div className="margin-bottom margin-xlarge">
+                            <div className="max-width-medium">
+                                <div className="margin-bottom margin-xlarge">
+                                    <h2>
+                                        Fundamentals of{" "}
+                                        <span className="text-gradient-2">Brokerbot</span>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div className="content-grid">
+                                {
+                                    tab_content_object.map(v => {
+                                        return (
+                                            <div
+                                                id="w-node-_377faedc-6048-0ed3-2223-239a40218c03-9cd4fe06"
+                                                className="hover-card-item background-color-gradient-1"
+                                            >
+                                                <div className="hover-card-content">
+                                                    <div className="margin-bottom margin-medium">
+                                                        <img
+                                                            src={v.img}
+                                                            loading="lazy"
+                                                            alt="Background Icon"
+                                                            className="icon-1x1-large"
+                                                            style={{ filter: "saturate(0%) brightness(200%)" }}
+                                                        />
+                                                    </div>
+                                                    <div className="max-width-full">
+                                                        <div className="margin-bottom margin-small">
+                                                            <h3 className="text-size-xlarge text-weight-normal">
+                                                                {v.title}
+                                                            </h3>
+                                                        </div>
+                                                        <p className="text-color-darkgrey">
+                                                            {v.description}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div className="divider" />
+                    <div className="container-large">
+                        <div className="cta_component margin-bottom margin-small">
+                            <div className="max-width-full">
+                                <div className="margin-bottom margin-medium">
+                                    <p className="heading-xlarge text-weight-bold">
+                                        Discover companies using{" "}
+                                        <span className="text-gradient-2">our toolkit.</span>
+                                    </p>
+                                </div>
+                                <a href="#" className="button w-button">
+                                    Show more
+                                </a>
+                            </div>
+                            <div className="max-width-small" />
+                        </div>
+                    </div>
+                    <div className="divider" />
+                    <div className="container-large">
+                        <div className="max-width-large">
+                            <div className="margin-bottom margin-xlarge">
+                                <div className="margin-bottom margin-medium">
+                                    <h2 className="text-gradient-2">Key Features</h2>
+                                </div>
+                                <div className="text-size-medium">
+                                    Shares are meant to be transferable. Markets work best when they
+                                    are free and open. We create transferability and transparency
+                                    for private equity markets by leveraging the latest legal and
+                                    technical developments. By tokenizing your equity and allowing
+                                    it to be freely traded you can expect the following benefits:
+                                </div>
+                            </div>
+                        </div>
+                        {
+                            key_features_object.map(v => {
+                                return (
+                                    <div key={v.id} className="margin-bottom margin-medium">
+                                        <div
+                                            id="w-node-_377faedc-6048-0ed3-2223-239a40218c44-9cd4fe06"
+                                            className="hover-card-item background-color-gradient-1"
+                                        >
+                                            <div className="hover-card-content horizontal-card">
+                                                <div className="dont-shrink">
+                                                    <div className="margin-right margin-large">
+                                                        <div className="margin-bottom margin-medium">
+                                                            <img
+                                                                src={v.img}
+                                                                loading="lazy"
+                                                                alt="Open Icon"
+                                                                className="icon-1x1-large"
+                                                                style={{ filter: "saturate(0%) brightness(200%)" }}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="horizontal-card-text">
+                                                    <div className="margin-right margin-medium">
+                                                        <div className="margin-bottom margin-small">
+                                                            <h3 className="text-size-xlarge text-weight-normal">
+                                                                {v.title}
+                                                            </h3>
+                                                        </div>
+                                                        <p className="text-color-darkgrey">
+                                                            {v.description}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                {v.isShrink && (
+                                                    <div className="dont-shrink">
+                                                        <a
+                                                            href={v.shrink_info.link}
+                                                            target="_blank" rel="noreferrer"
+                                                            className="button-arrow button-arrow-large w-inline-block action_arrow"
+                                                        >
+                                                            <div>{v.shrink_info.name}</div>
+                                                            <span className="arrow">
+                                                                ↘
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                )}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 
 const QAFurther = () => {
     return (
