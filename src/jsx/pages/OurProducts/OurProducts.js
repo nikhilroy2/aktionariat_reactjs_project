@@ -140,25 +140,12 @@ const SectionHero = () => {
                                 </div>
                                 <a
                                     href="/blogs/about-the-superiority-of-uniswap-style-markets-over-traditional-order-books"
-                                    className="button-arrow w-inline-block"
+                                    className="button-arrow action_arrow w-inline-block"
                                 >
                                     <div>Learn more</div>
-                                    <div
-                                        className="arrow"
-                                        style={{
-                                            "-webkit-transform":
-                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                            "-ms-transform":
-                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                            transform:
-                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                            "-webkit-transform-style": "preserve-3d",
-                                            "-ms-transform-style": "preserve-3d",
-                                            "transform-style": "preserve-3d",
-                                        }}
-                                    >
+                                    <span className="arrow">
                                         ↘
-                                    </div>
+                                    </span>
                                 </a>
                             </div>
                         </div>

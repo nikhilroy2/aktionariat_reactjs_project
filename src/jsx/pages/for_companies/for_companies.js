@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../../../scss/pages/for_companies/for_companies.css';
+import ClientFeedback from '../../components/ClientFeedback/ClientFeedback';
+import LatestNewsComponent from '../../components/LatestNews/LatestNews';
 function ForCompanies(props) {
     return (
         <div id='ForCompanies' className=''>
@@ -140,7 +142,7 @@ const OpenMarket = () => {
                                             className="icon accordion-icon" style={{ transform: `rotate(${accordion1 ? '45deg' : '0deg'})` }}
                                         >
                                             <img
-                                                src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
+                                                src={require('../../../icons/plus.svg').default}
                                                 loading="lazy"
                                                 alt="Plus Icon"
                                             />
@@ -173,7 +175,7 @@ const OpenMarket = () => {
                                             className="icon accordion-icon" style={{ transform: `rotate(${accordion2 ? '45deg' : '0deg'})` }}
                                         >
                                             <img
-                                                src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
+                                                src={require('../../../icons/plus.svg').default}
                                                 loading="lazy"
                                                 alt="Plus Icon"
                                             />
@@ -203,7 +205,7 @@ const OpenMarket = () => {
                                             className="icon accordion-icon" style={{ transform: `rotate(${accordion3 ? '45deg' : '0deg'})` }}
                                         >
                                             <img
-                                                src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
+                                                src={require('../../../icons/plus.svg').default}
                                                 loading="lazy"
                                                 alt="Plus Icon"
                                             />
@@ -236,7 +238,7 @@ const OpenMarket = () => {
 
                                         >
                                             <img
-                                                src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
+                                                src={require('../../../icons/plus.svg').default}
                                                 loading="lazy"
                                                 alt="Plus Icon"
                                             />
@@ -259,7 +261,7 @@ const OpenMarket = () => {
                                 className="image-block-0 image-center"
                             >
                                 <img
-                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619d218685a3c910d1d91e60_chart-less-price.svg"
+                                    src={require('../../../images/pages/for_companies/chart-less-price.svg').default}
                                     loading="lazy"
                                     alt="Less Price chart."
                                     className="secondary-market image-1"
@@ -348,15 +350,16 @@ const MarketWidget = () => {
                                             </span>
                                         </a>
                                     </div>
+
                                     <a
                                         id="w-node-_8eb57f92-3865-b6d4-319f-01c7ba96ee89-decd91f1"
                                         href="#"
                                         className="image-block image-center background-color-gradient-1 w-inline-block"
                                     >
                                         <img
-                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/62c2f06c8f5e0d3a1ff2e5d1_buy.png"
+                                            src={require('../../../images/pages/for_companies/buy.png')}
                                             loading="lazy"
-                                            alt
+                                            alt=""
                                             className="image-75"
                                         />
                                     </a>
@@ -370,10 +373,10 @@ const MarketWidget = () => {
                                         className="image-block image-center background-color-gradient-1"
                                     >
                                         <img
-                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/62c2f6e78e44d15805dc6934_dashboard-notebook%20(1).png"
+                                            src={require('../../../images/pages/for_companies/dashboard-notebook.png')}
                                             loading="lazy"
                                             width="1004.5"
-                                            alt
+                                            alt="img"
                                         />
                                     </div>
                                     <div
@@ -406,25 +409,12 @@ const MarketWidget = () => {
                                         </div>
                                         <a
                                             href="/our-products/corporate-dashboard#details"
-                                            className="button-arrow button-arrow-large w-inline-block"
+                                            className="button-arrow action_arrow button-arrow-large w-inline-block"
                                         >
                                             <div>Learn more</div>
-                                            <div
-                                                className="arrow"
-                                                style={{
-                                                    "-webkit-transform":
-                                                        "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                    "-ms-transform":
-                                                        "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                    transform:
-                                                        "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                    "-webkit-transform-style": "preserve-3d",
-                                                    "-ms-transform-style": "preserve-3d",
-                                                    "transform-style": "preserve-3d",
-                                                }}
-                                            >
+                                            <span className="arrow">
                                                 ↘
-                                            </div>
+                                            </span>
                                         </a>
                                     </div>
                                 </div>
@@ -462,25 +452,12 @@ const MarketWidget = () => {
                                         </div>
                                         <a
                                             href="/our-products/portfolio-app#details"
-                                            className="button-arrow button-arrow-large w-inline-block"
+                                            className="button-arrow action_arrow button-arrow-large w-inline-block"
                                         >
                                             <div>Learn more</div>
-                                            <div
-                                                className="arrow"
-                                                style={{
-                                                    "-webkit-transform":
-                                                        "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                    "-ms-transform":
-                                                        "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                    transform:
-                                                        "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                    "-webkit-transform-style": "preserve-3d",
-                                                    "-ms-transform-style": "preserve-3d",
-                                                    "transform-style": "preserve-3d",
-                                                }}
-                                            >
+                                            <span className="arrow">
                                                 ↘
-                                            </div>
+                                            </span>
                                         </a>
                                     </div>
                                     <div
@@ -489,11 +466,10 @@ const MarketWidget = () => {
                                     >
                                         <div className="margin-bottom margin-medium">
                                             <img
-                                                src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619d21e2f650fadaa5c8fb3e_aktionariat-app-mockup-1.png"
+                                                src={require('../../../images/pages/for_companies/mobile-wallet.png')}
                                                 loading="lazy"
                                                 height={430}
-                                                srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619d21e2f650fadaa5c8fb3e_aktionariat-app-mockup-1-p-500.png 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619d21e2f650fadaa5c8fb3e_aktionariat-app-mockup-1-p-800.png 800w, https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619d21e2f650fadaa5c8fb3e_aktionariat-app-mockup-1.png 842w"
-                                                sizes="100vw"
+
                                                 alt="Portfolio App screenshot with a mockup."
                                             />
                                         </div>
@@ -502,10 +478,10 @@ const MarketWidget = () => {
                                                 <a
                                                     href="https://apps.apple.com/ch/app/aktionariat/id1518326813#?platform=iphone"
                                                     target="_blank"
-                                                    className="w-inline-block"
+                                                    className="w-inline-block" rel="noreferrer"
                                                 >
                                                     <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/6199799d7f6c6bc01322e3ae_button-apple.svg"
+                                                        src={require('../../../icons/apple.svg').default}
                                                         loading="lazy"
                                                         alt="Button for App Store"
                                                     />
@@ -513,11 +489,11 @@ const MarketWidget = () => {
                                             </div>
                                             <a
                                                 href="https://play.google.com/store/apps/details?id=com.aktionariat.app"
-                                                target="_blank"
+                                                target="_blank" rel="noreferrer"
                                                 className="w-inline-block"
                                             >
                                                 <img
-                                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/6199799dd3a10efe04325ef9_button-google.svg"
+                                                    src={require('../../../icons/google.svg').default}
                                                     loading="lazy"
                                                     alt="Button for Google Play"
                                                 />
@@ -529,7 +505,7 @@ const MarketWidget = () => {
                             <div>
                                 <a
                                     href="https://meetings-eu1.hubspot.com/bela?__hstc=180372984.110723e7ee79c8b5cad6e8378037cce7.1659973797909.1660359929893.1660381758643.21&__hssc=180372984.2.1660381758643&__hsfp=3929547609"
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer"
                                     className="button-arrow-block button-arrow-large modal-open_btn w-inline-block"
                                 >
                                     <div>Request a Demo</div>
@@ -546,6 +522,33 @@ const MarketWidget = () => {
 }
 
 const OnboardingProcess = () => {
+
+    const step_object = [
+        {
+            id: 1,
+            title: 'Digital Shareholder Registry',
+            description: `Start by digitizing your shareholder registry in our Corporate
+            Dashboard, completely free of charge.`
+        },
+        {
+            id: 2,
+            title: 'Legal Framework',
+            description: `We provide you with the legal foundation for creating and trading
+            your digital shares.`
+        },
+        {
+            id: 3,
+            title: 'Tokenized Shares',
+            description: `Define the number of shares you want to tokenize, the starting price
+            and the price behavior of your shares.`
+        },
+        {
+            id: 4,
+            title: 'Open Market',
+            description: `Create an investor relations page, add our market widgets and
+            benefit from an automated and liquid share market.`
+        }
+    ]
     return (
         <section id="onboarding-process">
             <div className="page-padding">
@@ -570,81 +573,35 @@ const OnboardingProcess = () => {
                             >
                                 <div className="padding-small">
                                     <img
-                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c5cdcef439df78af97efe8_aktionariat-infographic-new.png"
+                                        src={require('../../../images/pages/for_companies/infographic-new-p-2000.png')}
                                         loading="lazy"
-                                        srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c5cdcef439df78af97efe8_aktionariat-infographic-new-p-500.png 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c5cdcef439df78af97efe8_aktionariat-infographic-new-p-800.png 800w, https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c5cdcef439df78af97efe8_aktionariat-infographic-new-p-1080.png 1080w, https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c5cdcef439df78af97efe8_aktionariat-infographic-new-p-1600.png 1600w, https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c5cdcef439df78af97efe8_aktionariat-infographic-new-p-2000.png 2000w, https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c5cdcef439df78af97efe8_aktionariat-infographic-new-p-2600.png 2600w, https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61c5cdcef439df78af97efe8_aktionariat-infographic-new.png 3660w"
-                                        width="1004.5"
-                                        sizes="(max-width: 479px) 7.75px, (max-width: 767px) 31.34375px, 100vw"
                                         alt="4 steps of share tokenization infographic."
                                     />
                                 </div>
                             </div>
-                            <div
-                                id="w-node-_6018aac0-35da-6bca-f58e-1165c7bf9189-decd91f1"
-                                className="content-block"
-                            >
-                                <div className="margin-bottom margin-small">
-                                    <h3 className="heading-label text-color-grey margin-bottom margin-xsmall">
-                                        Step 1
-                                    </h3>
-                                    <h3 className="text-size-large text-weight-normal">
-                                        Digital Shareholder Registry
-                                    </h3>
-                                </div>
-                                <p className="text-color-grey">
-                                    Start by digitizing your shareholder registry in our Corporate
-                                    Dashboard, completely free of charge.
-                                </p>
-                            </div>
-                            <div
-                                id="w-node-e0c3796e-4c96-46e2-d863-b83a8162edc7-decd91f1"
-                                className="content-block"
-                            >
-                                <div className="margin-bottom margin-small">
-                                    <h3 className="heading-label text-color-grey margin-bottom margin-xsmall">
-                                        Step 2
-                                    </h3>
-                                    <h3 className="text-size-large text-weight-normal">
-                                        Legal Framework
-                                    </h3>
-                                </div>
-                                <p className="text-color-grey">
-                                    We provide you with the legal foundation for creating and trading
-                                    your digital shares.
-                                </p>
-                            </div>
-                            <div
-                                id="w-node-_862e92b2-b070-4819-e20f-177993ff3a77-decd91f1"
-                                className="content-block"
-                            >
-                                <div className="margin-bottom margin-small">
-                                    <h3 className="heading-label text-color-grey margin-bottom margin-xsmall">
-                                        Step 3
-                                    </h3>
-                                    <h3 className="text-size-large text-weight-normal">
-                                        Tokenized Shares
-                                    </h3>
-                                </div>
-                                <p className="text-color-grey">
-                                    Define the number of shares you want to tokenize, the starting price
-                                    and the price behavior of your shares.
-                                </p>
-                            </div>
-                            <div
-                                id="w-node-_4b2d7e53-8ce0-4204-d126-5af0926f6a87-decd91f1"
-                                className="content-block"
-                            >
-                                <div className="margin-bottom margin-small">
-                                    <h3 className="heading-label text-color-grey margin-bottom margin-xsmall">
-                                        Step 4
-                                    </h3>
-                                    <h3 className="text-size-large text-weight-normal">Open Market</h3>
-                                </div>
-                                <p className="text-color-grey">
-                                    Create an investor relations page, add our market widgets and
-                                    benefit from an automated and liquid share market.
-                                </p>
-                            </div>
+                            {step_object.map(v => {
+                                return (
+
+                                    <div key={v.id}
+                                        id="w-node-_6018aac0-35da-6bca-f58e-1165c7bf9189-decd91f1"
+                                        className="content-block"
+                                    >
+                                        <div className="margin-bottom margin-small">
+                                            <h3 className="heading-label text-color-grey margin-bottom margin-xsmall">
+                                                Step {v.id}
+                                            </h3>
+                                            <h3 className="text-size-large text-weight-normal">
+                                                {v.title}
+                                            </h3>
+                                        </div>
+                                        <p className="text-color-grey">
+                                            {v.description}
+                                        </p>
+                                    </div>
+                                )
+                            })}
+
+
                         </div>
                     </div>
                 </div>
@@ -656,6 +613,45 @@ const OnboardingProcess = () => {
 
 
 const LegalPackage = () => {
+    const legal_pack_object = [
+        {
+            id: 1,
+            title: 'Articles of Association',
+            description: `Sets the base to mint and trade shares on a Blockchain.`,
+            link: 'https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619cd11f72bd655932661397_Articles%20of%20Association.pdf',
+            img: require('../../../icons/assoc.svg').default,
+            isLink: true,
+
+        },
+        {
+            id: 2,
+            title: 'Registration Agreement',
+            description: `Enables the registration of ledger-based securities in a
+            securities ledger.`,
+            link: 'https://hub.aktionariat.com/assets/terms/Registration%20Agreement.pdf',
+            img: require('../../../icons/registration.svg').default,
+            isLink: true,
+
+        },
+        {
+            id: 3,
+            title: 'Token Holder Agreement',
+            description: `A mini shareholder agreement with drag-along and tag-along
+            clauses.`,
+            link: 'https://hub.aktionariat.com/assets/terms/Token%20Holder%20Agreement.pdf',
+            img: require('../../../icons/tokenholder.svg').default,
+            isLink: true,
+
+        },
+        {
+            id: 4,
+            title: 'Shareholder Agreement',
+            description: `(Optional) Classic shareholder agreement taking into account
+            that shares need to be traded.`,
+            img: require('../../../icons/shareholder.svg').default,
+            isLink: false,
+        },
+    ]
     return <section id="legal-package">
         <div className="page-padding">
             <div className="container-large">
@@ -678,191 +674,53 @@ const LegalPackage = () => {
                     </div>
                     <div className="margin-bottom">
                         <div className="content-grid">
-                            <div
-                                id="w-node-b1a5eb19-a3a1-0b63-388a-4df567444a51-decd91f1"
-                                className="hover-card-item background-color-gradient-1"
-                            >
-                                <div className="hover-card-content">
-                                    <div className="margin-bottom margin-small">
-                                        <div className="margin-bottom margin-xlarge">
-                                            <img
-                                                src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61bbb2347f6a1a145a5a5aa9_icon-color-articles-of-assoc.svg"
-                                                loading="lazy"
-                                                alt
-                                                className="icon-1x1-large"
-                                                style={{ filter: "saturate(0%) brightness(200%)" }}
-                                            />
-                                        </div>
-                                        <div className="margin-bottom margin-small">
-                                            <h3 className="text-size-xlarge text-weight-normal">
-                                                Articles of Association
-                                            </h3>
-                                        </div>
-                                        <div className="margin-bottom margin-large">
-                                            <p>Sets the base to mint and trade shares on a Blockchain.</p>
-                                        </div>
-                                    </div>
-                                    <a
-                                        href="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619cd11f72bd655932661397_Articles%20of%20Association.pdf"
-                                        target="_blank"
-                                        className="button-arrow button-arrow-large w-inline-block"
-                                    >
-                                        <div>See example</div>
-                                        <div
-                                            className="arrow"
-                                            style={{
-                                                "-webkit-transform":
-                                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                "-ms-transform":
-                                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                transform:
-                                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                "-webkit-transform-style": "preserve-3d",
-                                                "-ms-transform-style": "preserve-3d",
-                                                "transform-style": "preserve-3d",
-                                            }}
+                            {
+                                legal_pack_object.map(v => {
+                                    return (
+
+                                        <div key={v.id}
+                                            id="w-node-b1a5eb19-a3a1-0b63-388a-4df567444a51-decd91f1"
+                                            className="hover-card-item background-color-gradient-1"
                                         >
-                                            ↘
+                                            <div className="hover-card-content">
+                                                <div className="margin-bottom margin-small">
+                                                    <div className="margin-bottom margin-xlarge">
+                                                        <img
+                                                            src={v.img}
+                                                            loading="lazy"
+                                                            alt=""
+                                                            className="icon-1x1-large"
+                                                            style={{ filter: "saturate(0%) brightness(200%)" }} />
+                                                    </div>
+                                                    <div className="margin-bottom margin-small">
+                                                        <h3 className="text-size-xlarge text-weight-normal">
+                                                            {v.title}
+                                                        </h3>
+                                                    </div>
+                                                    <div className="margin-bottom margin-large">
+                                                        <p>{v.description}</p>
+                                                    </div>
+                                                </div>
+
+                                                {v.isLink ? <a
+                                                    href={v.link}
+                                                    target="_blank" rel="noreferrer"
+                                                    className="button-arrow action_arrow button-arrow-large w-inline-block"
+                                                >
+                                                    <div>See example</div>
+                                                    <span className="arrow">
+                                                        ↘
+                                                    </span>
+                                                </a>
+                                                    : <div className="button-arrow button-arrow-large button-deactive"><div>On request</div></div>}
+
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-_93a3f522-ecd8-bbb6-e86e-dfc4a718a09a-decd91f1"
-                                className="hover-card-item background-color-gradient-1"
-                            >
-                                <div className="hover-card-content">
-                                    <div className="margin-bottom margin-small">
-                                        <div className="margin-bottom margin-xlarge">
-                                            <img
-                                                src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61bbb23498ff4642e66726b9_icon-color-registration.svg"
-                                                loading="lazy"
-                                                alt
-                                                className="icon-1x1-large"
-                                                style={{ filter: "saturate(0%) brightness(200%)" }}
-                                            />
-                                        </div>
-                                        <div className="margin-bottom margin-small">
-                                            <h3 className="text-size-xlarge text-weight-normal">
-                                                Registration Agreement
-                                            </h3>
-                                        </div>
-                                        <div className="margin-bottom margin-large">
-                                            <p>
-                                                Enables the registration of ledger-based securities in a
-                                                securities ledger.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <a
-                                        href="https://hub.aktionariat.com/assets/terms/Registration%20Agreement.pdf"
-                                        target="_blank"
-                                        className="button-arrow button-arrow-large w-inline-block"
-                                    >
-                                        <div>See example</div>
-                                        <div
-                                            className="arrow"
-                                            style={{
-                                                "-webkit-transform":
-                                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                "-ms-transform":
-                                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                transform:
-                                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                "-webkit-transform-style": "preserve-3d",
-                                                "-ms-transform-style": "preserve-3d",
-                                                "transform-style": "preserve-3d",
-                                            }}
-                                        >
-                                            ↘
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-e4bc2415-6c73-5512-e4a0-d000065fd76d-decd91f1"
-                                className="hover-card-item background-color-gradient-1"
-                            >
-                                <div className="hover-card-content">
-                                    <div className="margin-bottom margin-small">
-                                        <div className="margin-bottom margin-xlarge">
-                                            <img
-                                                src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61bbb2351a23e3a47e6ff3e3_icon-color-tokenholder.svg"
-                                                loading="lazy"
-                                                alt
-                                                className="icon-1x1-large"
-                                                style={{ filter: "saturate(0%) brightness(200%)" }}
-                                            />
-                                        </div>
-                                        <div className="margin-bottom margin-small">
-                                            <h3 className="text-size-xlarge text-weight-normal">
-                                                Token Holder Agreement
-                                            </h3>
-                                        </div>
-                                        <div className="margin-bottom margin-large">
-                                            <p>
-                                                A mini shareholder agreement with drag-along and tag-along
-                                                clauses.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <a
-                                        href="https://hub.aktionariat.com/assets/terms/Token%20Holder%20Agreement.pdf"
-                                        target="_blank"
-                                        className="button-arrow button-arrow-large w-inline-block"
-                                    >
-                                        <div>See example</div>
-                                        <div
-                                            className="arrow"
-                                            style={{
-                                                "-webkit-transform":
-                                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                "-ms-transform":
-                                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                transform:
-                                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                "-webkit-transform-style": "preserve-3d",
-                                                "-ms-transform-style": "preserve-3d",
-                                                "transform-style": "preserve-3d",
-                                            }}
-                                        >
-                                            ↘
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-ff8ab3c1-a570-757c-ce84-858e3cc054ad-decd91f1"
-                                className="hover-card-item background-color-gradient-1"
-                            >
-                                <div className="hover-card-content">
-                                    <div className="margin-bottom margin-small">
-                                        <div className="margin-bottom margin-xlarge">
-                                            <img
-                                                src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/61bbb2340726fc8a112ec77d_icon-color-shareholder.svg"
-                                                loading="lazy"
-                                                alt
-                                                className="icon-1x1-large"
-                                                style={{ filter: "saturate(0%) brightness(200%)" }}
-                                            />
-                                        </div>
-                                        <div className="margin-bottom margin-small">
-                                            <h3 className="text-size-xlarge text-weight-normal">
-                                                Shareholder Agreement
-                                            </h3>
-                                        </div>
-                                        <div className="margin-bottom margin-large">
-                                            <p>
-                                                (Optional) Classic shareholder agreement taking into account
-                                                that shares need to be traded.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="button-arrow button-arrow-large button-deactive">
-                                        <div>On request</div>
-                                    </div>
-                                </div>
-                            </div>
+                                    )
+                                })
+                            }
+
+
                         </div>
                     </div>
                 </div>
@@ -923,156 +781,7 @@ const Testimonial = () => {
                             </div>
                         </div>
                         <div className="margin-bottom margin-xlarge">
-                            <div className="testimonial-list w-dyn-list">
-                                <div
-                                    role="list"
-                                    className="content-grid clientbar-grid-2 w-dyn-items"
-                                >
-                                    <div
-                                        id="w-node-_6b29c2aa-56a6-2354-e4fc-578180818626-80818624"
-                                        role="listitem"
-                                        className="testimonial-card-item space-between w-dyn-item"
-                                    >
-                                        <div className="margin-bottom margin-medium">
-                                            <div className="text-color-darkgrey">
-                                                "With Aktionariat, tokenizing our shares and setting up a
-                                                market was a breeze. While the tools are unique, the real
-                                                value lies in the team’s ability to respond to customer needs
-                                                and continually evolve the product. Not for the bores or the
-                                                procrastinators, Aktionariat is a perfect fit for us!"
-                                            </div>
-                                        </div>
-                                        <div className="horizontal-center space-between">
-                                            <div className="horizontal-center">
-                                                <div className="margin-right margin-small">
-                                                    <div className="icon-1x1-medium">
-                                                        <div style={{}} className="avatar" />
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div>Simon Boss</div>
-                                                    <div className="text-size-small text-color-grey inline-text">
-                                                        CEO, COB, Founder, Co-Owner
-                                                    </div>
-                                                    <div className="text-size-small text-color-grey inline-text right-margin">
-                                                        ,
-                                                    </div>
-                                                    <div className="text-size-small text-color-grey inline-text">
-                                                        Boss Info
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a
-                                                href="https://linkedin.com/company/bossinfo"
-                                                className="icon-1x1-small w-inline-block"
-                                            >
-                                                <img
-                                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619988fac57d3ef64985cbeb_icon-linkedin.svg"
-                                                    loading="lazy"
-                                                    width={64}
-                                                    alt="LinkedIn Icon"
-                                                />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div
-                                        id="w-node-_6b29c2aa-56a6-2354-e4fc-578180818626-80818624"
-                                        role="listitem"
-                                        className="testimonial-card-item space-between w-dyn-item"
-                                    >
-                                        <div className="margin-bottom margin-medium">
-                                            <div className="text-color-darkgrey">
-                                                "Thanks to Aktionariat, we can offer our employees, customers
-                                                and investors a simple solution to buy and sell quitt.shares.
-                                                Aktionariat has managed to wrap the complex world of
-                                                blockchain and cryptocurrencies into a customer-friendly and
-                                                innovative product. Keep up the good work!"
-                                            </div>
-                                        </div>
-                                        <div className="horizontal-center space-between">
-                                            <div className="horizontal-center">
-                                                <div className="margin-right margin-small">
-                                                    <div className="icon-1x1-medium">
-                                                        <div style={{}} className="avatar" />
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div>Marie-Christin Kamann</div>
-                                                    <div className="text-size-small text-color-grey inline-text">
-                                                        CEO
-                                                    </div>
-                                                    <div className="text-size-small text-color-grey inline-text right-margin">
-                                                        ,
-                                                    </div>
-                                                    <div className="text-size-small text-color-grey inline-text">
-                                                        quitt
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a
-                                                href="https://www.linkedin.com/company/servicehunter-ag-quitt-ch/"
-                                                className="icon-1x1-small w-inline-block"
-                                            >
-                                                <img
-                                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619988fac57d3ef64985cbeb_icon-linkedin.svg"
-                                                    loading="lazy"
-                                                    width={64}
-                                                    alt="LinkedIn Icon"
-                                                />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div
-                                        id="w-node-_6b29c2aa-56a6-2354-e4fc-578180818626-80818624"
-                                        role="listitem"
-                                        className="testimonial-card-item space-between w-dyn-item"
-                                    >
-                                        <div className="margin-bottom margin-medium">
-                                            <div className="text-color-darkgrey">
-                                                "Since 2017, we have been tirelessly working on how we can
-                                                further empower the consumer. With the Security Token Offering
-                                                we finally found a way to go a big step further. Aktionariat
-                                                provided us with the tools to transform our stakeholders into
-                                                shareholders while being the first brand to raise CHF 0.5M
-                                                over a weekend and now continuously raise more through a
-                                                tradable security token on our own website."
-                                            </div>
-                                        </div>
-                                        <div className="horizontal-center space-between">
-                                            <div className="horizontal-center">
-                                                <div className="margin-right margin-small">
-                                                    <div className="icon-1x1-medium">
-                                                        <div style={{}} className="avatar" />
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div>Roy Bernheim</div>
-                                                    <div className="text-size-small text-color-grey inline-text">
-                                                        Co-Founder
-                                                    </div>
-                                                    <div className="text-size-small text-color-grey inline-text right-margin">
-                                                        ,
-                                                    </div>
-                                                    <div className="text-size-small text-color-grey inline-text">
-                                                        TBo
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a
-                                                href="https://www.linkedin.com/company/tboclothing"
-                                                className="icon-1x1-small w-inline-block"
-                                            >
-                                                <img
-                                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619988fac57d3ef64985cbeb_icon-linkedin.svg"
-                                                    loading="lazy"
-                                                    width={64}
-                                                    alt="LinkedIn Icon"
-                                                />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <ClientFeedback></ClientFeedback>
                         </div>
                         <div className="divider" />
                         <div className="section-title">
@@ -1086,109 +795,7 @@ const Testimonial = () => {
                             </div>
                         </div>
                         <div className="margin-bottom margin-medium">
-                            <div className="blog1_component">
-                                <div className="blog1_list-wrapper w-dyn-list">
-                                    <div role="list" className="collection-grid w-dyn-items">
-                                        <div
-                                            id="w-node-b6f51d02-9f4a-53e5-7a6c-3f373218c71a-3218c718"
-                                            role="listitem"
-                                            className="blog1_item w-dyn-item"
-                                        >
-                                            <div className="blog_content-wrapper">
-                                                <div className="blog_image-wrapper">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX.png"
-                                                        loading="lazy"
-                                                        alt
-                                                        sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
-                                                        srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX-p-500.png 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX.png 714w"
-                                                        className="image-100"
-                                                    />
-                                                </div>
-                                                <div className="blog_content">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-large text-weight-normal">
-                                                            SIX Digital Exchange partners with Aktionariat to
-                                                            provide greater access to capital through digital
-                                                            securities in Switzerland
-                                                        </h3>
-                                                    </div>
-                                                    <div className="text-size-small text-color-lightgrey w-dyn-bind-empty" />
-                                                </div>
-                                                <a
-                                                    href="https://www.aktionariat.com/blogs/six-digital-exchange-partners-with-aktionariat"
-                                                    target="_blank"
-                                                    className="blog1_item-link w-inline-block"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div
-                                            id="w-node-b6f51d02-9f4a-53e5-7a6c-3f373218c71a-3218c718"
-                                            role="listitem"
-                                            className="blog1_item w-dyn-item"
-                                        >
-                                            <div className="blog_content-wrapper">
-                                                <div className="blog_image-wrapper">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016.jpg"
-                                                        loading="lazy"
-                                                        alt
-                                                        sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
-                                                        srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-500.jpg 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-800.jpg 800w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-1600.jpg 1600w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-2000.jpg 2000w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-2600.jpg 2600w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016-p-3200.jpg 3200w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/61d5cc24cea82f726311514c_Aktionariat-0016.jpg 3680w"
-                                                        className="image-100"
-                                                    />
-                                                </div>
-                                                <div className="blog_content">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-large text-weight-normal">
-                                                            Startups für alle: Die «Demokratisierung» von Private
-                                                            Equity und Venture Capital hat begonnen
-                                                        </h3>
-                                                    </div>
-                                                    <div className="text-size-small text-color-lightgrey w-dyn-bind-empty" />
-                                                </div>
-                                                <a
-                                                    href="https://www.nzz.ch/finanzen/private-finanzen/startups-und-fintech-neue-finanzprodukte-fuer-privatanleger-ld.1692186"
-                                                    target="_blank"
-                                                    className="blog1_item-link w-inline-block"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div
-                                            id="w-node-b6f51d02-9f4a-53e5-7a6c-3f373218c71a-3218c718"
-                                            role="listitem"
-                                            className="blog1_item w-dyn-item"
-                                        >
-                                            <div className="blog_content-wrapper">
-                                                <div className="blog_image-wrapper">
-                                                    <img
-                                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat.jpeg"
-                                                        loading="lazy"
-                                                        alt
-                                                        sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
-                                                        srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat-p-500.jpeg 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat-p-800.jpeg 800w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat-p-2000.jpeg 2000w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat-p-2600.jpeg 2600w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62ab2b20a7b6de5d4659de43_realuXaktionariat.jpeg 2662w"
-                                                        className="image-100"
-                                                    />
-                                                </div>
-                                                <div className="blog_content">
-                                                    <div className="margin-bottom margin-small">
-                                                        <h3 className="text-size-large text-weight-normal">
-                                                            Erstmals Aktien einer Schweizer börsenkotierten
-                                                            Gesellschaft direkt über Blockchain erwerben
-                                                        </h3>
-                                                    </div>
-                                                    <div className="text-size-small text-color-lightgrey w-dyn-bind-empty" />
-                                                </div>
-                                                <a
-                                                    href="https://www.moneycab.com/finanz/realunit-schweiz-erstmals-aktien-einer-schweizer-boersenkotierten-gesellschaft-direkt-ueber-blockchain-erwerben/"
-                                                    target="_blank"
-                                                    className="blog1_item-link w-inline-block"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <LatestNewsComponent></LatestNewsComponent>
                         </div>
                     </div>
                 </div>
@@ -1218,7 +825,7 @@ const RequestDemo = () => {
                                     <a
                                         data-w-id="ce9baed1-57d0-3aec-2f62-af58dbe9c817"
                                         href="https://meetings-eu1.hubspot.com/bela?__hstc=180372984.110723e7ee79c8b5cad6e8378037cce7.1659973797909.1660359929893.1660381758643.21&__hssc=180372984.2.1660381758643&__hsfp=3929547609"
-                                        target="_blank"
+                                        target="_blank" rel="noreferrer"
                                         className="button w-button"
                                     >
                                         Request a demo

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../../../scss/pages/homepage/Homepage.css';
 import CompanyTable from '../../../jsx/components/CompanyTable/CompanyTable';
+import ClientFeedback from '../../components/ClientFeedback/ClientFeedback';
+import LatestNewsComponent from '../../components/LatestNews/LatestNews'
 import { Helmet } from "react-helmet";
 function Homepage(props) {
     return (
@@ -668,27 +670,7 @@ function LatestBlogs() {
 }
 
 function LatestNews() {
-    const news_object = [
-        {
-            id: 1,
-            link: '/blogs/six-digital-exchange-partners-with-aktionariat',
-            img: require('../../../images/pages/homepage/blog_img1.png'),
-            description: `SIX Digital Exchange partners with Aktionariat to provide greater access to capital through digital securities in Switzerland
-            `
-        },
-        {
-            id: 2,
-            link: 'https://www.nzz.ch/finanzen/private-finanzen/startups-und-fintech-neue-finanzprodukte-fuer-privatanleger-ld.1692186',
-            img: require('../../../images/pages/homepage/Aktionariat-0016-p-800.jpg'),
-            description: `Startups für alle: Die «Demokratisierung» von Private Equity und Venture Capital hat begonnen`
-        },
-        {
-            id: 3,
-            link: 'https://www.moneycab.com/finanz/realunit-schweiz-erstmals-aktien-einer-schweizer-boersenkotierten-gesellschaft-direkt-ueber-blockchain-erwerben/',
-            img: require('../../../images/pages/homepage/realuXaktionariat-p-800.jpeg'),
-            description: `Erstmals Aktien einer Schweizer börsenkotierten Gesellschaft direkt über Blockchain erwerben`
-        },
-    ]
+
     return (
         <section id="LatestNews" className='section section-grey'>
             <div className="page-padding">
@@ -703,45 +685,7 @@ function LatestNews() {
                             </div>
                         </div>
                         <div className="margin-bottom">
-                            <div className="blog1_component">
-                                <div className="blog1_list-wrapper w-dyn-list">
-                                    <div role="list" className="collection-grid w-dyn-items">
-                                        {news_object.map(v => {
-                                            return (
-                                                <div
-                                                    id="w-node-b6f51d02-9f4a-53e5-7a6c-3f373218c71a-3218c718"
-                                                    role="listitem"
-                                                    className="blog1_item w-dyn-item"
-                                                >
-                                                    <div className="blog_content-wrapper">
-                                                        <div className="blog_image-wrapper">
-                                                            <img
-                                                                src={v.img}
-                                                                loading="lazy"
-                                                                alt=""
-                                                                className="image-100"
-                                                            />
-                                                        </div>
-                                                        <div className="blog_content">
-                                                            <div className="margin-bottom margin-small">
-                                                                <h3 className="text-size-large text-weight-normal">
-                                                                    {v.description}
-                                                                </h3>
-                                                            </div>
-                                                            <div className="text-size-small text-color-lightgrey w-dyn-bind-empty" />
-                                                        </div>
-                                                        <a
-                                                            href={v.link}
-                                                            target="_blank" rel='noreferrer' className="blog1_item-link w-inline-block">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            )
-                                        })}
-
-                                    </div>
-                                </div>
-                            </div>
+                            <LatestNewsComponent></LatestNewsComponent>
                         </div>
                     </div>
                 </div>
@@ -752,38 +696,7 @@ function LatestNews() {
 }
 
 function CustomerFeedback() {
-    const feedback_object = [
-        {
-            id: 1,
-            description: `"With Aktionariat, tokenizing our shares and setting up a market was a breeze. While the tools are unique, the real value lies in the team’s ability to respond to customer needs and continually evolve the product. Not for the bores or the procrastinators, Aktionariat is a perfect fit for us!"`,
-            icon_img: require('../../../icons/company_icons/BOSS.png'),
-            linkedin_icon: require('../../../icons/social_icons/linkedin.svg').default,
-            linkedin_link: 'https://linkedin.com/company/bossinfo',
-            text1: 'Simon Boss',
-            text2: 'CEO, COB, Founder, Co-Owner',
-            text3: 'Boss Info'
-        },
-        {
-            id: 2,
-            description: `"Thanks to Aktionariat, we can offer our employees, customers and investors a simple solution to buy and sell quitt.shares. Aktionariat has managed to wrap the complex world of blockchain and cryptocurrencies into a customer-friendly and innovative product. Keep up the good work!"`,
-            icon_img: require('../../../icons/company_icons/DQTS.png'),
-            linkedin_icon: require('../../../icons/social_icons/linkedin.svg').default,
-            linkedin_link: 'https://www.linkedin.com/company/servicehunter-ag-quitt-ch/',
-            text1: 'Marie-Christin Kamann',
-            text2: 'CEO,quitt',
-            text3: ''
-        },
-        {
-            id: 3,
-            description: `"Since 2017, we have been tirelessly working on how we can further empower the consumer. With the Security Token Offering we finally found a way to go a big step further. Aktionariat provided us with the tools to transform our stakeholders into shareholders while being the first brand to raise CHF 0.5M over a weekend and now continuously raise more through a tradable security token on our own website."`,
-            icon_img: require('../../../icons/company_icons/TBOS.png'),
-            linkedin_icon: require('../../../icons/social_icons/linkedin.svg').default,
-            linkedin_link: 'https://linkedin.com/company/bossinfo',
-            text1: 'Simon Boss',
-            text2: 'CEO, COB, Founder, Co-Owner',
-            text3: 'Boss Info'
-        },
-    ]
+
     return (
         <section id="CustomerFeedback">
             <div className="page-padding">
@@ -833,58 +746,7 @@ function CustomerFeedback() {
                             </div>
                         </div>
                         <div className="divider" />
-                        <div className="testimonial-list w-dyn-list">
-                            <div role="list" className="content-grid clientbar-grid-2 w-dyn-items">
-
-                                {feedback_object.map(v => {
-                                    return (
-                                        <div key={v.id}
-                                            id="w-node-_6b29c2aa-56a6-2354-e4fc-578180818626-80818624"
-                                            role="listitem"
-                                            className="testimonial-card-item space-between w-dyn-item"
-                                        >
-                                            <div className="margin-bottom margin-medium">
-                                                <div className="text-color-darkgrey">
-                                                    {v.description}
-                                                </div>
-                                            </div>
-                                            <div className="horizontal-center space-between">
-                                                <div className="horizontal-center">
-                                                    <div className="margin-right margin-small">
-                                                        <div className="icon-1x1-medium">
-                                                            <div style={{ backgroundImage: `url(${v.icon_img})`, backgroundSize: '100%' }} className="avatar" />
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div>{v.text1}</div>
-                                                        <div className="text-size-small text-color-grey inline-text">
-                                                            {v.text2}
-                                                        </div>
-                                                        <div className="text-size-small text-color-grey inline-text right-margin">
-                                                            ,
-                                                        </div>
-                                                        <div className="text-size-small text-color-grey inline-text">
-                                                            {v.text3}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <a
-                                                    href={v.linkedin_link}
-                                                    className="icon-1x1-small w-inline-block"
-                                                >
-                                                    <img
-                                                        src={v.linkedin_icon}
-                                                        loading="lazy"
-                                                        width={64}
-                                                        alt="LinkedIn Icon"
-                                                    />
-                                                </a>
-                                            </div>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
+                        <ClientFeedback></ClientFeedback>
                     </div>
                 </div>
             </div>

@@ -150,7 +150,7 @@ const MobileWallet = () => {
                             >
                                 <div className="margin-bottom margin-medium">
                                     <img
-                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/62c7cedfdd4868998d6531a6_mobile-wallet.png"
+                                        src={require('../../../images/pages/for_investors/mobile-wallet.png')}
                                         loading="lazy"
                                         height={430}
                                         alt=""
@@ -193,6 +193,50 @@ const MobileWallet = () => {
 }
 
 const PrivateEquityMarket = () => {
+    const market_object = [
+        {
+            id: 1,
+            info_text_lg: '+3.02%',
+            description: `US&nbsp;Private equity outperformed the S&amp;P 500 index by
+            3.02%*`,
+            description_sm: `* mean annual return over 25 years (CFA institute, 2021. p.41)`,
+            link: false,
+            col_id: `w-node-bbbacec7-bdb7-981f-71a3-ea2177ca61fa-a644fd35`
+        },
+        {
+            id: 2,
+            info_text_lg: '+111% (2020-2021)',
+            description: `Global venture funding increased by 111% YoY*`,
+            description_sm: `* $ 249B in 2020 vs. $ 621 in 2021 (CB Insights, 2021 Q4, p.8)`,
+            col_id: `w-node-_750a9d54-f878-93c4-8cee-26540da25d34-a644fd35`
+        },
+        {
+            id: 3,
+            info_text_lg: '+58%',
+            description: `Number of exits: 58% more global exits in 2021 compared to 2020`,
+            description_sm: `*Global M&A exits jump to over 10K, (2020: 6'833, 2021: 10'792) (CB Insights Q4, 2021, p.69)`,
+            link: false,
+            col_id: `w-node-c492f4c2-74a3-7ebc-8241-df1f0a2b8e55-a644fd35`
+        },
+        {
+            id: 4,
+            info_text_lg: '+142%',
+            description: `Europe VC funding up by more than 2x*`,
+            description_sm: `* Europe VC funding reached $93.3B in 2021. Comparison: 2020's funding amounted to $38.5B (CB Insights Q4, 2021, p.236)`,
+            link: false,
+            col_id: `w-node-d7adc1b5-0a08-38ba-166e-c127e77da9f6-a644fd35`
+        },
+        {
+            id: 5,
+            info_text_lg: 'CHF 3.1 B',
+            description: `CHF 3.1B invested capital in Swiss startups 2021 *`,
+            description_sm: `*st+44% from CHF 2.124B in 2020 (startupticker.ch)`,
+            link: true,
+            link_name: '(startupticker.ch)',
+            link_action: 'https://www.startupticker.ch/index.php/en/news/chf-3-1-billion-for-start-ups',
+            col_id: `w-node-_9bd4dfa1-cd3e-8532-b636-f811895ee7b6-a644fd35`
+        },
+    ]
     return (
         <section id="private-equity-market">
             <div className="page-padding">
@@ -220,97 +264,32 @@ const PrivateEquityMarket = () => {
                             </div>
                         </div>
                         <div className="content-grid">
-                            <div
-                                id="w-node-bbbacec7-bdb7-981f-71a3-ea2177ca61fa-a644fd35"
-                                className="info-block"
-                            >
-                                <div className="info-text">
-                                    <div className="margin-bottom margin-small">
-                                        <h3>+3.02%</h3>
-                                    </div>
-                                    <div className="margin-bottom margin-xsmall">
-                                        <div>
-                                            US&nbsp;Private equity outperformed the S&amp;P 500 index by
-                                            3.02%*
+
+                            {market_object.map(v => {
+                                return (
+                                    <div key={v.id}
+                                        id={v.col_id}
+                                        className="info-block"
+                                    >
+                                        <div className="info-text">
+                                            <div className="margin-bottom margin-small">
+                                                <h3>{v.info_text_lg}</h3>
+                                            </div>
+                                            <div className="margin-bottom margin-xsmall">
+                                                <div>
+                                                    {v.description}
+                                                </div>
+                                            </div>
+                                            <div className="text-size-small text-color-grey">
+                                                {v.link ? <>
+                                                    {v.description_sm}
+                                                    <a href={v.link_action}>{v.link_name}</a>
+                                                </> : v.description_sm}
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="text-size-small text-color-grey">
-                                        * mean annual return over 25 years (CFA institute, 2021. p.41)
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-_750a9d54-f878-93c4-8cee-26540da25d34-a644fd35"
-                                className="info-block"
-                            >
-                                <div className="info-text">
-                                    <div className="margin-bottom margin-small">
-                                        <h3>+111% (2020-2021)</h3>
-                                    </div>
-                                    <div className="margin-bottom margin-xsmall">
-                                        <div>Global venture funding increased by 111% YoY*</div>
-                                    </div>
-                                    <div className="text-size-small text-color-grey">
-                                        * $ 249B in 2020 vs. $ 621 in 2021 (CB Insights, 2021 Q4, p.8)
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-c492f4c2-74a3-7ebc-8241-df1f0a2b8e55-a644fd35"
-                                className="info-block"
-                            >
-                                <div className="info-text">
-                                    <div className="margin-bottom margin-small">
-                                        <h3>+58%</h3>
-                                    </div>
-                                    <div className="margin-bottom margin-xsmall">
-                                        <div>
-                                            Number of exits: 58% more global exits in 2021 compared to 2020
-                                        </div>
-                                    </div>
-                                    <div className="text-size-small text-color-grey">
-                                        *Global M&amp;A exits jump to over 10K, (2020: 6'833, 2021:
-                                        10'792) (CB Insights Q4, 2021, p.69)
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-d7adc1b5-0a08-38ba-166e-c127e77da9f6-a644fd35"
-                                className="info-block"
-                            >
-                                <div className="info-text">
-                                    <div className="margin-bottom margin-small">
-                                        <h3>+142%</h3>
-                                    </div>
-                                    <div className="margin-bottom margin-xsmall">
-                                        <div>Europe VC funding up by more than 2x*</div>
-                                    </div>
-                                    <div className="text-size-small text-color-grey">
-                                        * Europe VC&nbsp;funding reached $93.3B in 2021. Comparison:
-                                        2020's funding amounted to $38.5B (CB Insights Q4, 2021, p.236)
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-_9bd4dfa1-cd3e-8532-b636-f811895ee7b6-a644fd35"
-                                className="info-block"
-                            >
-                                <div className="info-text">
-                                    <div className="margin-bottom margin-small">
-                                        <h3>CHF 3.1 B</h3>
-                                    </div>
-                                    <div className="margin-bottom margin-xsmall">
-                                        <div>CHF 3.1B invested capital in Swiss startups 2021 *</div>
-                                    </div>
-                                    <div className="text-size-small text-color-grey">
-                                        *st+44% from CHF 2.124B in 2020 (
-                                        <a href="https://www.startupticker.ch/index.php/en/news/chf-3-1-billion-for-start-ups">
-                                            startupticker.ch
-                                        </a>
-                                        )
-                                    </div>
-                                </div>
-                            </div>
+                                )
+                            })}
                         </div>
                     </div>
                 </div>
@@ -354,7 +333,7 @@ const OurPortfolio = () => {
                                 technology and backed by{" "}
                                 <a
                                     href="https://www.admin.ch/gov/en/start/documentation/media-releases/media-releases-federal-council.msg-id-84035.html#:~:text=In%20September%202020%2C%20Parliament%20passed,necessary%20adjustments%20to%20ten%20ordinances."
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer"
                                 >
                                     Swiss DLT-Law.
                                 </a>
@@ -368,25 +347,12 @@ const OurPortfolio = () => {
                     </div>
                     <a
                         href="/all-companies"
-                        className="button-arrow button-arrow-large w-inline-block"
+                        className="button-arrow action_arrow button-arrow-large w-inline-block"
                     >
                         <div>Show more</div>
-                        <div
-                            className="arrow"
-                            style={{
-                                "-webkit-transform":
-                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                "-ms-transform":
-                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                transform:
-                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                "-webkit-transform-style": "preserve-3d",
-                                "-ms-transform-style": "preserve-3d",
-                                "transform-style": "preserve-3d",
-                            }}
-                        >
+                        <span className="arrow">
                             ↘
-                        </div>
+                        </span>
                     </a>
                 </div>
             </div>
@@ -427,7 +393,7 @@ const NewsLatter = () => {
                                 {/*[if lte IE 8]>
 
 <![endif]*/}
-                                <div
+                                {/* <div
                                     className="hbspt-form"
                                     id="hbspt-form-1660384332042-5526384441"
                                 >
@@ -447,7 +413,9 @@ const NewsLatter = () => {
                                         }}
                                         height={214}
                                     />
-                                </div>
+                                </div> */}
+
+                                {/* newslatter here */}
                             </div>
                         </div>
                     </div>
@@ -459,6 +427,24 @@ const NewsLatter = () => {
 }
 
 const HowItWork = () => {
+    const how_it_work_object = [
+        {
+            id: 1,
+            title: 'Download the Aktionariat Wallet App.'
+        },
+        {
+            id: 2,
+            title: 'Find interesting companies.'
+        },
+        {
+            id: 3,
+            title: 'Place your investments directly in our App.'
+        },
+        {
+            id: 4,
+            title: 'Buy more or sell your shares.'
+        },
+    ]
     return (
         <section id="how-it-works">
             <div className="page-padding">
@@ -478,61 +464,29 @@ const HowItWork = () => {
                             </div>
                             <div className="margin-bottom">
                                 <div className="content-grid">
-                                    <div
-                                        id="w-node-a832b5ae-46a1-0093-8ebe-bde7467e52ef-a644fd35"
-                                        className="step-block"
-                                    >
-                                        <div className="info-text">
-                                            <div className="margin-bottom margin-small">
-                                                <h3>1</h3>
-                                            </div>
-                                            <div className="text-size-medium text-color-darkgrey">
-                                                Download the Aktionariat Wallet App.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        id="w-node-fdd6190f-4405-8a5f-716c-4a56393cb861-a644fd35"
-                                        className="step-block"
-                                    >
-                                        <div className="info-text">
-                                            <div className="margin-bottom margin-small">
-                                                <h3>2</h3>
-                                            </div>
-                                            <div className="text-size-medium text-color-darkgrey">
-                                                Find interesting companies.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        id="w-node-b3e19bb9-d56b-e6f6-8732-1d2c11c3fdb7-a644fd35"
-                                        className="step-block"
-                                    >
-                                        <div className="info-text">
-                                            <div className="margin-bottom margin-small">
-                                                <h3>3</h3>
-                                            </div>
-                                            <div className="text-size-medium text-color-darkgrey">
-                                                Place your investments directly in our App.
-                                                <span className="tablet-hidden">
-                                                    <br />‍
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        id="w-node-d7a24505-8000-c738-a0ef-3282ffb2204b-a644fd35"
-                                        className="step-block"
-                                    >
-                                        <div className="info-text">
-                                            <div className="margin-bottom margin-small">
-                                                <h3>4</h3>
-                                            </div>
-                                            <div className="text-size-medium text-color-darkgrey">
-                                                Buy more or sell your shares.
-                                            </div>
-                                        </div>
-                                    </div>
+
+                                    {
+                                        how_it_work_object.map(v => {
+                                            return (
+
+                                                <div key={v.id}
+                                                    id="w-node-a832b5ae-46a1-0093-8ebe-bde7467e52ef-a644fd35"
+                                                    className="step-block">
+                                                    <div className="info-text">
+                                                        <div className="margin-bottom margin-small">
+                                                            <h3>{v.id}</h3>
+                                                        </div>
+                                                        <div className="text-size-medium text-color-darkgrey">
+                                                            {v.title}
+
+                                                            <br />
+                                                            <br />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            )
+                                        })
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -647,6 +601,32 @@ const InvestIn = () => {
 }
 
 const LatestBlogs = () => {
+    const blogs_object = [
+        {
+            id: 1,
+            img: require('../../../images/pages/for_investors/blog_img1.png'),
+            description: `SIX Digital Exchange partners with Aktionariat to
+            provide greater access to capital through digital
+            securities in Switzerland`,
+            link: '/blogs/six-digital-exchange-partners-with-aktionariat',
+            date: 'July 21, 2022',
+        },
+        {
+            id: 2,
+            img: require('../../../images/pages/for_investors/wallet-p-800.png'),
+            description: `Wallets for cryptocurrencies: An overview.`,
+            link: '/blogs/wallets-for-cryptocurrencies-an-overview',
+            date: 'May 10, 2022',
+        },
+        {
+            id: 3,
+            img: require('../../../images/pages/for_investors/blog-3-p-1080.jpeg'),
+            description: `Reasons for Optimism: Aktionariat implemented Ethereum
+            Layer-2 Optimism roll-up protocol`,
+            link: '/blogs/reasons-for-optimism-aktionariat-implements-ethereum-layer-2-optimism-roll-up-protocol',
+            date: 'April 7, 2022',
+        },
+    ]
     return <section id="LatestBlogs">
         <div className="page-padding">
             <div className="container-large">
@@ -663,130 +643,56 @@ const LatestBlogs = () => {
                         <div className="blog1_component">
                             <div className="blog1_list-wrapper w-dyn-list">
                                 <div role="list" className="collection-grid w-dyn-items">
-                                    <div
-                                        id="w-node-_3cec4047-dc23-a95a-b6f8-b68a04997983-04997981"
-                                        role="listitem"
-                                        className="blog1_item w-dyn-item"
-                                    >
-                                        <div className="blog_content-wrapper">
-                                            <div className="blog_image-wrapper">
-                                                <img
-                                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX.png"
-                                                    loading="lazy"
-                                                    alt
-                                                    sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
-                                                    srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX-p-500.png 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX.png 714w"
-                                                    className="image-100"
-                                                />
-                                            </div>
-                                            <div className="blog_content">
-                                                <div className="margin-bottom margin-small">
-                                                    <h3 className="text-size-large text-weight-normal">
-                                                        SIX Digital Exchange partners with Aktionariat to
-                                                        provide greater access to capital through digital
-                                                        securities in Switzerland
-                                                    </h3>
-                                                </div>
-                                                <div className="text-size-small text-color-lightgrey">
-                                                    July 21, 2022
-                                                </div>
-                                            </div>
-                                            <a
-                                                href="/blogs/six-digital-exchange-partners-with-aktionariat"
-                                                className="blog1_item-link w-inline-block"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div
-                                        id="w-node-_3cec4047-dc23-a95a-b6f8-b68a04997983-04997981"
-                                        role="listitem"
-                                        className="blog1_item w-dyn-item"
-                                    >
-                                        <div className="blog_content-wrapper">
-                                            <div className="blog_image-wrapper">
-                                                <img
-                                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet.png"
-                                                    loading="lazy"
-                                                    alt="Wallets for cryptocurrencies: A comparison of hot, cold and smart wallets."
-                                                    sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
-                                                    srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet-p-500.png 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet-p-800.png 800w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet-p-1080.png 1080w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet-p-1600.png 1600w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet-p-2000.png 2000w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/6273ce21804b0f814b993d49_wallet.png 2136w"
-                                                    className="image-100"
-                                                />
-                                            </div>
-                                            <div className="blog_content">
-                                                <div className="margin-bottom margin-small">
-                                                    <h3 className="text-size-large text-weight-normal">
-                                                        Wallets for cryptocurrencies: An overview.
-                                                    </h3>
-                                                </div>
-                                                <div className="text-size-small text-color-lightgrey">
-                                                    May 10, 2022
+
+                                    {blogs_object.map(v => {
+                                        return (
+                                            <div key={v.id}
+                                                id="w-node-_3cec4047-dc23-a95a-b6f8-b68a04997983-04997981"
+                                                role="listitem"
+                                                className="blog1_item w-dyn-item"
+                                            >
+                                                <div className="blog_content-wrapper">
+                                                    <div className="blog_image-wrapper">
+                                                        <img
+                                                            src={v.img}
+                                                            loading="lazy"
+                                                            alt
+                                                            sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
+                                                            srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX-p-500.png 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/62d8f95a57e92f3465a9ae74_SDX.png 714w"
+                                                            className="image-100"
+                                                        />
+                                                    </div>
+                                                    <div className="blog_content">
+                                                        <div className="margin-bottom margin-small">
+                                                            <h3 className="text-size-large text-weight-normal">
+                                                                {v.description}
+                                                            </h3>
+                                                        </div>
+                                                        <div className="text-size-small text-color-lightgrey">
+                                                            {v.date}
+                                                        </div>
+                                                    </div>
+                                                    <a
+                                                        href={v.link}
+                                                        className="blog1_item-link w-inline-block"
+                                                    />
                                                 </div>
                                             </div>
-                                            <a
-                                                href="/blogs/wallets-for-cryptocurrencies-an-overview"
-                                                className="blog1_item-link w-inline-block"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div
-                                        id="w-node-_3cec4047-dc23-a95a-b6f8-b68a04997983-04997981"
-                                        role="listitem"
-                                        className="blog1_item w-dyn-item"
-                                    >
-                                        <div className="blog_content-wrapper">
-                                            <div className="blog_image-wrapper">
-                                                <img
-                                                    src="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/624ea4878fb43cb4988be640_aktionariat-layer-2-optimisasdm-blog-3.jpeg"
-                                                    loading="lazy"
-                                                    alt="Reasons for Optimism: Aktionariat implemented Ethereum Layer-2 Optimism roll-up protocol"
-                                                    sizes="(max-width: 479px) 43vw, (max-width: 767px) 46vw, (max-width: 991px) 29vw, 30vw"
-                                                    srcSet="https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/624ea4878fb43cb4988be640_aktionariat-layer-2-optimisasdm-blog-3-p-500.jpeg 500w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/624ea4878fb43cb4988be640_aktionariat-layer-2-optimisasdm-blog-3-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/624ea4878fb43cb4988be640_aktionariat-layer-2-optimisasdm-blog-3-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/624ea4878fb43cb4988be640_aktionariat-layer-2-optimisasdm-blog-3-p-2000.jpeg 2000w, https://uploads-ssl.webflow.com/6191fe28d0a1c82aca7ea557/624ea4878fb43cb4988be640_aktionariat-layer-2-optimisasdm-blog-3.jpeg 2560w"
-                                                    className="image-100"
-                                                />
-                                            </div>
-                                            <div className="blog_content">
-                                                <div className="margin-bottom margin-small">
-                                                    <h3 className="text-size-large text-weight-normal">
-                                                        Reasons for Optimism: Aktionariat implemented Ethereum
-                                                        Layer-2 Optimism roll-up protocol
-                                                    </h3>
-                                                </div>
-                                                <div className="text-size-small text-color-lightgrey">
-                                                    April 7, 2022
-                                                </div>
-                                            </div>
-                                            <a
-                                                href="/blogs/reasons-for-optimism-aktionariat-implements-ethereum-layer-2-optimism-roll-up-protocol"
-                                                className="blog1_item-link w-inline-block"
-                                            />
-                                        </div>
-                                    </div>
+                                        )
+                                    })}
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <a
                         href="/blog"
-                        className="button-arrow button-arrow-large w-inline-block"
+                        className="button-arrow action_arrow button-arrow-large w-inline-block"
                     >
                         <div>More blog articles</div>
-                        <div
-                            className="arrow"
-                            style={{
-                                "-webkit-transform":
-                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                "-ms-transform":
-                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                transform:
-                                    "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                "-webkit-transform-style": "preserve-3d",
-                                "-ms-transform-style": "preserve-3d",
-                                "transform-style": "preserve-3d",
-                            }}
-                        >
+                        <span className="arrow">
                             ↘
-                        </div>
+                        </span>
                     </a>
                 </div>
             </div>
@@ -813,11 +719,11 @@ const AppDownload = () => {
                                 <div className="margin-right margin-xsmall">
                                     <a
                                         href="https://apps.apple.com/ch/app/aktionariat/id1518326813#?platform=iphone"
-                                        target="_blank"
+                                        target="_blank" rel="noreferrer"
                                         className="w-inline-block"
                                     >
                                         <img
-                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/6199799d7f6c6bc01322e3ae_button-apple.svg"
+                                            src={require('../../../icons/apple.svg').default}
                                             loading="lazy"
                                             alt="Button for App Store"
                                         />
@@ -825,11 +731,11 @@ const AppDownload = () => {
                                 </div>
                                 <a
                                     href="https://play.google.com/store/apps/details?id=com.aktionariat.app"
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer"
                                     className="w-inline-block"
                                 >
                                     <img
-                                        src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/6199799dd3a10efe04325ef9_button-google.svg"
+                                        src={require('../../../icons/google.svg').default}
                                         loading="lazy"
                                         alt="Button for Google Play"
                                     />
