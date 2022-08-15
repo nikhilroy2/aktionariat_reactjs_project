@@ -13,6 +13,7 @@ import ForInvestors from './jsx/pages/ForInvestors/ForInvestors';
 import OurProducts from './jsx/pages/OurProducts/OurProducts';
 import Login from './jsx/pages/login/login';
 import BossInfo from './jsx/pages/bossInfo/bossInfo';
+import About from './jsx/pages/about/About';
 function App() {
   return (
     <div className="App">
@@ -25,6 +26,7 @@ function App() {
             <Route path="/our-products/brokerbot" element={<OurProducts></OurProducts>}></Route>
             <Route path="/login" element={<Login></Login>}></Route>
             <Route path="/bossinfo" element={<BossInfo></BossInfo>}></Route>
+            <Route path="/about" element={<About></About>}></Route>
           </Routes>
         </Base>
       </BrowserRouter>

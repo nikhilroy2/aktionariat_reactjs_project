@@ -97,4 +97,17 @@ a:hover {
 .invert-colors:hover {
   color: #fff !important;
 }
+
+.accordion-item {
+  background: transparent;
+}
+
+.accordion-item.w-dyn-item:hover {
+  opacity: 1 !important;
+}
+
+.accordion-item .accordion-icon {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
 /*# sourceMappingURL=App.css.map */

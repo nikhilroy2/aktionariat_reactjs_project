@@ -226,7 +226,6 @@ const BrokerbotTab = () => {
             </>
         },
     ]
-
     const key_features_object = [
         {
             id: 1,
@@ -278,8 +277,6 @@ const BrokerbotTab = () => {
             description: `Less uncertainty allows to create appeal to new types of less adventurous investors. Smaller ticket sizes lower the entry level for smaller investors. Ease of use allows anyone to purchase shares, even if not familiar with stock exchanges. Since our tools work on the Ethereum Blockchain, issuers automatically get access to 50 million Ethereum users; all potential investors.`,
             isShrink: false,
         },
-
-
     ]
     return (
         <div id="BrokerbotTab">

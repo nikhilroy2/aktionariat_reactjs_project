@@ -86,3 +86,14 @@ a:hover {
     color: #fff !important;
   }
 }
+// mdb update class
+.accordion-item {
+  background: transparent;
+  // custom accordion;
+  &.w-dyn-item:hover {
+    opacity: 1 !important;
+  }
+  .accordion-icon {
+    transition: 0.2s;
+  }
+}
