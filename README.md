@@ -29,4 +29,8 @@
         <a
             href="https://aktionariat-nl-reactjs-project.netlify.app/bossinfo">https://aktionariat-nl-reactjs-project.netlify.app/bossinfo</a>
     </li>
+    <li>
+        <a
+            href="https://aktionariat-nl-reactjs-project.netlify.app/about">https://aktionariat-nl-reactjs-project.netlify.app/about</a>
+    </li>
 </ul>
