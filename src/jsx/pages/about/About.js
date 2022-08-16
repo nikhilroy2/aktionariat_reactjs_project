@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import LatestNewsComponent from '../../components/LatestNews/LatestNews';
+import FurtherQuestions from '../../components/FurtherQuestions/FurtherQuestions';
 function About(props) {
     return (
         <div id='About'>
@@ -9,6 +10,8 @@ function About(props) {
             <OpenPosition></OpenPosition>
             <Team></Team>
             <PartnerExpert></PartnerExpert>
+            <FeatureNews></FeatureNews>
+            <FurtherQuestions></FurtherQuestions>
         </div>
     );
 }
@@ -625,7 +628,7 @@ const Team = () => {
 
 const PartnerExpert = () => {
 
-    const [cardAccordion1, setCardAccordion1] = useState(false);
+    // const [cardAccordion1, setCardAccordion1] = useState(false);
     const partner_object = [
         {
             id: 1,
@@ -635,7 +638,80 @@ const PartnerExpert = () => {
             description: 'Lexr is our legal partner and the recommended choice for all the legal work related to tokenized securities. Founder Christian Meisser is an entrepreneur and lawyer. He regularly publishes and advises on blockchain-related topics and financial market regulation.',
             link: 'https://www.lexr.ch/'
         },
+        {
+            id: 2,
+            img: require('../../../images/pages/about/Partner-Monerium.png'),
+            name: 'Monerium',
+            role: 'Financial Technology Partner',
+            description: 'Monerium is a fintech from Iceland that offers IBAN accounts connected to Ethereum addresses. This can help our clients to fully automate the handling of bank transfers when offering their shares for sale, triggering a blockchain-based transaction as the payment arrives.',
+            link: 'https://monerium.com/'
+        },
+        {
+            id: 3,
+            img: require('../../../images/pages/about/Partner-Dagmara.png'),
+            name: 'Dagmara Robinson',
+            role: 'Financial Communication Partner',
+            description: 'Dagmara Robinson is an experienced leader in financial communication for publicly traded companies. She supports our clients in establishing professional investor relations and developing a communication strategy towards the financial community.',
+            link: 'https://www.linkedin.com/in/dagmara-robinson-8885bb4/'
+        },
+        {
+            id: 4,
+            img: require('../../../images/pages/about/unnamed.jpg'),
+            name: 'Konsento',
+            role: '',
+            description: 'Konsento operates a corporate housekeeping platform that allows companies to efficiently manage their equity and shareholders. With digital tools for investor communication, general meetings, board meetings and corporate documents, Konsento enhances corporate governance of companies, increases the efficiency of founders and boards, reduces legal costs and risks and strengthens the information and participation rights of shareholders.',
+            link: 'https://konsento.ch/en/'
+        },
+        {
+            id: 5,
+            img: require('../../../images/pages/about/BityLogo.jpg'),
+            name: 'Bity',
+            role: '',
+            description: `Bity is a regulated Swiss financial intermediary that simplifies the conversion from traditional money into cryptocurrencies & digital assets. The service offering includes: - An online platform: bity.com to buy, sell or swap cryptocurrencies - A crypto-ATMs network with more than 35 locations in Switzerland - An API allowing to integrate Bity services within third-party applications - A KYC and AML compliance suite services for ICOs and other token generating entities ready to begin raising funds who want to be compliant with Swiss regulation.`,
+            link: 'https://bity.com/'
+        },
+        {
+            id: 6,
+            img: require('../../../images/pages/about/logo_square.png'),
+            name: 'ETH Entrepreneur Club',
+            role: '',
+            description: `The ETH Entrepreneur Club is a non-profit student run organization aiming to bring entrepreneurial-minded people together and foster entrepreneurship.The clubs main goal is to empower the next generation of entrepreneurs and to inspire students to found their own start up. By offering innovative start-up related content, organizing a variety of events, running a co-working space and maintaining close ties to the Swiss startup ecosystem, the club provides a platform to network, develop ideas, build teams and exchange experiences. The three pillars or our club are to Inspire, Educate and Accelerate the next generation of entrepreneurs.`,
+            link: 'https://entrepreneur-club.org/'
+        },
+        {
+            id: 7,
+            img: require('../../../images/pages/about/BEES.png'),
+            name: 'BEE Digital',
+            role: '',
+            description: `Transform to Perform - Provider of digital marketing, digital sales and growth solutions. For mid-market and corporates in the DACH Region that want to transform their business (marketing & sales) in order to grow locally and globally, BEE is the highest ranked digital growth solution partner that combines strategy, execution, data intelligence and people into a transformance model.`,
+            link: 'https://www.bee.digital/'
+        },
+
+
+
+        {
+            id: 8,
+            img: require('../../../images/pages/about/fs.png'),
+            name: 'FounderStudio',
+            role: '',
+            description: `FounderStudio ("FS") allows you to invest in startups that haven't even been founded yet. Support extraordinary founders with their world-changing ideas and once the company is founded receive shares for your investment. Founders get the opportunity to build a community around their product, brand and startup from day 1. Turn your customers into your investors and investors into your BrandAmbassadors.`,
+            link: '/pricing'
+        },
+        {
+            id: 9,
+            img: require('../../../images/pages/about/PXL_Logo.png'),
+            name: 'PXL Vision',
+            role: '',
+            description: `PXL Vision AG is a Swiss high-tech spin-off of the Swiss Federal Institute of Technology (ETH). It was founded by former key employees of Dacuda AG, an award-winning computer vision company that sold its 3D division to Magic Leap in early 2017. PXL Vision provides leading solutions for automating and improving online identity verification and customer onboarding through customized software solutions based on the latest developments in computer vision and machine learning. Our team has a proven track record in developing and delivering mass market products used by more than a million people worldwide.`,
+            link: 'https://www.pxl-vision.com/'
+        },
     ]
+
+
+    function accordionControl(id) {
+        let getAccordion = document.querySelector(`.accordion-icon-${id}`);
+        getAccordion.classList.toggle('icon_rotate');
+    }
     return (
         <section className="section section-grey">
             <div className="page-padding">
@@ -656,13 +732,13 @@ const PartnerExpert = () => {
                                         {
                                             partner_object.map(v => {
                                                 return (
-                                                    <div role="listitem" className="collection-item w-dyn-item">
+                                                    <div key={v.id} role="listitem" className="collection-item w-dyn-item">
                                                         <div className="member-item-wrapper">
                                                             <div className="member_image-wrapper">
                                                                 <div style={{ backgroundImage: `url(${v.img})` }} className="square-image" />
                                                             </div>
-                                                            <div className="member_content space-between">
-                                                                <div className="member-info">
+                                                            <div className="member_content space-between w-100">
+                                                                <div className="member-info w-100">
                                                                     <div className="margin-bottom margin-small">
                                                                         <div className="margin-bottom margin-xsmall">
                                                                             <h3 className="text-size-large text-weight-normal">
@@ -688,7 +764,7 @@ const PartnerExpert = () => {
                                                                                     data-w-id="9f362517-6f33-4de4-c83f-bfbcfdc38a72"
                                                                                     className="accordion-trigger"
                                                                                     data-mdb-toggle="collapse"
-                                                                                    data-mdb-target="#cardAccordion1" onClick={() => setCardAccordion1(!cardAccordion1)}
+                                                                                    data-mdb-target={`#cardAccordion${v.id}`} onClick={() => accordionControl(v.id)}
                                                                                 >
                                                                                     <div className="dropdown-title">
                                                                                         <div className="horizontal-center">
@@ -696,7 +772,7 @@ const PartnerExpert = () => {
                                                                                         </div>
                                                                                     </div>
                                                                                     <div
-                                                                                        className="icon accordion-icon" style={{ transform: `rotate(${cardAccordion1 ? '45deg' : '0deg'})` }}
+                                                                                        className={`icon accordion-icon accordion-icon-${v.id}`}
                                                                                     >
                                                                                         <img
                                                                                             src={require('../../../icons/plus.svg').default}
@@ -705,7 +781,7 @@ const PartnerExpert = () => {
                                                                                         />
                                                                                     </div>
                                                                                 </div>
-                                                                                <div id='cardAccordion1'
+                                                                                <div id={`cardAccordion${v.id}`}
                                                                                     className="accordion-item-content accordion-collapse collapse">
                                                                                     <div className="accordion-description">
                                                                                         <p className="text-size-small text-color-darkgrey">
@@ -743,6 +819,30 @@ const PartnerExpert = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    )
+}
+const FeatureNews = () => {
+    return (
+        <section id="FeatureNews">
+            <div className="page-padding">
+                <div className="container-large">
+                    <div className="padding-vertical padding-xxlarge">
+                        <div className="section-title">
+                            <h2 className="heading-label text-color-grey">News</h2>
+                            <div className="margin-bottom margin-xlarge">
+                                <p className="heading-large text-weight-bold max-width-large">
+                                    Featured <span className="text-gradient-1">News</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="margin-bottom">
+                            <LatestNewsComponent></LatestNewsComponent>
                         </div>
                     </div>
                 </div>

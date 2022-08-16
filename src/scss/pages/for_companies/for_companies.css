@@ -1,16 +1,16 @@
-#ForCompanies #OpenMarket .accordion-item {
+#ForCompanies #secondary-market .accordion-item {
   background: transparent;
   opacity: 0.6;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-#ForCompanies #OpenMarket .accordion-item * {
+#ForCompanies #secondary-market .accordion-item * {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-#ForCompanies #OpenMarket .accordion-item:hover {
+#ForCompanies #secondary-market .accordion-item:hover {
   opacity: 1;
 }
 

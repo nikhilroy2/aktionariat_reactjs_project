@@ -36,42 +36,41 @@ function HeaderMenu() {
         {
             id: 2,
             name: 'Secondary Market',
-            link: '#OpenMarket',
+            link: '/for-companies#secondary-market',
             active: false
 
         },
         {
             id: 3,
             name: 'Our Products',
-            link: '#market-widgets',
+            link: '/for-companies#market-widgets',
             active: false
-
         },
         {
             id: 4,
             name: 'Onboarding Process',
-            link: '#',
+            link: '/for-companies#onboarding-process',
             active: false
 
         },
         {
             id: 5,
             name: 'Legal Package',
-            link: '#',
+            link: '/for-companies#legal-package',
             active: false
 
         },
         {
             id: 6,
             name: 'Pricing',
-            link: '#',
+            link: '/pricing',
             active: false
 
         },
         {
-            id: 6,
+            id: 7,
             name: 'Corporate Login',
-            link: '#',
+            link: '/login',
             active: true
         },
     ]
@@ -79,43 +78,43 @@ function HeaderMenu() {
         {
             id: 1,
             name: 'Overview',
-            link: '#',
+            link: '/for-investors',
             active: false,
         },
         {
             id: 2,
             name: 'Mobile Wallet',
-            link: '#',
+            link: '/for-investors#mobile-wallet',
             active: false,
         },
         {
             id: 3,
             name: 'The Private Equity Market',
-            link: '#',
+            link: '/for-investors#private-equity-market',
             active: false,
         },
         {
             id: 4,
             name: 'Investment Opportunities',
-            link: '#',
+            link: '/for-investors#our-portfolio',
             active: false,
         },
         {
             id: 5,
             name: 'How it Works',
-            link: '#',
+            link: '/for-investors#how-it-works',
             active: false,
         },
         {
             id: 6,
             name: 'Invest in Us',
-            link: '#',
+            link: '/investor-relations',
             active: true,
         },
         {
             id: 7,
             name: 'All Companies',
-            link: '#',
+            link: '/all-companies',
             active: true,
         },
     ]
@@ -127,19 +126,19 @@ function HeaderMenu() {
             active: false,
         },
         {
-            id: 1,
+            id: 2,
             name: 'FAQ',
             link: '#',
             active: true,
         },
         {
-            id: 1,
+            id: 3,
             name: 'Get in Touch',
             link: '#',
             active: true,
         },
         {
-            id: 1,
+            id: 4,
             name: 'Subscribe to the Newsletter',
             link: '#',
             active: true,
@@ -153,19 +152,19 @@ function HeaderMenu() {
             active: false,
         },
         {
-            id: 1,
+            id: 2,
             name: 'Slide Deck',
             link: '#',
             active: false,
         },
         {
-            id: 1,
+            id: 3,
             name: 'Blog',
             link: '#',
             active: false,
         },
         {
-            id: 1,
+            id: 4,
             name: 'News',
             link: '#',
             active: false,
@@ -207,7 +206,11 @@ function HeaderMenu() {
                                             companies_object.map(v => {
                                                 return (
                                                     <li key={v.id}>
-                                                        <Link to={v.link} className={`dropdown-item ${v.active ? 'active_item' : ''}`} href={v.link}>{v.name}</Link>
+                                                        {v.link.includes('#') ? <a href={v.link} className={`dropdown-item ${v.active ? 'active_item' : ''}`}>{v.name}</a > :
+                                                            <Link to={{
+                                                                pathname: v.link,
+                                                            }} className={`dropdown-item ${v.active ? 'active_item' : ''}`}>{v.name}</Link >
+                                                        }
                                                     </li>
                                                 )
                                             })
@@ -223,7 +226,11 @@ function HeaderMenu() {
                                         {investors_object.map(v => {
                                             return (
                                                 <li key={v.id}>
-                                                    <a className={`dropdown-item ${v.active ? 'active_item' : ''}`} href={v.link}>{v.name}</a>
+                                                    {v.link.includes('#') ? <a href={v.link} className={`dropdown-item ${v.active ? 'active_item' : ''}`}>{v.name}</a > :
+                                                        <Link to={{
+                                                            pathname: v.link,
+                                                        }} className={`dropdown-item ${v.active ? 'active_item' : ''}`}>{v.name}</Link >
+                                                    }
                                                 </li>
                                             )
                                         })}
@@ -236,9 +243,13 @@ function HeaderMenu() {
                                     {/* Dropdown menu */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         {about_us_object.map(v => {
-                                            return (<li key={v.id}>
-                                                <a className={`dropdown-item ${v.active ? 'active_item' : ''}`} href={v.link}>{v.name}</a>
-                                            </li>)
+                                            return <li key={v.id}>
+                                                {v.link.includes('#') ? <a href={v.link} className={`dropdown-item ${v.active ? 'active_item' : ''}`}>{v.name}</a > :
+                                                    <Link to={{
+                                                        pathname: v.link,
+                                                    }} className={`dropdown-item ${v.active ? 'active_item' : ''}`}>{v.name}</Link >
+                                                }
+                                            </li>
                                         })}
                                     </ul>
                                 </li>
@@ -251,9 +262,13 @@ function HeaderMenu() {
                                     {/* Dropdown menu */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         {resource_object.map(v => {
-                                            return (<li key={v.id}>
-                                                <a className={`dropdown-item ${v.active ? 'active_item' : ''}`} href={v.link}>{v.name}</a>
-                                            </li>)
+                                            return <li key={v.id}>
+                                                {v.link.includes('#') ? <a href={v.link} className={`dropdown-item ${v.active ? 'active_item' : ''}`}>{v.name}</a > :
+                                                    <Link to={{
+                                                        pathname: v.link,
+                                                    }} className={`dropdown-item ${v.active ? 'active_item' : ''}`}>{v.name}</Link >
+                                                }
+                                            </li>
                                         })}
                                     </ul>
                                 </li>

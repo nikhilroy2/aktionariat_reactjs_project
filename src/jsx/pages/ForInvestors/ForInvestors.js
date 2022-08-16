@@ -105,7 +105,7 @@ const SectionHero = () => {
 
 const MobileWallet = () => {
     return (
-        <section id="MobileWallet">
+        <section id="mobile-wallet">
             <div className="page-padding">
                 <div className="container-large">
                     <div className="padding-vertical padding-xxlarge">

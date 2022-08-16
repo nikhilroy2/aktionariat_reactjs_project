@@ -95,5 +95,8 @@ a:hover {
   }
   .accordion-icon {
     transition: 0.2s;
+    &.icon_rotate {
+      transform: rotate(45deg);
+    }
   }
 }

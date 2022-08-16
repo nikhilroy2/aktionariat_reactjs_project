@@ -1,53 +1,44 @@
 import React from 'react';
 import logo from '../../../images/logo.svg'
 import '../../../scss/layout/footer/Footer.css';
+import { Link } from 'react-router-dom';
 function Footer(props) {
     const footer_object = {
         solutions: [
             {
                 id: 1,
                 name: 'For companies',
-                link: '#'
+                link: '/for-companies'
             },
             {
                 id: 2,
                 name: 'For investors',
-                link: '#'
+                link: '/for-investors'
             },
             {
                 id: 3,
                 name: 'Our products',
-                link: '#'
+                link: '/our-products/brokerbot'
             },
             {
                 id: 4,
                 name: 'Corporate login',
-                link: '#'
+                link: '/login'
             },
         ],
         about_us: [
             {
                 id: 1,
                 name: 'Our vision',
-                link: '#'
+                link: '/about/#our-vision'
             },
             {
                 id: 2,
                 name: 'Team & career',
-                link: '#'
-            },
-            {
-                id: 3,
-                name: 'Our products',
-                link: '#'
+                link: '/about/#team'
             },
             {
                 id: 4,
-                name: 'Press room',
-                link: '#'
-            },
-            {
-                id: 5,
                 name: 'FAQ',
                 link: '#'
             },
@@ -146,7 +137,9 @@ function Footer(props) {
                                     return (
 
                                         <li key={v.id}>
-                                            <a href={v.link}>{v.name}</a>
+                                            <Link to={v.link}>
+                                                {v.name}
+                                            </Link>
                                         </li>
                                     )
                                 })}
@@ -175,9 +168,8 @@ function Footer(props) {
                             <ul className="list-unstyled footer_list">
                                 {footer_object.resources.map(v => {
                                     return (
-
                                         <li key={v.id}>
-                                            <a href={v.link}>{v.name}</a>
+                                            <Link to={v.link}>{v.name}</Link>
                                         </li>
                                     )
                                 })}
@@ -193,7 +185,7 @@ function Footer(props) {
                                     return (
 
                                         <li key={v.id}>
-                                            <a href={v.link}>{v.name}</a>
+                                            <Link to={v.link}>{v.name}</Link>
                                         </li>
                                     )
                                 })}
@@ -210,7 +202,7 @@ function Footer(props) {
                                     return (
 
                                         <li key={v.id}>
-                                            <a href={v.link}>{v.name}</a>
+                                            <Link to={v.link}> {v.name}</Link>
                                         </li>
                                     )
                                 })}
