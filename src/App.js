@@ -14,6 +14,9 @@ import OurProducts from './jsx/pages/OurProducts/OurProducts';
 import Login from './jsx/pages/login/login';
 import BossInfo from './jsx/pages/bossInfo/bossInfo';
 import About from './jsx/pages/about/About';
+import FAQEn from './jsx/pages/FAQ/FAQEn';
+// Not Found 404 page
+import NotFound from './jsx/pages/NotFound/NotFound';
 function App() {
   return (
     <div className="App">
@@ -27,6 +30,9 @@ function App() {
             <Route path="/login" element={<Login></Login>}></Route>
             <Route path="/bossinfo" element={<BossInfo></BossInfo>}></Route>
             <Route path="/about" element={<About></About>}></Route>
+            <Route path="/faq/en" element={<FAQEn></FAQEn>}></Route>
+            {/* Not Found 404 page */}
+            <Route path="*" element={<NotFound></NotFound>}></Route>
           </Routes>
         </Base>
       </BrowserRouter>
