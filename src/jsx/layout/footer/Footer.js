@@ -40,7 +40,7 @@ function Footer(props) {
             {
                 id: 4,
                 name: 'FAQ',
-                link: '#'
+                link: '/faq/en'
             },
         ],
         resources: [

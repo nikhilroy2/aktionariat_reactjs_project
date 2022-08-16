@@ -1,10 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // for English version faq
+
+const isEnglish = window.location.pathname.includes('en');
+
+
 function FAQEn(props) {
     return (
         <div id='FAQEn'>
             <SectionHero></SectionHero>
             <OurVision></OurVision>
+            <Newsletter></Newsletter>
         </div>
     );
 }
@@ -31,15 +37,28 @@ const SectionHero = () => {
                                         className="max-width-full"
                                     >
                                         <div className="margin-top">
-                                            <a
-                                                href="/faq/de"
-                                                className="button-arrow action_arrow button-arrow-large w-inline-block"
-                                            >
-                                                <div>Lesen Sie auf Deutsch</div>
-                                                <span className="arrow">
-                                                    ↘
-                                                </span>
-                                            </a>
+                                            {
+                                                isEnglish ? <a
+                                                    href="/faq/de"
+                                                    className="button-arrow action_arrow button-arrow-large w-inline-block"
+                                                >
+                                                    <div>Lesen Sie auf Deutsch</div>
+                                                    <span className="arrow">
+                                                        ↘
+                                                    </span>
+                                                </a> :
+
+                                                    <a
+                                                        href="/faq/en"
+                                                        className="button-arrow action_arrow button-arrow-large w-inline-block"
+                                                    >
+                                                        <div>Read in English</div>
+                                                        <span className="arrow">
+                                                            ↘
+                                                        </span>
+                                                    </a>
+                                            }
+
                                         </div>
                                     </div>
                                 </div>
@@ -54,9 +73,11 @@ const SectionHero = () => {
 }
 
 const OurVision = () => {
+    //console.log(window.location.pathname.includes('en'))
+
     const category_object = {
         category_1: {
-            en: {
+            de: {
                 title: 'Aktienmarkt',
                 accordions: [
                     {
@@ -507,12 +528,169 @@ const OurVision = () => {
                     },
                 ]
             },
+            en: {
+                title: 'Shares market',
+                accordions: [
+                    {
+                        id: 1,
+                        title: 'On what legal foundation are the share tokens based?',
+                        description:
+                            <div className="text-rich-text w-richtext"><p>With the <a href="https://www.sif.admin.ch/sif/en/home/finanzmarktpolitik/digit_finanzsektor/blockchain.html">amendments to the Swiss Code of Obligations</a> that came into force on 01.02.21, the concept of register value rights was introduced. <a href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#part_5/tit_33/sec_1/lvl_H">Article 973d</a> defines the ledger-based securities as a right (1) which is registered in a securities ledger and (2) which can only be asserted via securities ledger.</p><p>A securities ledger on DLT (Distributed Ledger Technology), such as a blockchain, meets the requirements for a securities ledger set out in Article 973d (2) CO. If permitted by the articles of association of a company, securities such as shares can be issued as ledger-based security.</p><p>On this basis, we tokenize our own shares, as well as those of our customers. Thus, the share tokens contain exactly the same rights and obligations as "traditional" shares.</p></div>
+                    },
+                    {
+                        id: 2,
+                        title: `What do I need to be able to buy tokenized shares?`,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>With the <a href="https://www.sif.admin.ch/sif/en/home/finanzmarktpolitik/digit_finanzsektor/blockchain.html">amendments to the Swiss Code of Obligations</a> that came into force on 01.02.21, the concept of register value rights was introduced. <a href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#part_5/tit_33/sec_1/lvl_H">Article 973d</a> defines the ledger-based securities as a right (1) which is registered in a securities ledger and (2) which can only be asserted via securities ledger.</p><p>A securities ledger on DLT (Distributed Ledger Technology), such as a blockchain, meets the requirements for a securities ledger set out in Article 973d (2) CO. If permitted by the articles of association of a company, securities such as shares can be issued as ledger-based security.</p><p>On this basis, we tokenize our own shares, as well as those of our customers. Thus, the share tokens contain exactly the same rights and obligations as "traditional" shares.</p></div>
+                    },
+                    {
+                        id: 3,
+                        title: `Is investing anonymous or is an investor's identity made public in any way?`,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>Personal data of investors such as name, address and email address are not published. In order to get an entry in the share ledger of the corresponding company, investors have to register with their name and address (more on further below). The Ethereum address of a holder of share tokens is stored in the Ethereum Blockchain and can be viewed by anyone, but without any link to personal data, which is not stored on the Blockchain.</p></div>,
+                    },
+                    {
+                        id: 4,
+                        title: `In the event of an effective share sale, how are the shareholders entered in the commercial register and certified by the notary beforehand?`,
+                        description: <div className="text-rich-text w-richtext"><p>This is only necessary when subscribing for new shares. Our model is based on the exchange of registered shares held by the company (treasury shares), i.e. already subscribed. In the case of a purchase/sale of share tokens via the Aktionariat Brokerbot, no purchase agreement is required, as this is replaced by the smart contract.</p></div>
+
+                    },
+                    {
+                        id: 5,
+                        title: `How are shareholders registered in the share register?`,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>Shareholders must, however, register in the share register if they wish to receive the right to dividends and vote. To do this, they can simply register their name and address in the Shareholder Portfolio App or the Shareholder Registry Widget (on the Investor Relations page of the company). We recommend that investors do this before purchasing shares.</p></div>
+                    },
+                    {
+                        id: 6,
+                        title: `How do I find investors?`,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>Aktionariat AG sees itself as a technology provider and does not actively seek investors for its clients. Nevertheless, Aktionariat AG has a certain reach via various media. The launch of a client's brokerbot is shared across all Aktionariat AG channels (social media, newsletter). In addition, all our press contacts are informed about the go-live of new clients.</p></div>
+                    },
+                    {
+                        id: 7,
+                        title: `Do issuers have to operate a whitelisting?`,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>No, whitelisting is generally not necessary. If an issuer wants a transfer restriction (restriction on transferability) of the shares, it is advisable to implement this at the level of registration in the share register and not by means of whitelisting in the smart contract. Contractual transfer restrictions (for example a lockup) can also be mapped more flexibly via secondary registers. The simpler the main register (smart contract) is kept, the lower the transaction fees in the Ethereum system and the better the token can be integrated into the blockchain ecosystem. For example, many decentralised exchanges reject tokens that are subject to whitelisting or similar restrictions.</p></div>
+                    },
+                    {
+                        id: 8,
+                        title: `Can an issuer (company) adjust the email address of an investor?`,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>No, this is not possible. But an investor can always add an additional email address in the Aktionariat Mobile Wallet (App) and choose which address should be the primary address. Non primary address can be removed.</p></div>
+                    },
+                    {
+                        id: 9,
+                        title: `Kann ein Emittent (Unternehmen) die E-Mail-Adresse
+                        eines Aktionärs selbstständig anpassen?`,
+                        description:
+                            <div className="text-rich-text w-richtext">
+                                <p>
+                                    Nein, das ist nicht möglich. Aber ein Anleger kann
+                                    jederzeit eine zusätzliche E-Mail-Adresse in der
+                                    Aktionariat Mobile Wallet (App) hinzufügen und
+                                    auswählen welche Adresse die primäre Adresse sein
+                                    soll. Nicht primäre Adressen können vom Investor in
+                                    der Aktionariat App entfernt werden.
+                                </p>
+                            </div>
+                    },
+                    {
+                        id: 10,
+                        title: `Are issuers obliged to conduct a KYC/AML?`,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>According to the <a href="https://www.finma.ch/de/news/2018/02/20180216-mm-ico-wegleitung/">FINMA guidelines</a>, there is no legal obligation to identify the purchasers of share tokens before the purchase, as in this case there is no MLA obligation. On the other hand, the shareholder is obliged to register with the company if he reaches or exceeds 25 per cent of the share capital or voting rights with the purchase (<a href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_697_j">Art. 697j OR</a>). Without registration, he cannot assert his rights as a shareholder. It should also be noted that financial intermediaries require proof of origin when cryptocurrencies are exchanged. Which documents are necessary for this depends on the respective circumstances.</p></div>
+                    },
+                    {
+                        id: 11,
+                        title: `How is the market cap calculated?`,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>The market cap is calculated as follows: (Total number of shares - &nbsp;treasury shares) * share price</p><p>Treasury shares are shares held by the company (and not an investor).</p></div>
+                    },
+                    {
+                        id: 12,
+                        title: `Which documents, such as financial statements or prospectuses, do issuers have to publish?`,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>Financial statements: In the model of Aktionariat AG, no (annual) financial statements have to be published. Existing shareholders, on the other hand, must of course be provided with annual reports and audit reports (<a href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_696">Art. 696 para. 1 OR</a>). Only companies that have their equity securities listed on a stock exchange, so-called public companies, have to publish their annual reports and audit reports (<a href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_958_e">Art. 958e para. 1 OR</a>, <a href="https://www.six-exchange-regulation.com/dam/downloads/regulation/admission-manual/listing-rules/03_01-LR_de.pdf">Art. 49 LR SIX</a>). However, Aktionariat AG strongly recommends publishing information on the company's performance on its own website in order to create a certain degree of transparency for potential investors, including in particular the annual financial statements.</p><p>Prospectus obligation: According to the <a href="https://www.fidleg.com/fidleg">Swiss Financial Services Act (FIDLEG)</a>, no prospectus has to be published if (Art 36, No. 1):</p><ul role="list"><li>is aimed only at investors who are considered professional clients;</li><li>is aimed at fewer than 500 investors;</li><li>is aimed at investors who acquire securities with a value of at least 100,000 francs;</li><li>has a minimum denomination of 100,000 francs;</li><li>does not exceed a total value of 8 million francs calculated over a period of 12 months.</li></ul></div>
+                    },
+                    {
+                        id: 13,
+                        title: `Where does the ETH/CHF conversion rate come from?`,
+                        description:
+                            <div class="text-rich-text w-richtext"><p>The exchange rate (ETH/CHF) which we take into account is fetched from chain.link. Actually, we fetch the ETH/USD and the USD/CHF exchange rate in order to calculate ETH/CHF. Furthermore we integrate a 1% slippage protection when triggering Brokerbot transactions.</p></div>
+                    },
+                    {
+                        id: 14,
+                        title: `Is our company obliged to disclose an audit report to potential investors?`,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>No, there is neither an obligation to disclose the annual report to potential investors nor an obligation to have it audited by an auditor.</p></div>
+                    },
+                    {
+                        id: 15,
+                        title: `If a buyer of a share wants to sell it on or sell it back - how does that work and what options does he have?
+                        `,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>Thanks to Aktionariat AG, the issuer has the possibility to provide a liquidity pool by leaving part of the funds collected from investors for share buybacks in his brokerbot. In this case, the investor proceeds in the same way as when buying shares by connecting his Ethereum wallet to the brokerbot and selecting the "Sell" tab instead of the "Buy" tab. In this way, the investor can easily sell his shares or part of them back to the company.</p><p>It is also possible to transfer the shares from one investor's wallet to another. When using the Shareholder Portfolio App:</p><ul role="list"><li>the investor selects the "Portfolio" tab,&nbsp;</li><li>selects the corresponding asset,</li><li>selects the desired sender address under "Positions" and then</li><li>then presses "Transfer".</li></ul><p>Under "to Address", the investor can then select his own Ethereum address or an external address and transfer the desired number of share tokens by scanning the QR code or by manually entering the target Ethereum address. The payment of the transferred tokens is a separate process and can also be done outside the blockchain ecosystem.&nbsp;</p><p>Important: The new holder of the share tokens must register via the Aktionariat Portfolio App in order to be entered in the share register. If using a different Ethereum wallet, the investor can register in the share ledger using the registration widget. Find out more at: <a href="https://aktionariat.com/market#shareholder-registry">https://aktionariat.com/market#shareholder-registry</a></p><p><br /></p></div>
+                    },
+                    {
+                        id: 16,
+                        title: `Do all shares necessarily have to be tokenized?`,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>No. Both our Corporate Dashboard as well as our Mobile Wallet are capable of holding both tokenized and traditional stock in parallel. So a company can easily manage tokenized and non-tokenized stock at the same time. We recommend providing at least the free float portion of the shares as security tokens so that this portion of the shares can be traded.</p><p>‍</p></div>
+                    },
+                    {
+                        id: 17,
+                        title: `What are transaction costs all about?`,
+                        description:
+                            <div className="text-rich-text w-richtext"><p>Transaction fees are charged by the Ethereum network and can vary widely. The costs mainly depend on how many other transactions are currently being executed on the Ethereum blockchain. In the future, we will offer a solution with permanently lower transaction costs.</p></div>
+                    },
+                ]
+            }
+        },
+        category_2: {
+            de: {
+                title: 'Drag-Along',
+                accordions: [
+                    {
+                        id: 1,
+                        title: 'Können die Kleinaktionäre (Investoren in den Free Float Teil der Aktien) den Verkauf des Unternehmens blockieren?',
+                        description: <div className="text-rich-text w-richtext"><p>Im Gegenteil. Unsere Basetokens können in einen Drag-Along Token verpackt werden. Dieser erlaubt es Kleinaktionäre bei einem Exit automatisch zum Verkauf ihrer Aktientoken zu zwingen, sofern min 75% aller abgegebenen Stimmen einem Verkauf zustimmen. Jeder Drag-Along Token berechtigt zur Abgabe einer Stimme. Mit dem Kauf von Drag-Along Token über den Brokerbot auf der Webseite des Emittenten stimmen Aktionäre dem „Token Holder Agreement“ zu, womit sie sich mit der Drag-Along-Klausel einverstanden erklären. Zum Verkauf des gesamten Unternehmens mittels dieser Drag-Along-Funktion müssen allerdings zuvor sämtliche Aktien tokenisiert werden. Das Tokenisieren von “traditionellen” Aktien, welche bspw. von den Gründern und/oder Lead-Investoren gehalten werden, kann problemlos auf den Zeitpunkt verschoben werden, zu dem ein Verkauf realistisch erscheint**.</p></div>
+                    },
+                    {
+                        id: 2,
+                        title: 'Wie funktioniert die Durchsetzung der Drag-Along-Klausel?',
+                        description: <div className="text-rich-text w-richtext"><p>Initiierung: Jeder interessierte Käufer mit genügend Kapital* kann ein Angebot zum Erwerb aller (aber nicht weniger) Drag-Along-Token von den anderen Drag-Along-Token-Inhabern zu einem bestimmten Preis pro Aktie im Drag-Along-Smart-Contract initiieren. Den Übernahmepreis definiert der potentielle Käufer. Dadurch wird ein Smart Contract, der den Erwerb regelt, erstellt und ein entsprechendes Ereignis auf der Blockchain emittiert. Sämtliche Tokenholder werden über das Kaufangebot benachrichtigt und um eine Stimmabgabe gebeten.</p><p>Abstimmung: Nach der Initiierung eines Angebots beginnt die Abstimmungsphase (diese dauert 60 Tage). Während der Abstimmungsphase kann jeder Drag-Along-Token-Inhaber (einschließlich der anbietenden Partei) mit „Ja“ oder „Nein“ über das Erwerbsangebot abstimmen. Nach dem Ende des Abstimmungszeitraums beginnt der Ausführungszeitraum.</p><p>Ausführung: Die anbietende Partei kann die Funktion "Ausführung" auf dem Angebotsvertrag auslösen, um den Erwerb jederzeit während des Abstimmungszeitraums oder des Ausführungszeitraums zu erzwingen. Die Durchführung des Erwerbs ist nur zu einem Zeitpunkt möglich, zu dem das Erwerbsquorum erreicht ist und die erforderliche Finanzierung zur Verfügung steht*. Während der Abstimmungsphase müssen min. 75% aller Drag-Along Tokens mit „Ja“ gestimmt haben, während der Ausführungsphase reichen 75% aller abgegeben Stimmen. Mit der Ausführung des Erwerbsangebots werden alle „verpackten“ Basis-Token an die anbietende Partei abgetreten und durch den Verkaufserlös ersetzt. Die Inhaber der Basis-Token erhalten anschliessend den Verkaufserlös im Verhältnis zur Anzahl ihrer Token.&nbsp;</p><p><strong>Weitere Informationen zum Drag-Along Mechanismus:</strong>‍</p><ul role="list"><li>Erklärung des Drag-Along Smart Contracts:<br />‍<a href="https://aktionariat.com/documentation/smart-contracts/draggable.html">https://aktionariat.com/documentation/smart-contracts/draggable.html</a></li><li>Rechtliche Grundlage innerhalb des Token Holder Agreements unserer DAKS: <br />‍<a href="https://aktionariat.com/assets/terms/Token%20Holder%20Agreement.pdf">https://aktionariat.com/assets/terms/Token%20Holder%20Agreement.pdf</a></li></ul><p><strong>Warnhinweis für potentielle Käufer eines Unternehmens:</strong></p><p>* Das Platzieren eines Übernahmeangebots mittels Drag-Along-Funktion kostet 3 Ether, unabhängig davon, ob es zu einem Verkauf kommt oder nicht. In der Wallet der Partei, welche ein Übernahmeangebot platziert, müssen zu jeder Zeit ab dem Platzieren des Übernahmeangebots bis Abschluss (erfolgreich oder nicht) genügend liquide Mittel vorhanden sein. Jeder Besitzer entsprechender Tokens kann während der Abstimmungsphase zur Übernahme der Token (bzw. des gesamten Unternehmens) das Übernahmeangebot “challengen”. Sollte beispielsweise festgestellt werden, dass in der Wallet der Partei, die ein Übernahmeangebot platziert hat, nicht genügend liquide Mittel vorhanden sind, um sämtliche Token zum angebotenen Kaufpreis zu bezahlen, und jemand challenged das Übernahmeangebot, so wird der Prozess umgehend automatisch abgebrochen. Die 3 Ether, welche der potentielle Käufer für das Platzieren des Angebots bezahlt hat, gehen damit verloren.<br /></p><p>** Es ist grundsätzlich zu jedem Zeitpunkt möglich bestehende, “traditionelle” Aktien zu tokenisieren. Damit kann sich die Anzahl Aktientoken rasch stark erhöhen. Gründer könnten dies tun wollen, wenn jemand versucht sämtliche Token mittels Drag-Along-Funktion zu erwerben, um gegen das Kaufangebot abzustimmen. Dies kann ein Risiko für einen potentiellen Käufer der Aktientoken bergen, der von der Drag-Along-Funktion im Smart Contract der Draggable Aktien gebrauch macht. Dieser hat womöglich vorab mit den Inhaber der bestehenden Aktientoken gesprochen und ist aufgrund der Gespräche zuversichtlich sämtliche bestehenden Aktientoken erwerben zu können. Mit der Tokenisierung Ihrer Aktien und das Stimmen gegen das Kaufangebot, könnten bspw. Gründer dem potentiellen Käufer einen Strich durch die Rechnung machen. Das potentielle Schadensausmass umfasst 3 Ether, denn diese werden für das Platzieren eines Übernahmeangebots benötigt.<br /></p></div>
+                    },
+                ]
+            },
+            en: {
+                title: 'Drag-Along',
+                accordions: [
+                    {
+                        id: 1,
+                        title: 'Can the small shareholders (investors in the free float part of the shares) block the sale of the company?',
+                        description: <div className="text-rich-text w-richtext"><p>On the contrary. Our base tokens can be wrapped into a drag-along token. This allows small shareholders to automatically be forced to sell their share tokens at an exit, provided that at least 75% of all votes cast agree to a sale. Each Drag-Along Token entitles the holder to cast one vote. By purchasing Drag-Along Tokens via the Brokerbot on the issuer's website, shareholders agree to the "Token Holder Agreement", thereby agreeing to the Drag-Along clause. However, to sell the entire company using this drag-along feature, all shares must first be tokenized. The tokenization of "traditional" shares, which are held by the founders and/or lead investors, for example, can easily be postponed to the time when a sale seems realistic**.</p></div>
+                    },
+                    {
+                        id: 2,
+                        title: 'How does drag-along enforcement work?',
+                        description: <div className="text-rich-text w-richtext"><p><strong>Initiation: </strong>any interested buyer with sufficient capital* can initiate an offer to acquire all (but not less) Drag-Along tokens from the other Drag-Along token holders at a certain price per share in the Drag-Along smart contract. The acquisition price is defined by the potential buyer. This creates a smart contract governing the acquisition and issues a corresponding event on the blockchain. All token holders are notified of the purchase offer and asked to vote.</p><p><strong>Voting: </strong>After the initiation of an offer, the voting phase begins (this lasts 60 days). During the voting period, each Drag-Along token holder (including the offering party) can vote "Yes" or "No" on the acquisition offer. After the end of the voting period, the execution period begins.</p><p><strong>Execution: </strong>The offering party may trigger the "Execution" function on the offer agreement to force the acquisition at any time during the voting period or the execution period. Execution of the acquisition is only possible at a time when the acquisition quorum has been reached and the required financing is available*. During the voting period, at least 75% of all Drag-Along Tokens must have voted "Yes", during the execution period 75% of all votes cast are sufficient. Upon execution of the acquisition offer, all "wrapped" Base Tokens will be assigned to the offering party and replaced by the sale proceeds. The holders of the Base Tokens will subsequently receive the sale proceeds in proportion to the number of their tokens.&nbsp;</p><p><strong>More information about the Drag-Along mechanism:</strong></p><ul role="list"><li>Explanation of the Drag-Along Smart Contract:<br />‍<a href="https://aktionariat.com/documentation/smart-contracts/draggable.html">https://aktionariat.com/documentation/smart-contracts/draggable.html</a></li></ul><ul role="list"><li>Legal basis within the Token Holder Agreement of our DAKS:<a href="https://aktionariat.com/assets/terms/Token%20Holder%20Agreement.pdf"><br />https://aktionariat.com/assets/terms/Token%20Holder%20Agreement.pdf</a><br /></li></ul><p><strong>Warning notice for potential buyers of a company:</strong></p><p>* Placing a takeover offer via drag-along function costs 3 Ether, regardless of whether a sale occurs or not. There must be sufficient liquid funds in the wallet of the party placing a takeover offer at all times from the placement of the takeover offer until completion (successful or not). Any holder of corresponding tokens can "challenge" the takeover offer during the voting phase for the takeover of the tokens (or the entire company). For example, if it is found that there are not enough liquid funds in the wallet of the party that placed a takeover offer to pay for all the tokens at the offered purchase price, and someone challenges the takeover offer, the process is immediately terminated automatically. The 3 Ether that the potential buyer paid for placing the offer will be lost.<br /></p><p>** In principle, it is possible to tokenize existing, "traditional" shares at any time. This can quickly greatly increase the number of share tokens. Founders may want to do this if someone tries to acquire all tokens via drag-along to vote against the purchase offer. This may pose a risk to a potential buyer of the share tokens who makes use of the drag-along function in the smart contract of the draggable shares. The latter may have talked to the holders of the existing share tokens in advance and is confident to acquire all existing share tokens based on the discussions. By tokenizing their shares and voting against the purchase offer, founders, for example, could put a spoke in the potential buyer's wheel. The potential damage is 3 Ether, because these are needed for the placement of a takeover bid.<br /></p></div>
+                    }
+                ]
+            }
         }
     }
 
+    // accordion variable
+    const category_1_accordion_object = isEnglish ? category_object.category_1.en : category_object.category_1.de;
+    //console.log(category_1_accordion_object)
 
-    function accordionControl(id) {
-        let getAccordion = document.querySelector(`.faqCategory1Collapse${id}icon`);
+
+    const category_2_accordion_object = isEnglish ? category_object.category_2.en : category_object.category_2.de;
+
+
+    function accordionControl(id, category = 1) {
+        let getAccordion = document.querySelector(`.faqCategory${category}Collapse${id}icon`);
         getAccordion.classList.toggle('icon_rotate');
     }
 
@@ -549,12 +727,12 @@ const OurVision = () => {
                         >
                             <div id="shares-market" className="sidebar-section">
                                 <div className="margin-bottom margin-medium">
-                                    <h2>Aktienmarkt</h2>
+                                    <h2>{category_1_accordion_object.title}</h2>
                                 </div>
                                 <div className="w-dyn-list">
 
                                     <div role="list" className="w-dyn-items">
-                                        {category_object.category_1.en.accordions.map(v => {
+                                        {category_1_accordion_object.accordions.map(v => {
                                             return (
                                                 <div key={v.id} role="listitem" className="w-dyn-item">
                                                     <div className="accordion-item w-dyn-item" style={{ opacity: "0.6" }}>
@@ -567,8 +745,7 @@ const OurVision = () => {
                                                         >
                                                             <div className="dropdown-title large-title">
                                                                 <h3 className="text-size-medium text-weight-normal">
-                                                                    Auf welcher gesetzlichen Grundlage basieren die
-                                                                    Aktientoken?
+                                                                    {v.title}
                                                                 </h3>
                                                             </div>
                                                             <div
@@ -586,36 +763,7 @@ const OurVision = () => {
                                                             id={`faqCategory1Collapse${v.id}`}
                                                         >
                                                             <div className="accordion-description">
-                                                                <div className="text-rich-text w-richtext">
-                                                                    <p>
-                                                                        Mit den am 01.02.21 in Kraft getretenen{" "}
-                                                                        <a href="https://www.sif.admin.ch/sif/de/home/finanzmarktpolitik/digit_finanzsektor/blockchain.html">
-                                                                            Änderungen im Schweizer Obligationenrecht
-                                                                        </a>{" "}
-                                                                        wurde der Begriff der Registerwertrechte eingeführt.{" "}
-                                                                        <a href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#part_5/tit_33/chap_1/lvl_H">
-                                                                            Artikel 973d
-                                                                        </a>{" "}
-                                                                        definiert das Registerwertrecht als ein Recht, (1)
-                                                                        welches in einem Wertrechteregister eingetragen ist
-                                                                        und (2) nur über dieses geltend gemacht werden kann.
-                                                                    </p>
-                                                                    <p>
-                                                                        Ein auf DLT (Distributed Ledger Technology)
-                                                                        basierendes Register wie bspw. eine Blockchain
-                                                                        erfüllt die in Artikel 973d Ziffer 2 genannten
-                                                                        Anforderungen an ein Wertrechteregister. Sofern die
-                                                                        Statuten eines Unternehmens dies erlauben, können
-                                                                        Wertpapiere wie bspw. Aktien als Registerwertrechte
-                                                                        ausgegeben werden.
-                                                                    </p>
-                                                                    <p>
-                                                                        Auf dieser Grundlage tokenisieren wir unsere eigenen
-                                                                        Aktien, sowie die unserer Kunden. Damit beinhalten
-                                                                        die Aktientoken exakt dieselben Rechte und Pflichten
-                                                                        wie “traditionelle” Aktien.
-                                                                    </p>
-                                                                </div>
+                                                                {v.description}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -636,234 +784,49 @@ const OurVision = () => {
                                         <div className="divider top-clear" />
                                     </div>
                                     <div className="margin-bottom margin-medium">
-                                        <h2>Drag-Along</h2>
+                                        <h2>{category_2_accordion_object.title}</h2>
                                     </div>
                                 </div>
                                 <div className="w-dyn-list">
                                     <div role="list" className="w-dyn-items">
-                                        <div role="listitem" className="w-dyn-item">
-                                            <div className="accordion-item" style={{ opacity: "0.6" }}>
-                                                <div
-                                                    data-w-id="bf3f7737-eb79-343a-5c62-f4b2a67806a6"
-                                                    className="accordion-trigger"
-                                                >
-                                                    <div className="dropdown-title large-title">
-                                                        <h3 className="text-size-medium text-weight-normal">
-                                                            Können die Kleinaktionäre (Investoren in den Free
-                                                            Float Teil der Aktien) den Verkauf des Unternehmens
-                                                            blockieren?
-                                                        </h3>
-                                                    </div>
-                                                    <div
-                                                        className="icon accordion-icon"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
-                                                            loading="lazy"
-                                                            alt="Plus Icon"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="accordion-item-content"
-                                                    style={{ height: "0px" }}
-                                                >
-                                                    <div className="accordion-description">
-                                                        <div className="text-rich-text w-richtext">
-                                                            <p>
-                                                                Im Gegenteil. Unsere Basetokens können in einen
-                                                                Drag-Along Token verpackt werden. Dieser erlaubt es
-                                                                Kleinaktionäre bei einem Exit automatisch zum
-                                                                Verkauf ihrer Aktientoken zu zwingen, sofern min 75%
-                                                                aller abgegebenen Stimmen einem Verkauf zustimmen.
-                                                                Jeder Drag-Along Token berechtigt zur Abgabe einer
-                                                                Stimme. Mit dem Kauf von Drag-Along Token über den
-                                                                Brokerbot auf der Webseite des Emittenten stimmen
-                                                                Aktionäre dem „Token Holder Agreement“ zu, womit sie
-                                                                sich mit der Drag-Along-Klausel einverstanden
-                                                                erklären. Zum Verkauf des gesamten Unternehmens
-                                                                mittels dieser Drag-Along-Funktion müssen allerdings
-                                                                zuvor sämtliche Aktien tokenisiert werden. Das
-                                                                Tokenisieren von “traditionellen” Aktien, welche
-                                                                bspw. von den Gründern und/oder Lead-Investoren
-                                                                gehalten werden, kann problemlos auf den Zeitpunkt
-                                                                verschoben werden, zu dem ein Verkauf realistisch
-                                                                erscheint**.
-                                                            </p>
+                                        {category_2_accordion_object.accordions.map(v => {
+                                            return (
+                                                <div key={v.id} role="listitem" className="w-dyn-item">
+                                                    <div className="accordion-item w-dyn-item" style={{ opacity: "0.6" }}>
+                                                        <div
+                                                            data-w-id="d79ecbd3-b0e6-8ab0-6838-8e83c83a34ee"
+                                                            className="accordion-trigger"
+                                                            onClick={() => accordionControl(v.id, 2)}
+                                                            data-mdb-toggle="collapse"
+                                                            data-mdb-target={`#faqCategory2Collapse${v.id}`}
+                                                        >
+                                                            <div className="dropdown-title large-title">
+                                                                <h3 className="text-size-medium text-weight-normal">
+                                                                    {v.title}
+                                                                </h3>
+                                                            </div>
+                                                            <div
+                                                                className={`icon accordion-icon faqCategory2Collapse${v.id}icon`}
+                                                            >
+                                                                <img
+                                                                    src={require('../../../icons/plus.svg').default}
+                                                                    loading="lazy"
+                                                                    alt="Plus Icon"
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            className="accordion-item-content accordion-collapse collapse"
+                                                            id={`faqCategory2Collapse${v.id}`}
+                                                        >
+                                                            <div className="accordion-description">
+                                                                {v.description}
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div role="listitem" className="w-dyn-item">
-                                            <div className="accordion-item" style={{ opacity: "0.6" }}>
-                                                <div
-                                                    data-w-id="bf3f7737-eb79-343a-5c62-f4b2a67806a6"
-                                                    className="accordion-trigger"
-                                                >
-                                                    <div className="dropdown-title large-title">
-                                                        <h3 className="text-size-medium text-weight-normal">
-                                                            Wie funktioniert die Durchsetzung der
-                                                            Drag-Along-Klausel?
-                                                        </h3>
-                                                    </div>
-                                                    <div
-                                                        className="icon accordion-icon"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
-                                                            loading="lazy"
-                                                            alt="Plus Icon"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="accordion-item-content"
-                                                    style={{ height: "0px" }}
-                                                >
-                                                    <div className="accordion-description">
-                                                        <div className="text-rich-text w-richtext">
-                                                            <p>
-                                                                Initiierung: Jeder interessierte Käufer mit genügend
-                                                                Kapital* kann ein Angebot zum Erwerb aller (aber
-                                                                nicht weniger) Drag-Along-Token von den anderen
-                                                                Drag-Along-Token-Inhabern zu einem bestimmten Preis
-                                                                pro Aktie im Drag-Along-Smart-Contract initiieren.
-                                                                Den Übernahmepreis definiert der potentielle Käufer.
-                                                                Dadurch wird ein Smart Contract, der den Erwerb
-                                                                regelt, erstellt und ein entsprechendes Ereignis auf
-                                                                der Blockchain emittiert. Sämtliche Tokenholder
-                                                                werden über das Kaufangebot benachrichtigt und um
-                                                                eine Stimmabgabe gebeten.
-                                                            </p>
-                                                            <p>
-                                                                Abstimmung: Nach der Initiierung eines Angebots
-                                                                beginnt die Abstimmungsphase (diese dauert 60 Tage).
-                                                                Während der Abstimmungsphase kann jeder
-                                                                Drag-Along-Token-Inhaber (einschließlich der
-                                                                anbietenden Partei) mit „Ja“ oder „Nein“ über das
-                                                                Erwerbsangebot abstimmen. Nach dem Ende des
-                                                                Abstimmungszeitraums beginnt der
-                                                                Ausführungszeitraum.
-                                                            </p>
-                                                            <p>
-                                                                Ausführung: Die anbietende Partei kann die Funktion
-                                                                "Ausführung" auf dem Angebotsvertrag auslösen, um
-                                                                den Erwerb jederzeit während des
-                                                                Abstimmungszeitraums oder des Ausführungszeitraums
-                                                                zu erzwingen. Die Durchführung des Erwerbs ist nur
-                                                                zu einem Zeitpunkt möglich, zu dem das Erwerbsquorum
-                                                                erreicht ist und die erforderliche Finanzierung zur
-                                                                Verfügung steht*. Während der Abstimmungsphase
-                                                                müssen min. 75% aller Drag-Along Tokens mit „Ja“
-                                                                gestimmt haben, während der Ausführungsphase reichen
-                                                                75% aller abgegeben Stimmen. Mit der Ausführung des
-                                                                Erwerbsangebots werden alle „verpackten“ Basis-Token
-                                                                an die anbietende Partei abgetreten und durch den
-                                                                Verkaufserlös ersetzt. Die Inhaber der Basis-Token
-                                                                erhalten anschliessend den Verkaufserlös im
-                                                                Verhältnis zur Anzahl ihrer Token.&nbsp;
-                                                            </p>
-                                                            <p>
-                                                                <strong>
-                                                                    Weitere Informationen zum Drag-Along Mechanismus:
-                                                                </strong>
-                                                                ‍
-                                                            </p>
-                                                            <ul role="list">
-                                                                <li>
-                                                                    Erklärung des Drag-Along Smart Contracts:
-                                                                    <br />‍
-                                                                    <a href="https://aktionariat.com/documentation/smart-contracts/draggable.html">
-                                                                        https://aktionariat.com/documentation/smart-contracts/draggable.html
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    Rechtliche Grundlage innerhalb des Token Holder
-                                                                    Agreements unserer DAKS: <br />‍
-                                                                    <a href="https://aktionariat.com/assets/terms/Token%20Holder%20Agreement.pdf">
-                                                                        https://aktionariat.com/assets/terms/Token%20Holder%20Agreement.pdf
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                            <p>
-                                                                <strong>
-                                                                    Warnhinweis für potentielle Käufer eines
-                                                                    Unternehmens:
-                                                                </strong>
-                                                            </p>
-                                                            <p>
-                                                                * Das Platzieren eines Übernahmeangebots mittels
-                                                                Drag-Along-Funktion kostet 3 Ether, unabhängig
-                                                                davon, ob es zu einem Verkauf kommt oder nicht. In
-                                                                der Wallet der Partei, welche ein Übernahmeangebot
-                                                                platziert, müssen zu jeder Zeit ab dem Platzieren
-                                                                des Übernahmeangebots bis Abschluss (erfolgreich
-                                                                oder nicht) genügend liquide Mittel vorhanden sein.
-                                                                Jeder Besitzer entsprechender Tokens kann während
-                                                                der Abstimmungsphase zur Übernahme der Token (bzw.
-                                                                des gesamten Unternehmens) das Übernahmeangebot
-                                                                “challengen”. Sollte beispielsweise festgestellt
-                                                                werden, dass in der Wallet der Partei, die ein
-                                                                Übernahmeangebot platziert hat, nicht genügend
-                                                                liquide Mittel vorhanden sind, um sämtliche Token
-                                                                zum angebotenen Kaufpreis zu bezahlen, und jemand
-                                                                challenged das Übernahmeangebot, so wird der Prozess
-                                                                umgehend automatisch abgebrochen. Die 3 Ether,
-                                                                welche der potentielle Käufer für das Platzieren des
-                                                                Angebots bezahlt hat, gehen damit verloren.
-                                                                <br />
-                                                            </p>
-                                                            <p>
-                                                                ** Es ist grundsätzlich zu jedem Zeitpunkt möglich
-                                                                bestehende, “traditionelle” Aktien zu tokenisieren.
-                                                                Damit kann sich die Anzahl Aktientoken rasch stark
-                                                                erhöhen. Gründer könnten dies tun wollen, wenn
-                                                                jemand versucht sämtliche Token mittels
-                                                                Drag-Along-Funktion zu erwerben, um gegen das
-                                                                Kaufangebot abzustimmen. Dies kann ein Risiko für
-                                                                einen potentiellen Käufer der Aktientoken bergen,
-                                                                der von der Drag-Along-Funktion im Smart Contract
-                                                                der Draggable Aktien gebrauch macht. Dieser hat
-                                                                womöglich vorab mit den Inhaber der bestehenden
-                                                                Aktientoken gesprochen und ist aufgrund der
-                                                                Gespräche zuversichtlich sämtliche bestehenden
-                                                                Aktientoken erwerben zu können. Mit der
-                                                                Tokenisierung Ihrer Aktien und das Stimmen gegen das
-                                                                Kaufangebot, könnten bspw. Gründer dem potentiellen
-                                                                Käufer einen Strich durch die Rechnung machen. Das
-                                                                potentielle Schadensausmass umfasst 3 Ether, denn
-                                                                diese werden für das Platzieren eines
-                                                                Übernahmeangebots benötigt.
-                                                                <br />
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            )
+                                        })}
                                     </div>
                                 </div>
                             </div>
@@ -1428,6 +1391,130 @@ const OurVision = () => {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+const Newsletter = () => {
+    return <section id="newsletter">
+        <div className="page-padding">
+            <div className="container-large">
+                <div className="padding-vertical padding-xlarge">
+                    <div className="max-width-full">
+                        <div className="margin-bottom margin-medium">
+                            <p className="heading-xlarge text-weight-bold">
+                                Still have a question?
+                            </p>
+                        </div>
+                        <div className="margin-bottom margin-xlarge">
+                            <div className="margin-bottom margin-medium">
+                                <p className="text-color-darkgrey">
+                                    If you can’t find answer to your question in our FAQ, you can
+                                    always contact us. We will answer to you shortly.
+                                </p>
+                            </div>
+                            <p className="text-size-small text-color-grey">
+                                Fields marked with an asterisk (*) are required.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="max-width-large">
+                        <div className="contact_form-wrapper w-form">
+                            <form
+                                id="wf-form-Contact-Form"
+                                name="wf-form-Contact-Form"
+                                data-name="Contact Form"
+                                method="get"
+                                className="contact_form"
+                                aria-label="Contact Form"
+                                data-hs-cf-bound="true"
+                            >
+                                <div className="margin-bottom margin-small">
+                                    <div className="form-field-row">
+                                        <input
+                                            type="text"
+                                            className="form-text-input w-input"
+                                            maxLength={256}
+                                            name="contact-2-first-name-2"
+                                            data-name="Contact 2 First Name 2"
+                                            placeholder="First Name*"
+                                            id="contact-2-first-name-2"
+                                            required
+                                        />
+                                        <input
+                                            type="text"
+                                            className="form-text-input w-input"
+                                            maxLength={256}
+                                            name="contact-2-last-name-2"
+                                            data-name="Contact 2 Last Name 2"
+                                            placeholder="Last Name*"
+                                            id="contact-2-last-name-2"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div className="margin-bottom margin-small">
+                                    <div className="form-field-row">
+                                        <input
+                                            type="email"
+                                            className="form-text-input w-input"
+                                            maxLength={256}
+                                            name="contact-2-email-3"
+                                            data-name="Contact 2 Email 3"
+                                            placeholder="Email*"
+                                            id="contact-2-email-3"
+                                            required
+                                        />
+                                        <input
+                                            type="tel"
+                                            className="form-text-input w-input"
+                                            maxLength={256}
+                                            name="contact-2-email-2"
+                                            data-name="Contact 2 Email 2"
+                                            placeholder="Phone Number"
+                                            id="contact-2-email-2"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div className="margin-bottom margin-small">
+                                    <textarea
+                                        placeholder="Message"
+                                        maxLength={5000}
+                                        id="contact-2-message-2"
+                                        name="contact-2-message-2"
+                                        data-name="Contact 2 Message 2"
+                                        required
+                                        className="form-text-input text-area w-input"
+                                        defaultValue={""}
+                                    />
+                                </div>
+                                <input
+                                    type="submit"
+                                    defaultValue="Submit"
+                                    data-wait="Please wait..."
+                                    className="button-form-visible w-button"
+                                />
+                            </form>
+                            <div
+                                className="success-message w-form-done"
+                                tabIndex={-1}
+                                role="region"
+                                aria-label="Contact Form success"
+                            >
+                                <div>Thank you! Your submission has been received!</div>
+                            </div>
+                            <div
+                                className="error-message w-form-fail"
+                                tabIndex={-1}
+                                role="region"
+                                aria-label="Contact Form failure"
+                            >
+                                <div>Oops! Something went wrong while submitting the form.</div>
                             </div>
                         </div>
                     </div>

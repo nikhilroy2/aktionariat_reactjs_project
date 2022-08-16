@@ -33,4 +33,12 @@
         <a
             href="https://aktionariat-nl-reactjs-project.netlify.app/about">https://aktionariat-nl-reactjs-project.netlify.app/about</a>
     </li>
+    <li>
+        <a
+            href="https://aktionariat-nl-reactjs-project.netlify.app/faq/en">https://aktionariat-nl-reactjs-project.netlify.app/faq/en</a>
+    </li>
+    <li>
+        <a
+            href="https://aktionariat-nl-reactjs-project.netlify.app/faq/de">https://aktionariat-nl-reactjs-project.netlify.app/faq/de</a>
+    </li>
 </ul>
