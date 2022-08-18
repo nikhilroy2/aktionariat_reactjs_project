@@ -1,153 +1,157 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function DocAside(props) {
+    const doc_aside_object = {
+        category_1: {
+            title: 'Investor Guides',
+            list: [
+                {
+                    id: 1,
+                    name: 'How to buy Aktionariat shares',
+                    link: '/documentation/how-to-buy-aktionariat-shares'
+                },
+                {
+                    id: 2,
+                    name: 'Setting up your wallet',
+                    link: '/documentation/setting-up-your-wallet'
+                },
+                {
+                    id: 3,
+                    name: 'Funding your wallet',
+                    link: '/documentation/funding-your-wallet'
+                },
+                {
+                    id: 4,
+                    name: 'Funding your wallet for Optimism',
+                    link: '/documentation/funding-your-wallet-for-optimism'
+                },
+                {
+                    id: 5,
+                    name: 'Off-ramp your XCHF',
+                    link: '/documentation/off-ramp-your-xchf'
+                },
+            ]
+        },
+        category_2: {
+            title: 'Corporate Guides',
+            list: [
+                {
+                    id: 1,
+                    name: 'How to set up your Ledger Nano S',
+                    link: '/documentation/adding-ledger-as-an-additional-signer'
+                },
+                {
+                    id: 3,
+                    name: 'Tokenization checklist',
+                    link: '/documentation/tokenization-checklist'
+                },
+                {
+                    id: 3,
+                    name: 'Accessing the Corporate Dashboard',
+                    link: '/documentation/accessing-corporate-dashboard'
+                },
+                {
+                    id: 4,
+                    name: 'Setting up our widgets',
+                    link: '/documentation/setting-up-our-widgets'
+                }
+            ]
+        },
+        category_3: {
+            title: 'Learn More',
+            list: [
+                {
+                    id: 1,
+                    name: 'Shareholder Registry',
+                    link: '/documentation/shareholder-registry'
+                },
+                {
+                    id: 3,
+                    name: 'Multisignature Contract',
+                    link: '/documentation/multisignature-contract'
+                },
+                {
+                    id: 3,
+                    name: 'Recovery mechanism',
+                    link: '/documentation/recovery-mechanism'
+                },
+                {
+                    id: 4,
+                    name: 'Drag-along mechanism',
+                    link: '/documentation/drag-along-mechanism'
+                }
+            ]
+        }
+    }
+    const getActiveItem = window.location.pathname
     return (
         <div
             id="w-node-df90eb21-984e-43b9-92be-9bb72e4f12e8-0dd10406"
             className="sidebar sidebar-sticky"
         >
             <div className="margin-bottom margin-small">
-                <div className="text-size-medium">Investor Guides</div>
+                <div className="text-size-medium">{doc_aside_object.category_1.title}</div>
             </div>
             <div className="sidebar-links-list">
                 <div className="w-dyn-list">
                     <div role="list" className="w-dyn-items">
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/how-to-buy-aktionariat-shares"
-                                className="sidebar-link"
-                            >
-                                How to buy Aktionariat shares
-                            </a>
-                        </div>
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/setting-up-your-wallet"
-                                className="sidebar-link"
-                            >
-                                Setting up your wallet
-                            </a>
-                        </div>
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/funding-your-wallet"
-                                className="sidebar-link"
-                            >
-                                Funding your wallet
-                            </a>
-                        </div>
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/funding-your-wallet-for-optimism"
-                                className="sidebar-link"
-                            >
-                                Funding your wallet for Optimism
-                            </a>
-                        </div>
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/off-ramp-your-xchf"
-                                className="sidebar-link"
-                            >
-                                Off-ramp your XCHF
-                            </a>
-                        </div>
+                        {
+                            doc_aside_object.category_1.list.map(v => {
+                                return (
+                                    <div key={v.id} role="listitem" className="w-dyn-item">
+                                        <Link
+                                            to={v.link}
+                                            className={`sidebar-link ${getActiveItem.includes(v.link) ? 'w--current' : ''}`}>
+                                            {v.name}
+                                        </Link>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
             <div className="margin-bottom margin-small">
-                <div className="text-size-medium">Corporate Guides</div>
+                <div className="text-size-medium">{doc_aside_object.category_2.title}</div>
             </div>
             <div className="sidebar-links-list">
                 <div className="w-dyn-list">
                     <div role="list" className="w-dyn-items">
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/adding-ledger-as-an-additional-signer"
-                                aria-current="page"
-                                className="sidebar-link w--current"
-                            >
-                                How to set up your Ledger Nano S
-                            </a>
-                        </div>
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/tokenization-checklist"
-                                className="sidebar-link"
-                            >
-                                Tokenization checklist
-                            </a>
-                        </div>
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/accessing-corporate-dashboard"
-                                className="sidebar-link"
-                            >
-                                Accessing the Corporate Dashboard
-                            </a>
-                        </div>
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/setting-up-our-widgets"
-                                className="sidebar-link"
-                            >
-                                Setting up our widgets
-                            </a>
-                        </div>
+                        {
+                            doc_aside_object.category_2.list.map(v => {
+                                return (
+                                    <div key={v.id} role="listitem" className="w-dyn-item">
+                                        <Link
+                                            to={v.link}
+                                            className={`sidebar-link ${getActiveItem.includes(v.link) ? 'w--current' : ''}`}>
+                                            {v.name}
+                                        </Link>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
             <div className="margin-bottom margin-small">
-                <div className="text-size-medium">Learn More</div>
+                <div className="text-size-medium">{doc_aside_object.category_3.title}</div>
             </div>
             <div className="sidebar-links-list">
                 <div className="w-dyn-list">
                     <div role="list" className="w-dyn-items">
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/shareholder-registry"
-                                className="sidebar-link"
-                            >
-                                Shareholder Registry
-                            </a>
-                        </div>
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/multisignature-contract"
-                                className="sidebar-link"
-                            >
-                                Multisignature Contract
-                            </a>
-                        </div>
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/recovery-mechanism"
-                                className="sidebar-link"
-                            >
-                                Recovery mechanism
-                            </a>
-                        </div>
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/drag-along-mechanism"
-                                className="sidebar-link"
-                            >
-                                Drag-along mechanism
-                            </a>
-                        </div>
-                        <div role="listitem" className="w-dyn-item">
-                            <a
-                                href="/documentation/infinite-erc-20-allowances"
-                                className="sidebar-link"
-                            >
-                                Infinite ERC-20 allowances
-                            </a>
-                        </div>
-                        <div role="listitem" className="w-dyn-item">
-                            <a href="/documentation/allowlist" className="sidebar-link">
-                                Allowlist
-                            </a>
-                        </div>
+                        {
+                            doc_aside_object.category_3.list.map(v => {
+                                return (
+                                    <div key={v.id} role="listitem" className="w-dyn-item">
+                                        <Link
+                                            to={v.link}
+                                            className={`sidebar-link ${getActiveItem.includes(v.link) ? 'w--current' : ''}`}>
+                                            {v.name}
+                                        </Link>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>

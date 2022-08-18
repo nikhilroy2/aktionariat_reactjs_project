@@ -1,10 +1,23 @@
 import React from 'react';
 import DocAside from './DocAside';
-import DocumentationHowToBuy from './DocumentationHowToBuy';
+import FurtherQuestions from '../../components/FurtherQuestions/FurtherQuestions';
 function Documentation(props) {
     return (
         <div id='Documentation'>
-            <DocumentationBox></DocumentationBox>
+            <SectionHero></SectionHero>
+            <section id="DocumentationBox" className="section section-grey">
+                <div className="page-padding">
+                    <div className="container-large">
+                        <div className="padding-vertical padding-xxlarge">
+                            <div className="content-grid">
+                                <DocAside></DocAside>
+                                {props.children}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <FurtherQuestions></FurtherQuestions>
         </div>
     );
 }
@@ -34,8 +47,4 @@ export const SectionHero = () => {
         </section>
 
     )
-}
-
-const DocumentationBox = () => {
-    return <DocumentationHowToBuy></DocumentationHowToBuy>
 }
