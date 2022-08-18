@@ -174,7 +174,7 @@ function HeaderMenu() {
         <menu id="HeaderMenu" className='position-relative'>
             <div className="section_container px-0">
                 {/* Navbar */}
-                <nav className="navbar navbar-expand-lg navbar-dark bg-black">
+                <nav className="navbar shadow-0 navbar-expand-lg navbar-dark bg-black">
                     {/* Container wrapper */}
                     <div className="container-fluid px-0">
                         <div className="d-flex d-lg-none align-items-center justify-content-between w-100">

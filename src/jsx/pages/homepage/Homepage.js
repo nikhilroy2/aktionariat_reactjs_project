@@ -539,25 +539,12 @@ function OurSolution() {
                                                 </div>
                                                 <a
                                                     href="/for-companies"
-                                                    className="button-arrow button-arrow-large w-inline-block"
+                                                    className="button-arrow action_arrow button-arrow-large w-inline-block"
                                                 >
                                                     <div>Show more</div>
-                                                    <div
-                                                        className="arrow"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
+                                                    <span className="arrow">
                                                         ↘
-                                                    </div>
+                                                    </span>
                                                 </a>
                                             </div>
                                         </div>

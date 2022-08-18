@@ -379,21 +379,21 @@ function CompanyTable(props) {
             <table className=''>
                 <thead>
                     <tr>
-                        <td className='text-nowrap' style={{ "width": "6%", "padding": "1rem", "font-size": "1.25rem" }} />
+                        <td className='text-nowrap' style={{ "width": "6%", "padding": "1rem", "fontSize": "1.25rem" }} />
                         <td className='text-nowrap' style={{ "width": "24%", "padding": "1rem" }}>
                             <div className="text-size-medium">Company</div>
                         </td>
                         <td className='text-nowrap' style={{ "width": "24%", "padding": "1rem" }}>
                             <div className="text-size-medium">Share Name &amp; Ticker</div>
                         </td>
-                        <td className='text-nowrap' style={{ "width": "18%", "padding": "1rem", "-webkit-text-align": "right", "text-align": "right" }}>
+                        <td className='text-nowrap' style={{ "width": "18%", "padding": "1rem", "WebkitTextAlign": "right", "textAlign": "right" }}>
                             <div className="text-size-medium">Price</div>
                             <div className="text-size-small text-color-grey">Yearly Change</div>
                         </td>
-                        <td className='text-nowrap' style={{ "width": "18%", "padding": "1rem", "font-size": "1.25rem", "-webkit-text-align": "right", "text-align": "right" }}>
+                        <td className='text-nowrap' style={{ "width": "18%", "padding": "1rem", "fontSize": "1.25rem", "WebkitTextAlign": "right", "textAlign": "right" }}>
                             <div className="text-size-medium">Market Cap</div>
                         </td>
-                        <td className='text-nowrap' style={{ "width": "10%", "padding": "1rem", "font-size": "1.25rem" }} />
+                        <td className='text-nowrap' style={{ "width": "10%", "padding": "1rem", "fontSize": "1.25rem" }} />
                     </tr>
                 </thead>
                 <tbody>
@@ -401,7 +401,7 @@ function CompanyTable(props) {
                         table_object.map(v => {
                             return (
                                 <tr key={v.id}>
-                                    <td style={{ "padding-left": "1rem", "min-width": "64px" }}>
+                                    <td style={{ "paddingLeft": "1rem", "minWidth": "64px" }}>
                                         <a rel='noreferrer' href={v.company.link} target="_blank">
                                             <img
                                                 src={v.company.img}
@@ -440,7 +440,7 @@ function CompanyTable(props) {
                                     </td>
                                     <td
                                         style={{
-                                            "text-align": "right",
+                                            "textAlign": "right",
                                         }}
                                     >
                                         <div className={v.price.option1.class}>{v.price.option1.name}</div>
@@ -451,14 +451,14 @@ function CompanyTable(props) {
                                     </td>
                                     <td
                                         style={{
-                                            "text-align": "right",
+                                            "textAlign": "right",
                                         }}
                                     >
                                         <div className={v.market_cap.option1.class}>{v.market_cap.option1.name}</div>
                                     </td>
                                     <td
                                         style={{
-                                            "text-align": "right",
+                                            "textAlign": "right",
                                         }}
                                     >
                                         <a rel='noreferrer'

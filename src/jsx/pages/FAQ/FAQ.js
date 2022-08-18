@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Scrollspy from 'react-scrollspy';
 // for English version faq
 
 const isEnglish = window.location.pathname.includes('en');
@@ -1056,21 +1057,22 @@ const OurVision = () => {
                                 <div className="text-size-medium">Category</div>
                             </div>
                             <div className="sidebar-links-list">
-                                <a href="#shares-market" className="sidebar-link">
-                                    {category_1_accordion_object.title}
-                                </a>
-                                <a href="#drag-along" className="sidebar-link">
-                                    {category_2_accordion_object.title}
+                                <Scrollspy items={['shares-market', 'drag-along', 'dependencies', 'wallet']} currentClassName="w--current">
+                                    <a href="#shares-market" className="sidebar-link">
+                                        {category_1_accordion_object.title}
+                                    </a>
+                                    <a href="#drag-along" className="sidebar-link">
+                                        {category_2_accordion_object.title}
 
-                                </a>
-                                <a href="#dependencies" className="sidebar-link">
-                                    {category_3_accordion_object.title}
+                                    </a>
+                                    <a href="#dependencies" className="sidebar-link">
+                                        {category_3_accordion_object.title}
 
-                                </a>
-                                <a href="#wallet" className="sidebar-link w--current">
-                                    {category_4_accordion_object.title}
-
-                                </a>
+                                    </a>
+                                    <a href="#wallet" className="sidebar-link ">
+                                        {category_4_accordion_object.title}
+                                    </a>
+                                </Scrollspy>
                             </div>
                         </div>
                         <div
@@ -1326,7 +1328,7 @@ const Newsletter = () => {
                                 method="get"
                                 className="contact_form"
                                 aria-label="Contact Form"
-                                data-hs-cf-bound="true"
+                                data-hs-cf-bound={true}
                             >
                                 <div className="margin-bottom margin-small">
                                     <div className="form-field-row">

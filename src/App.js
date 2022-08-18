@@ -15,6 +15,9 @@ import Login from './jsx/pages/login/login';
 import BossInfo from './jsx/pages/bossInfo/bossInfo';
 import About from './jsx/pages/about/About';
 import FAQ from './jsx/pages/FAQ/FAQ';
+// Documentation pages
+import Documentation from './jsx/pages/documentation/Documentation';
+import DocumentationHowToBuy from './jsx/pages/documentation/DocumentationHowToBuy';
 // Not Found 404 page
 import NotFound from './jsx/pages/NotFound/NotFound';
 function App() {
@@ -33,6 +36,11 @@ function App() {
             {/* for language en, de */}
             <Route path="/faq/en" element={<FAQ></FAQ>}></Route>
             <Route path="/faq/de" element={<FAQ></FAQ>}></Route>
+            
+            {/* Documentation pages */}
+            <Route path="/documentation" element={<Documentation></Documentation>}></Route>
+            <Route path="/documentation/how-to-buy-aktionariat-shares" element={<DocumentationHowToBuy></DocumentationHowToBuy>}></Route>
+            
             {/* Not Found 404 page */}
             <Route path="*" element={<NotFound></NotFound>}></Route>
           </Routes>
