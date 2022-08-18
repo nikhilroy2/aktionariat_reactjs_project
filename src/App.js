@@ -32,6 +32,10 @@ import DocumentationRecovery from './jsx/pages/documentation/DocumentationRecove
 import DocumentationDragAlong from './jsx/pages/documentation/DocumentationDragAlong';
 import DocumentationInfinite from './jsx/pages/documentation/DocumentationInfinite';
 import DocumentationAllowlist from './jsx/pages/documentation/DocumentationAllowlist';
+// Documentation pages end
+
+import Blogs from './jsx/pages/Blogs/Blogs';
+
 // Not Found 404 page
 import NotFound from './jsx/pages/NotFound/NotFound';
 function App() {
@@ -69,6 +73,11 @@ function App() {
             <Route path="/documentation/drag-along-mechanism" element={<DocumentationDragAlong></DocumentationDragAlong>}></Route>
             <Route path="/documentation/infinite-erc-20-allowances" element={<DocumentationInfinite></DocumentationInfinite>}></Route>
             <Route path="/documentation/allowlist" element={<DocumentationAllowlist></DocumentationAllowlist>}></Route>
+
+            {/* Documentation pages End*/}
+            <Route path="/blog" element={<Blogs></Blogs>}></Route>
+
+
             {/* Not Found 404 page */}
             <Route path="*" element={<NotFound></NotFound>}></Route>
           </Routes>

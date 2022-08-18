@@ -148,7 +148,7 @@ function HeaderMenu() {
         {
             id: 1,
             name: 'Documentation',
-            link: '#',
+            link: '/documentation/how-to-buy-aktionariat-shares',
             active: false,
         },
         {
@@ -160,7 +160,7 @@ function HeaderMenu() {
         {
             id: 3,
             name: 'Blog',
-            link: '#',
+            link: '/blog',
             active: false,
         },
         {

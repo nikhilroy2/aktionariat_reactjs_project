@@ -47,17 +47,17 @@ function Footer(props) {
             {
                 id: 1,
                 name: 'Documentation',
-                link: '#'
+                link: '/documentation/how-to-buy-aktionariat-shares'
             },
             {
                 id: 2,
                 name: 'Developer resources',
-                link: '#'
+                link: '/documentation/how-to-buy-aktionariat-shares'
             },
             {
                 id: 3,
                 name: 'Blogs',
-                link: '#'
+                link: '/blog'
             },
             {
                 id: 4,
