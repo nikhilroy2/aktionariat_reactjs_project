@@ -795,6 +795,22 @@ function NewsLatter() {
                             </div>
                             <div className="max-width-medium">
                                 <div className="w-embed w-script">
+                                    <div className="form-group">
+                                        <input type="email" name="" id="" placeholder='Your email address' className='form-control w-100 border border-danger py-2 px-3 shadow-0 outline-0' />
+                                    </div>
+                                    <div className="form-check py-3">
+                                        <label className="form-check-label">
+                                            <input type="checkbox" className="form-check-input" name="" id="" value="checkedValue" checked />
+
+                                            I agree to receive communication from Aktionariat. <span className="text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <p>
+                                        You can unsubscribe from these communications at any time.
+                                    </p>
+
+                                    <button type="submit" className="btn btn-light my-4">Subscribe now</button>
                                 </div>
                             </div>
                         </div>

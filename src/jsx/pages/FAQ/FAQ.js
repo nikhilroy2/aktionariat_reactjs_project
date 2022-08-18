@@ -617,7 +617,7 @@ const OurVision = () => {
                         id: 13,
                         title: `Where does the ETH/CHF conversion rate come from?`,
                         description:
-                            <div class="text-rich-text w-richtext"><p>The exchange rate (ETH/CHF) which we take into account is fetched from chain.link. Actually, we fetch the ETH/USD and the USD/CHF exchange rate in order to calculate ETH/CHF. Furthermore we integrate a 1% slippage protection when triggering Brokerbot transactions.</p></div>
+                            <div className="text-rich-text w-richtext"><p>The exchange rate (ETH/CHF) which we take into account is fetched from chain.link. Actually, we fetch the ETH/USD and the USD/CHF exchange rate in order to calculate ETH/CHF. Furthermore we integrate a 1% slippage protection when triggering Brokerbot transactions.</p></div>
                     },
                     {
                         id: 14,
@@ -678,7 +678,354 @@ const OurVision = () => {
                     }
                 ]
             }
-        }
+        },
+        category_3: {
+            de: {
+                title: 'Abhängigkeiten',
+                accordions: [
+                    {
+                        id: 1,
+                        title: 'In welchem Land werden die Daten zum Aktienbuch gehostet?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                Wir hosten unsere Daten (inkl. der Aktienbücher) bei einem Anbieter in der
+                                Schweiz.
+                            </p>
+                        </div>
+
+                    },
+                    {
+                        id: 2,
+                        title: 'Besteht ein Risiko für den Emittenten falls der Ether auf 0$ fällt?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                Nein, grundsätzlich nicht. Ether wird „nur“ für das Bezahlen der
+                                Transaktionsgebühr des Ethereum Systems gebraucht. Ein tiefer Etherpreis
+                                geht oftmals einher mit tiefen Transaktionsgebühren des Ethereumsystems. Der
+                                Worst Case wäre, dass das Ethereum-System kaputt geht und man die Token auf
+                                eine andere Blockchain migrieren müsste. Dieser Fall ist jedoch sehr
+                                unwahrscheinlich, denn das Ethereumsystem ging vor mittlerweile 6 Jahren
+                                live und erwies sich bislang als sehr stabil. Ausserdem befindet sich das
+                                Aktienbuch des Emittenten nicht auf der Blockchain. Die Informationen
+                                darüber welche Investoren wie viele Aktien halten, würden also bestehen
+                                bleiben auch wenn die Ethereum Blockchain nicht mehr existieren würde.
+                            </p>
+                        </div>
+                    },
+                    {
+                        id: 3,
+                        title: 'Was passiert mit den Aktien falls die Aktionariat AG Konkurs anmelden müsste?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                Die Aktientokens basieren auf dem ERC-20 Standardtoken und funktionieren
+                                vollständig ohne unser Zutun. Falls die Aktionariat AG Konkurs geht, gäbe es
+                                lediglich unser Userinterfaces nicht mehr (Aktionariat App, Corporate
+                                Dashboard, Market Widgets) aber die Inhaber der Tokens könnten diese
+                                weiterhin transferieren, halten und die Rechte ausüben, die damit verbunden
+                                sind. Auch besteht immer die Möglichkeit die Tokens auf anderen Marktplätzen
+                                anzubieten. Wir bauen auch deshalb auf der Ethereum-Blockchain und verwenden
+                                ERC-20 Tokens, weil es unsere Kunden in keine unnötige Abhängigkeit der
+                                Aktionariat AG bringt. Der dezentrale Ansatz ist für Aktionariat deshalb ein
+                                Kernanliegen, weil keine neuen Abhängigkeiten geschaffen werden sollen.
+                            </p>
+                        </div>
+                    },
+                    {
+                        id: 4,
+                        title: 'Wie viel kostet es das Unternehmen wieder auf ein traditionelles Aktiensystem zu wechseln?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                Das Unternehmen kann in Absprache mit den Aktionären alle Security Tokens
+                                einsammeln und ‘’verbrennen’’. Das Einsammeln der Tokens verursacht mehrere
+                                Transaktionen auf der Ethereum Blockchain. Deshalb fallen dafür
+                                entsprechende Transaktionskosten an. Wie hoch diese sind, hängt von der
+                                Anzahl Transaktionen und dem ‘’Gaspreis’’ ab.
+                            </p>
+                        </div>
+                    },
+                ]
+            },
+            en: {
+                title: 'Dependencies',
+                accordions: [
+                    {
+                        id: 1,
+                        title: 'In which country is the shareholder registry data hosted?',
+                        description: <div className="text-rich-text w-richtext"><p>We host our data (incl. shareholder registry) with a provider in Switzerland.</p></div>
+                    },
+                    {
+                        id: 2,
+                        title: 'Is there a risk for the issuer if the Ether falls to $0?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                No, basically not. Ether is "only" used to pay the transaction fee of the
+                                Ethereum system. A low Ether price often goes hand in hand with low
+                                transaction fees of the Ethereum system. The worst case would be that the
+                                Ethereum system breaks and you have to migrate the tokens to another
+                                blockchain. However, this case is very unlikely, because the Ethereum system
+                                went live 6 years ago and has proven to be very stable so far. Moreover, the
+                                issuer's share ledger is not on the blockchain. The information about which
+                                investors hold how many shares would therefore remain even if the Ethereum
+                                blockchain no longer existed.
+                            </p>
+                        </div>
+                    },
+                    {
+                        id: 3,
+                        title: 'What happens to the shares if Aktionariat AG has to file for bankruptcy?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                The share tokens are based on the ERC-20 standard token and work completely
+                                without our intervention. If Aktionariat AG goes bankrupt, only our user
+                                interfaces would no longer exist (Aktionariat App, Corporate Dashboard,
+                                Market Widgets) but the holders of the tokens would still be able to
+                                transfer, hold and exercise the rights associated with them. Also, there is
+                                always the possibility to offer the tokens on other marketplaces. We also
+                                build on the Ethereum blockchain and use ERC-20 tokens because it does not
+                                put our clients in unnecessary dependency on Aktionariat AG. The
+                                decentralized approach is therefore a core concern for Aktionariat because
+                                no new dependencies should be created.
+                            </p>
+                        </div>
+
+                    },
+                    {
+                        id: 4,
+                        title: 'How much does it cost a company to switch back to a traditional share system?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                The company can collect and ''burn'' all Security Tokens in consultation
+                                with shareholders. Collecting the tokens causes multiple transactions on the
+                                Ethereum Blockchain. Therefore, there are corresponding transaction costs
+                                for this. How high these are depends on the number of transactions and the
+                                ''gas price''.
+                            </p>
+                        </div>
+                    },
+                ]
+            }
+        },
+        category_4: {
+            de: {
+                title: 'Wallet',
+                accordions: [
+                    {
+                        id: 1,
+                        title: 'Warum ist das Feld "Name" in der Aktionariat App und im Dashboard nicht in ein "Vorname"- und ein "Nachname"-Feld unterteilt?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                Die Schönheit der Lösung liegt in ihrer Einfachheit: Die Verwendung von nur
+                                einem Feld funktioniert für alle gleichermaßen: Unternehmen wie "Aktionariat
+                                AG", Personen wie "Ewan McGregor", Personen, die auf die Verwendung von
+                                mittleren Buchstaben bestehen, z.B. "George W. Bush", Personen, die gerne
+                                mit Doppelnamen angesprochen werden, z.B. "Marie-Christin Weidmann",
+                                Personen, die zwei Vornamen verwenden, z.B. "Rainer Maria Hubacher", usw.
+                                Wenn wir zum Beispiel ein Feld "Vorname" und das andere Feld "Nachname"
+                                nennen, wo soll Rainer Maria Rilke dann "Maria" eintragen?
+                            </p>
+                            <p>‍</p>
+                        </div>
+                    },
+                    {
+                        id: 2,
+                        title: 'Weshalb sehe ich meine DAKS Token nicht auf meiner MetaMask Wallet?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                Da MetaMask nur grosse / bekannt Coins erkennt, muss der DAKS oder andere
+                                Security Tokens von Aktionariat Kunden zuerst importiert werden. Wenn man
+                                die App auf dem Smartphone verwendet:
+                            </p>
+                            <ol start={1} role="list">
+                                <li>MetaMask öffnen und im Menü den Browser in der App selber öffnen.</li>
+                                <li>
+                                    Im Browser auf etherscan.io die eigene Ethereum-Adresse (sichtbar im
+                                    MetaMask Wallet) eingeben
+                                </li>
+                                <li>Beim Security Token unter ‘’More’’ → Add DAKS to MetaMask</li>
+                            </ol>
+                            <p>
+                                Wenn man MetaMask als Erweiterung in einem Browser auf dem Laptop verwendet,
+                                ist es wichtig in diesem Browser auf <strong>etherscan.io </strong>die
+                                eigene Ethereum Adresse einzugeben. Da ebenfalls beim DAKS / anderen
+                                Security Token unter ‘’more’’ → Add to MetaMask.
+                            </p>
+                        </div>
+                    },
+                    {
+                        id: 3,
+                        title: 'Was ist eine Seed-Phrase?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                Die Seed Phrase besteht aus einer Aneinanderreihung von 12 oder 24 Wörter
+                                und erfüllt den Zweck eines Back-up Schlüssels. Bei Verlust des Wallets kann
+                                mithilfe dieser Seed Phrase das eigene Konto wiederhergestellt werden.
+                            </p>
+                        </div>
+                    },
+                    {
+                        id: 4,
+                        title: 'Wer ist verantwortlich für die Seed-Phrase?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                Jeder Benutzer ist selber für die eigene Seed-Phrase verantwortlich und
+                                sollte diese sicher aufbewahren.
+                            </p>
+                        </div>
+                    },
+                    {
+                        id: 5,
+                        title: 'Wo finde ich meine Seed-Phrase?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>Bei erster Benutzung:</p>
+                            <ul role="list">
+                                <li>
+                                    Im Aktionariat Wallet unten im Screen auf ‘<strong>’Connect</strong>’’
+                                    klicken.&nbsp;
+                                </li>
+                                <li>
+                                    Unter ‘’All Ethereum Addresses’’ auf ‘’<strong>This Device BACKUP</strong>
+                                    ’’&nbsp;
+                                </li>
+                                <li>
+                                    Auf den roten Banner ‘’<strong>Backup Address</strong>’’ klicken&nbsp;
+                                </li>
+                                <li>
+                                    Auf ‘’<strong>View</strong>’’ klicken
+                                </li>
+                                <li>→ Nun wird ihr Seed-Phrase angezeigt</li>
+                                <li>
+                                    <strong>ACHTUNG:</strong> Notieren Sie diese 12 Wörter in der richtigen
+                                    Reihenfolge (Wir empfehlen ein Hardware Wallet zu verwenden, oder den
+                                    Inhalt auf ein Blatt Papier zu schreiben und sicher zu verwahren). Wenn
+                                    sie anschließend auf ‘’Continue’’ klicken, wird ein Kontrollmechanismus
+                                    eingeleitet. Dieser verlangt ihre 12 Wörter in der richtigen Reihenfolge.
+                                    Sobald Sie diese richtig eingegeben haben, verschwindet der rote
+                                    Warn-Balken.&nbsp;
+                                </li>
+                            </ul>
+                            <p>Nach Backup:</p>
+                            <ul role="list">
+                                <li>
+                                    Nachdem Sie ihre Seed-Phrase aufgerufen und den Kontrollmechanismus
+                                    durchlaufen haben, können Sie ihre Seed-Phrase nicht mehr einsehen.&nbsp;
+                                </li>
+                            </ul>
+                        </div>
+
+                    },
+                ]
+            },
+            en: {
+                title: 'Wallet',
+                accordions: [
+                    {
+                        id: 1,
+                        title: 'What is a seed phrase?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                A seed phrase consists of a combination of 12 or 24 words and serves the
+                                purpose of a back-up key. If the wallet is lost, the personal seed phrase
+                                can be used to restore the account.
+                            </p>
+                        </div>
+                    },
+                    {
+                        id: 2,
+                        title: 'Who is responsible for the seed phrase?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                Each user is responsible for their own seed phrase and must keep it safe.
+                            </p>
+                        </div>
+                    },
+                    {
+                        id: 3,
+                        title: 'Where can I find my seed phrase?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>At first use:</p>
+                            <ul role="list">
+                                <li>
+                                    Click on ‘’connect’’ at the bottom of the Aktionariat Wallet App.&nbsp;
+                                </li>
+                                <li>
+                                    Click on ‘’<strong>This Device BACKUP</strong>’’ below ‘’ All Ethereum
+                                    Adresses’’&nbsp;
+                                </li>
+                                <li>
+                                    Click on ‘’<strong>Backup Adress</strong>’’&nbsp;
+                                </li>
+                                <li>
+                                    Click on ‘’<strong>View</strong>’’&nbsp;
+                                </li>
+                                <li>Now your seed phrase is visible.&nbsp;</li>
+                                <li>
+                                    WARNING: Write down these 12 words in the correct order (we recommend
+                                    using a hardware wallet or writing the seed phrase on a piece of paper and
+                                    keeping it safe). After writing down your seed phrase, click on ‘’
+                                    <strong>continue’’</strong> to initiate a control mechanism. The mechanism
+                                    will ask for the 12 words of your seed phrase in the correct order. Once
+                                    you entered them correctly the red warning notice will disappear.
+                                </li>
+                            </ul>
+                            <p>
+                                <br />
+                            </p>
+                            <p>
+                                <br />
+                            </p>
+                        </div>
+                    },
+                    {
+                        id: 4,
+                        title: 'Why is the "Name" field not divided into a "Firstname" and a "Lastname" field in the Aktionariat App and Dashboard?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                The beauty of the solution lays in its simplicity: Using only one field
+                                works for everyone alike: companies like "Aktionariat AG", persons like
+                                "Ewan McGregor", persons that insist on using middlle letter, e.g. "George
+                                W. Bush", persons that like to be called by double names, e.g.
+                                "Marie-Christin Weidmann", persons that use two first names, e.g. "Rainer
+                                Maria Hubacher", etc. For example, when we call one field "First Name" and
+                                the other field "Family Name", where should Rainer Maria Rilke enter
+                                "Maria"?
+                            </p>
+                        </div>
+                    },
+                    {
+                        id: 5,
+                        title: 'Why can’t I see my DAKS on my MetaMask wallet?',
+                        description: <div className="text-rich-text w-richtext">
+                            <p>
+                                MetaMask only recognizes established coins, therefore DAKS or other security
+                                tokens from Aktionariat clients need to be imported first. If you are using
+                                a smartphone, please use the following steps;
+                            </p>
+                            <ol start={1} role="list">
+                                <li>Open MetaMask, open the menu and click on Browser inside the app</li>
+                                <li>
+                                    Enter etherscan.io as URL and search for your ethereum address (visible in
+                                    your MetaMask wallet)
+                                </li>
+                                <li>
+                                    You’ll see your security tokens, then click ‘’more’’ → Add DAKS to
+                                    MetaMask
+                                </li>
+                            </ol>
+                            <p>
+                                If you are using MetaMast as an extension of a browser, please make sure to
+                                use this browser when entering etherscan.io and searching for your ethereum
+                                address. There you can see your security tokens, then click ‘’more’’ → Add
+                                DAKS to MetaMask
+                            </p>
+                            <p>
+                                <br />
+                            </p>
+                        </div>
+                    },
+                ]
+            }
+        },
+
     }
 
     // accordion variable
@@ -687,6 +1034,8 @@ const OurVision = () => {
 
 
     const category_2_accordion_object = isEnglish ? category_object.category_2.en : category_object.category_2.de;
+    const category_3_accordion_object = isEnglish ? category_object.category_3.en : category_object.category_3.de;
+    const category_4_accordion_object = isEnglish ? category_object.category_4.en : category_object.category_4.de;
 
 
     function accordionControl(id, category = 1) {
@@ -708,16 +1057,19 @@ const OurVision = () => {
                             </div>
                             <div className="sidebar-links-list">
                                 <a href="#shares-market" className="sidebar-link">
-                                    Aktienmarkt
+                                    {category_1_accordion_object.title}
                                 </a>
                                 <a href="#drag-along" className="sidebar-link">
-                                    Drag-Along
+                                    {category_2_accordion_object.title}
+
                                 </a>
                                 <a href="#dependencies" className="sidebar-link">
-                                    Abhängigkeiten
+                                    {category_3_accordion_object.title}
+
                                 </a>
                                 <a href="#wallet" className="sidebar-link w--current">
-                                    Wallet
+                                    {category_4_accordion_object.title}
+
                                 </a>
                             </div>
                         </div>
@@ -830,240 +1182,56 @@ const OurVision = () => {
                                     </div>
                                 </div>
                             </div>
+
                             <div id="dependencies" className="sidebar-section">
                                 <div className="margin-bottom margin-xlarge">
                                     <div className="divider top-clear" />
                                 </div>
                                 <div className="margin-bottom margin-medium">
                                     <div className="margin-bottom margin-medium">
-                                        <h2>Abhängigkeiten</h2>
+                                        <h2>{category_3_accordion_object.title}</h2>
                                     </div>
                                 </div>
                                 <div className="w-dyn-list">
                                     <div role="list" className="w-dyn-items">
-                                        <div role="listitem" className="w-dyn-item">
-                                            <div className="accordion-item" style={{ opacity: "0.6" }}>
-                                                <div
-                                                    data-w-id="59f560c9-d37f-973d-0fcd-c8c66287f455"
-                                                    className="accordion-trigger"
-                                                >
-                                                    <div className="dropdown-title large-title">
-                                                        <h3 className="text-size-medium text-weight-normal">
-                                                            In welchem Land werden die Daten zum Aktienbuch
-                                                            gehostet?
-                                                        </h3>
-                                                    </div>
-                                                    <div
-                                                        className="icon accordion-icon"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
-                                                            loading="lazy"
-                                                            alt="Plus Icon"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="accordion-item-content"
-                                                    style={{ height: "0px" }}
-                                                >
-                                                    <div className="accordion-description">
-                                                        <div className="text-rich-text w-richtext">
-                                                            <p>
-                                                                Wir hosten unsere Daten (inkl. der Aktienbücher) bei
-                                                                einem Anbieter in der Schweiz.
-                                                            </p>
+                                        {category_3_accordion_object.accordions.map(v => {
+                                            return (
+                                                <div key={v.id} role="listitem" className="w-dyn-item">
+                                                    <div className="accordion-item w-dyn-item" style={{ opacity: "0.6" }}>
+                                                        <div
+                                                            data-w-id="d79ecbd3-b0e6-8ab0-6838-8e83c83a34ee"
+                                                            className="accordion-trigger"
+                                                            onClick={() => accordionControl(v.id, 3)}
+                                                            data-mdb-toggle="collapse"
+                                                            data-mdb-target={`#faqCategory3Collapse${v.id}`}
+                                                        >
+                                                            <div className="dropdown-title large-title">
+                                                                <h3 className="text-size-medium text-weight-normal">
+                                                                    {v.title}
+                                                                </h3>
+                                                            </div>
+                                                            <div
+                                                                className={`icon accordion-icon faqCategory3Collapse${v.id}icon`}
+                                                            >
+                                                                <img
+                                                                    src={require('../../../icons/plus.svg').default}
+                                                                    loading="lazy"
+                                                                    alt="Plus Icon"
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            className="accordion-item-content accordion-collapse collapse"
+                                                            id={`faqCategory3Collapse${v.id}`}
+                                                        >
+                                                            <div className="accordion-description">
+                                                                {v.description}
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div role="listitem" className="w-dyn-item">
-                                            <div className="accordion-item" style={{ opacity: "0.6" }}>
-                                                <div
-                                                    data-w-id="59f560c9-d37f-973d-0fcd-c8c66287f455"
-                                                    className="accordion-trigger"
-                                                >
-                                                    <div className="dropdown-title large-title">
-                                                        <h3 className="text-size-medium text-weight-normal">
-                                                            Besteht ein Risiko für den Emittenten falls der Ether
-                                                            auf 0$ fällt?
-                                                        </h3>
-                                                    </div>
-                                                    <div
-                                                        className="icon accordion-icon"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
-                                                            loading="lazy"
-                                                            alt="Plus Icon"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="accordion-item-content"
-                                                    style={{ height: "0px" }}
-                                                >
-                                                    <div className="accordion-description">
-                                                        <div className="text-rich-text w-richtext">
-                                                            <p>
-                                                                Nein, grundsätzlich nicht. Ether wird „nur“ für das
-                                                                Bezahlen der Transaktionsgebühr des Ethereum Systems
-                                                                gebraucht. Ein tiefer Etherpreis geht oftmals einher
-                                                                mit tiefen Transaktionsgebühren des Ethereumsystems.
-                                                                Der Worst Case wäre, dass das Ethereum-System kaputt
-                                                                geht und man die Token auf eine andere Blockchain
-                                                                migrieren müsste. Dieser Fall ist jedoch sehr
-                                                                unwahrscheinlich, denn das Ethereumsystem ging vor
-                                                                mittlerweile 6 Jahren live und erwies sich bislang
-                                                                als sehr stabil. Ausserdem befindet sich das
-                                                                Aktienbuch des Emittenten nicht auf der Blockchain.
-                                                                Die Informationen darüber welche Investoren wie
-                                                                viele Aktien halten, würden also bestehen bleiben
-                                                                auch wenn die Ethereum Blockchain nicht mehr
-                                                                existieren würde.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div role="listitem" className="w-dyn-item">
-                                            <div className="accordion-item" style={{ opacity: "0.6" }}>
-                                                <div
-                                                    data-w-id="59f560c9-d37f-973d-0fcd-c8c66287f455"
-                                                    className="accordion-trigger"
-                                                >
-                                                    <div className="dropdown-title large-title">
-                                                        <h3 className="text-size-medium text-weight-normal">
-                                                            Was passiert mit den Aktien falls die Aktionariat AG
-                                                            Konkurs anmelden müsste?
-                                                        </h3>
-                                                    </div>
-                                                    <div
-                                                        className="icon accordion-icon"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
-                                                            loading="lazy"
-                                                            alt="Plus Icon"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="accordion-item-content"
-                                                    style={{ height: "0px" }}
-                                                >
-                                                    <div className="accordion-description">
-                                                        <div className="text-rich-text w-richtext">
-                                                            <p>
-                                                                Die Aktientokens basieren auf dem ERC-20
-                                                                Standardtoken und funktionieren vollständig ohne
-                                                                unser Zutun. Falls die Aktionariat AG Konkurs geht,
-                                                                gäbe es lediglich unser Userinterfaces nicht mehr
-                                                                (Aktionariat App, Corporate Dashboard, Market
-                                                                Widgets) aber die Inhaber der Tokens könnten diese
-                                                                weiterhin transferieren, halten und die Rechte
-                                                                ausüben, die damit verbunden sind. Auch besteht
-                                                                immer die Möglichkeit die Tokens auf anderen
-                                                                Marktplätzen anzubieten. Wir bauen auch deshalb auf
-                                                                der Ethereum-Blockchain und verwenden ERC-20 Tokens,
-                                                                weil es unsere Kunden in keine unnötige Abhängigkeit
-                                                                der Aktionariat AG bringt. Der dezentrale Ansatz ist
-                                                                für Aktionariat deshalb ein Kernanliegen, weil keine
-                                                                neuen Abhängigkeiten geschaffen werden sollen.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div role="listitem" className="w-dyn-item">
-                                            <div className="accordion-item" style={{ opacity: "0.6" }}>
-                                                <div
-                                                    data-w-id="59f560c9-d37f-973d-0fcd-c8c66287f455"
-                                                    className="accordion-trigger"
-                                                >
-                                                    <div className="dropdown-title large-title">
-                                                        <h3 className="text-size-medium text-weight-normal">
-                                                            Wie viel kostet es das Unternehmen wieder auf ein
-                                                            traditionelles Aktiensystem zu wechseln?
-                                                        </h3>
-                                                    </div>
-                                                    <div
-                                                        className="icon accordion-icon"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
-                                                            loading="lazy"
-                                                            alt="Plus Icon"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="accordion-item-content"
-                                                    style={{ height: "0px" }}
-                                                >
-                                                    <div className="accordion-description">
-                                                        <div className="text-rich-text w-richtext">
-                                                            <p>
-                                                                Das Unternehmen kann in Absprache mit den Aktionären
-                                                                alle Security Tokens einsammeln und ‘’verbrennen’’.
-                                                                Das Einsammeln der Tokens verursacht mehrere
-                                                                Transaktionen auf der Ethereum Blockchain. Deshalb
-                                                                fallen dafür entsprechende Transaktionskosten an.
-                                                                Wie hoch diese sind, hängt von der Anzahl
-                                                                Transaktionen und dem ‘’Gaspreis’’ ab.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            )
+                                        })}
                                     </div>
                                 </div>
                             </div>
@@ -1073,322 +1241,49 @@ const OurVision = () => {
                                 </div>
                                 <div className="margin-bottom margin-medium">
                                     <div className="margin-bottom margin-medium">
-                                        <h2>Wallet</h2>
+                                        <h2>{category_4_accordion_object.title}</h2>
                                     </div>
                                 </div>
                                 <div className="w-dyn-list">
                                     <div role="list" className="w-dyn-items">
-                                        <div role="listitem" className="w-dyn-item">
-                                            <div className="accordion-item" style={{ opacity: "0.6" }}>
-                                                <div
-                                                    data-w-id="0cdf7c74-704f-1e99-b770-6af18fae554c"
-                                                    className="accordion-trigger"
-                                                >
-                                                    <div className="dropdown-title large-title">
-                                                        <h3 className="text-size-medium text-weight-normal">
-                                                            Warum ist das Feld "Name" in der Aktionariat App und
-                                                            im Dashboard nicht in ein "Vorname"- und ein
-                                                            "Nachname"-Feld unterteilt?
-                                                        </h3>
-                                                    </div>
-                                                    <div
-                                                        className="icon accordion-icon"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
-                                                            loading="lazy"
-                                                            alt="Plus Icon"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="accordion-item-content"
-                                                    style={{ height: "0px" }}
-                                                >
-                                                    <div className="accordion-description">
-                                                        <div className="text-rich-text w-richtext">
-                                                            <p>
-                                                                Die Schönheit der Lösung liegt in ihrer Einfachheit:
-                                                                Die Verwendung von nur einem Feld funktioniert für
-                                                                alle gleichermaßen: Unternehmen wie "Aktionariat
-                                                                AG", Personen wie "Ewan McGregor", Personen, die auf
-                                                                die Verwendung von mittleren Buchstaben bestehen,
-                                                                z.B. "George W. Bush", Personen, die gerne mit
-                                                                Doppelnamen angesprochen werden, z.B.
-                                                                "Marie-Christin Weidmann", Personen, die zwei
-                                                                Vornamen verwenden, z.B. "Rainer Maria Hubacher",
-                                                                usw. Wenn wir zum Beispiel ein Feld "Vorname" und
-                                                                das andere Feld "Nachname" nennen, wo soll Rainer
-                                                                Maria Rilke dann "Maria" eintragen?
-                                                            </p>
-                                                            <p>‍</p>
+                                        {category_4_accordion_object.accordions.map(v => {
+                                            return (
+                                                <div key={v.id} role="listitem" className="w-dyn-item">
+                                                    <div className="accordion-item w-dyn-item" style={{ opacity: "0.6" }}>
+                                                        <div
+                                                            data-w-id="d79ecbd3-b0e6-8ab0-6838-8e83c83a34ee"
+                                                            className="accordion-trigger"
+                                                            onClick={() => accordionControl(v.id, 4)}
+                                                            data-mdb-toggle="collapse"
+                                                            data-mdb-target={`#faqCategory4Collapse${v.id}`}
+                                                        >
+                                                            <div className="dropdown-title large-title">
+                                                                <h3 className="text-size-medium text-weight-normal">
+                                                                    {v.title}
+                                                                </h3>
+                                                            </div>
+                                                            <div
+                                                                className={`icon accordion-icon faqCategory4Collapse${v.id}icon`}
+                                                            >
+                                                                <img
+                                                                    src={require('../../../icons/plus.svg').default}
+                                                                    loading="lazy"
+                                                                    alt="Plus Icon"
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            className="accordion-item-content accordion-collapse collapse"
+                                                            id={`faqCategory4Collapse${v.id}`}
+                                                        >
+                                                            <div className="accordion-description">
+                                                                {v.description}
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div role="listitem" className="w-dyn-item">
-                                            <div className="accordion-item" style={{ opacity: "0.6" }}>
-                                                <div
-                                                    data-w-id="0cdf7c74-704f-1e99-b770-6af18fae554c"
-                                                    className="accordion-trigger"
-                                                >
-                                                    <div className="dropdown-title large-title">
-                                                        <h3 className="text-size-medium text-weight-normal">
-                                                            Weshalb sehe ich meine DAKS Token nicht auf meiner
-                                                            MetaMask Wallet?
-                                                        </h3>
-                                                    </div>
-                                                    <div
-                                                        className="icon accordion-icon"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
-                                                            loading="lazy"
-                                                            alt="Plus Icon"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="accordion-item-content"
-                                                    style={{ height: "0px" }}
-                                                >
-                                                    <div className="accordion-description">
-                                                        <div className="text-rich-text w-richtext">
-                                                            <p>
-                                                                Da MetaMask nur grosse / bekannt Coins erkennt, muss
-                                                                der DAKS oder andere Security Tokens von Aktionariat
-                                                                Kunden zuerst importiert werden. Wenn man die App
-                                                                auf dem Smartphone verwendet:
-                                                            </p>
-                                                            <ol start={1} role="list">
-                                                                <li>
-                                                                    MetaMask öffnen und im Menü den Browser in der App
-                                                                    selber öffnen.
-                                                                </li>
-                                                                <li>
-                                                                    Im Browser auf etherscan.io die eigene
-                                                                    Ethereum-Adresse (sichtbar im MetaMask Wallet)
-                                                                    eingeben
-                                                                </li>
-                                                                <li>
-                                                                    Beim Security Token unter ‘’More’’ → Add DAKS to
-                                                                    MetaMask
-                                                                </li>
-                                                            </ol>
-                                                            <p>
-                                                                Wenn man MetaMask als Erweiterung in einem Browser
-                                                                auf dem Laptop verwendet, ist es wichtig in diesem
-                                                                Browser auf <strong>etherscan.io </strong>die eigene
-                                                                Ethereum Adresse einzugeben. Da ebenfalls beim DAKS
-                                                                / anderen Security Token unter ‘’more’’ → Add to
-                                                                MetaMask.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div role="listitem" className="w-dyn-item">
-                                            <div className="accordion-item" style={{ opacity: "0.6" }}>
-                                                <div
-                                                    data-w-id="0cdf7c74-704f-1e99-b770-6af18fae554c"
-                                                    className="accordion-trigger"
-                                                >
-                                                    <div className="dropdown-title large-title">
-                                                        <h3 className="text-size-medium text-weight-normal">
-                                                            Was ist eine Seed-Phrase?
-                                                        </h3>
-                                                    </div>
-                                                    <div
-                                                        className="icon accordion-icon"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
-                                                            loading="lazy"
-                                                            alt="Plus Icon"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="accordion-item-content"
-                                                    style={{ height: "0px" }}
-                                                >
-                                                    <div className="accordion-description">
-                                                        <div className="text-rich-text w-richtext">
-                                                            <p>
-                                                                Die Seed Phrase besteht aus einer Aneinanderreihung
-                                                                von 12 oder 24 Wörter und erfüllt den Zweck eines
-                                                                Back-up Schlüssels. Bei Verlust des Wallets kann
-                                                                mithilfe dieser Seed Phrase das eigene Konto
-                                                                wiederhergestellt werden.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div role="listitem" className="w-dyn-item">
-                                            <div className="accordion-item" style={{ opacity: "0.6" }}>
-                                                <div
-                                                    data-w-id="0cdf7c74-704f-1e99-b770-6af18fae554c"
-                                                    className="accordion-trigger"
-                                                >
-                                                    <div className="dropdown-title large-title">
-                                                        <h3 className="text-size-medium text-weight-normal">
-                                                            Wer ist verantwortlich für die Seed-Phrase?
-                                                        </h3>
-                                                    </div>
-                                                    <div
-                                                        className="icon accordion-icon"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
-                                                            loading="lazy"
-                                                            alt="Plus Icon"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="accordion-item-content"
-                                                    style={{ height: "0px" }}
-                                                >
-                                                    <div className="accordion-description">
-                                                        <div className="text-rich-text w-richtext">
-                                                            <p>
-                                                                Jeder Benutzer ist selber für die eigene Seed-Phrase
-                                                                verantwortlich und sollte diese sicher aufbewahren.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div role="listitem" className="w-dyn-item">
-                                            <div className="accordion-item" style={{ opacity: "0.6" }}>
-                                                <div
-                                                    data-w-id="0cdf7c74-704f-1e99-b770-6af18fae554c"
-                                                    className="accordion-trigger"
-                                                >
-                                                    <div className="dropdown-title large-title">
-                                                        <h3 className="text-size-medium text-weight-normal">
-                                                            Wo finde ich meine Seed-Phrase?
-                                                        </h3>
-                                                    </div>
-                                                    <div
-                                                        className="icon accordion-icon"
-                                                        style={{
-                                                            "-webkit-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-ms-transform":
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            transform:
-                                                                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                            "-webkit-transform-style": "preserve-3d",
-                                                            "-ms-transform-style": "preserve-3d",
-                                                            "transform-style": "preserve-3d",
-                                                        }}
-                                                    >
-                                                        <img
-                                                            src="https://uploads-ssl.webflow.com/6191fe28d0a1c876c77ea545/619943dc9b20f14e1ccd8d21_icon-24-plus.svg"
-                                                            loading="lazy"
-                                                            alt="Plus Icon"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="accordion-item-content"
-                                                    style={{ height: "0px" }}
-                                                >
-                                                    <div className="accordion-description">
-                                                        <div className="text-rich-text w-richtext">
-                                                            <p>Bei erster Benutzung:</p>
-                                                            <ul role="list">
-                                                                <li>
-                                                                    Im Aktionariat Wallet unten im Screen auf ‘
-                                                                    <strong>’Connect</strong>’’ klicken.&nbsp;
-                                                                </li>
-                                                                <li>
-                                                                    Unter ‘’All Ethereum Addresses’’ auf ‘’
-                                                                    <strong>This Device BACKUP</strong>’’&nbsp;
-                                                                </li>
-                                                                <li>
-                                                                    Auf den roten Banner ‘’
-                                                                    <strong>Backup Address</strong>’’ klicken&nbsp;
-                                                                </li>
-                                                                <li>
-                                                                    Auf ‘’<strong>View</strong>’’ klicken
-                                                                </li>
-                                                                <li>→ Nun wird ihr Seed-Phrase angezeigt</li>
-                                                                <li>
-                                                                    <strong>ACHTUNG:</strong> Notieren Sie diese 12
-                                                                    Wörter in der richtigen Reihenfolge (Wir empfehlen
-                                                                    ein Hardware Wallet zu verwenden, oder den Inhalt
-                                                                    auf ein Blatt Papier zu schreiben und sicher zu
-                                                                    verwahren). Wenn sie anschließend auf ‘’Continue’’
-                                                                    klicken, wird ein Kontrollmechanismus eingeleitet.
-                                                                    Dieser verlangt ihre 12 Wörter in der richtigen
-                                                                    Reihenfolge. Sobald Sie diese richtig eingegeben
-                                                                    haben, verschwindet der rote Warn-Balken.&nbsp;
-                                                                </li>
-                                                            </ul>
-                                                            <p>Nach Backup:</p>
-                                                            <ul role="list">
-                                                                <li>
-                                                                    Nachdem Sie ihre Seed-Phrase aufgerufen und den
-                                                                    Kontrollmechanismus durchlaufen haben, können Sie
-                                                                    ihre Seed-Phrase nicht mehr einsehen.&nbsp;
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            )
+                                        })}
                                     </div>
                                 </div>
                             </div>
